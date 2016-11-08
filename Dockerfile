@@ -21,6 +21,8 @@ COPY certs/new/fullchain.pem /fullchain.pem
 
 RUN pip3 install homeassistant==0.30.2
 
+ADD config_files.tar.gz /config
+
 EXPOSE 8123
 
 #####

@@ -1,0 +1,4 @@
+alias: "Righteye Notify"
+name: righteye
+platform: kodi
+host: http://192.168.1.4
