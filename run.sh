@@ -1,10 +1,12 @@
 #!/bin/bash
 
+. settings.conf
+
 #       --net=host \
 #       -p 8123:8123 \
 
 docker run \
-       --mac-address="92:20:DE:B0:6B:81" \
+       --mac-address="${MAC_ADDRESS}" \
        -dt \
        --privileged \
        -h homeassistant \
