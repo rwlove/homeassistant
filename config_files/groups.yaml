@@ -6,7 +6,7 @@ default_view:
     - group.kitchen
     - group.bathroom
     - group.locations
-    - configurator.philips_hue
+#    - configurator.philips_hue
 
 sensors:
   view: yes
