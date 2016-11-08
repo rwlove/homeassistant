@@ -21,8 +21,6 @@ COPY certs/new/fullchain.pem /fullchain.pem
 
 RUN pip3 install homeassistant==0.30.2
 
-COPY data/secrets.yaml /root/.homeassistant/secrets.yaml
-
 EXPOSE 8123
 
 #####
