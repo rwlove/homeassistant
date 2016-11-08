@@ -1,0 +1,13 @@
+#kitchen_nightlight_on:
+#  alias "Turn the kitchen nightlight on"
+#  sequence:
+#    service: scene.turn_on
+#    data:
+#      entity_id: scene.kitchen_nightlight_on
+
+#kitchen_bright_on:
+##  alias "Turn the kitchen lights on bright"
+#  sequence:
+#    service: scene.turn_on
+#    data:
+#      entity_id: scene.kitchen_bright_on

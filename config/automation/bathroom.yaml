@@ -1,0 +1,71 @@
+- alias: "Bathroom Lights Voice Change On"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/bathroom/lights_on
+  action:
+    service: light.turn_on
+    entity_id: group.bathroom_lights
+
+- alias: "Bathroom Lights Voice Change Off"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/bathroom/lights_off
+  action:
+    service: light.turn_off
+    entity_id: group.bathroom_lights
+
+#- alias: "Bathroom Lights Voice Change Color"
+#  hide_entity: true
+#  trigger:
+#    - platform: mqtt
+#      topic: voice/bathroom/lights_color
+#    - platform: mqtt
+#      topic: voice/bathroom/lights_scene
+#  action:
+#    - service: notify.righteye
+#      data:
+#        title: "Home Assistant"
+#        message: "Changing Color of Bathroom Lights"
+#        data:
+#          icon: "info"
+#          displaytime: 20000
+#    - service: light.turn_on
+#      data_template:
+#        profile: "{{ trigger.payload }}"
+#        entity_id: group.bathroom_lights
+
+- alias: "Bathroom Lights Voice Dim"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/bathroom/lights_adjust
+    payload: 'dim'
+  action:
+    service: light.turn_on
+    data_template:
+      entity_id: group.bathroom_lights
+      brightness: >
+        {% if states('light.__level_6.brightness') | int > 200 %}
+          150
+        {% else %}
+          50
+        {% endif %}
+
+- alias: "Bathroom Lights Voice Bright"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/bathroom/lights_adjust
+    payload: 'bright'
+  action:
+    service: light.turn_on
+    data_template:
+      entity_id: group.bathroom_lights
+      brightness: >
+        {% if states('light.__level_6.brightness') | int < 100 %}
+          150
+        {% else %}
+          254
+        {% endif %}

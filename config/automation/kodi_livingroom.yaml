@@ -1,0 +1,11 @@
+- alias: "Livingroom Kodi Play 000sexysongs"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: kodi/lefteye/sexy
+  action:
+    service: media_player.play_media
+    data:
+      entity_id: media_player.kodi_livingroom_lefteye
+      media_content_id: "/video_sources/Downloads/mp3_delme/"
+      media_content_type: "directory"

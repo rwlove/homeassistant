@@ -1,0 +1,9 @@
+alias: lefteye
+platform: kodi
+#  host: http://192.168.1.5
+host: http://lefteye
+port: 8080
+name: Kodi Livingroom (lefteye)
+#  username: USERNAME
+#  password: PASSWORD
+turn_off_action: shutdown

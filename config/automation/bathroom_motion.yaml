@@ -1,0 +1,25 @@
+- alias: "Bathroom Motion Detection On"
+#  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: binary_sensor.__sensor_5
+    from: 'off'
+    to: 'on'
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.bathroom_lights
+
+- alias: "Bathroom Motion Detection Off"
+#  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: binary_sensor.__sensor_5
+    from: 'on'
+    to: 'off'
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.bathroom_lights
+
+#- alias: "Bathroom Motion Detection Cancel"
+#  trigger:
+#    platform: 

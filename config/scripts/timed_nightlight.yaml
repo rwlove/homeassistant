@@ -1,0 +1,22 @@
+timed_nightlight:
+  alias: "Turn on nightlight and set timer"
+  sequence:
+    # Cancel old timer
+    - service: script.turn_off
+      data:
+        entity_id: script.timer_off
+    - service: scene.turn_on
+      data:
+        entity_id: scene.nightlight_on
+    - service: script.turn_on
+      data:
+        entity_id: script.timer_off
+
+timer_off:
+  alias: "Turn off nightlight after 10 minutes"
+  sequence:
+    - delay:
+        minutes: 10
+    - service: scene.turn_on
+      data:
+        entity_id: scene.nightlight_off

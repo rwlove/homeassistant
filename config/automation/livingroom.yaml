@@ -1,0 +1,98 @@
+- alias: "Livingroom Lights Voice Change On"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/livingroom/lights_on
+  action:
+    service: script.turn_on
+    entity_id: script.light_on_notify_lefteye
+
+- alias: "Livingroom Lights Voice Change Off"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/livingroom/lights_off
+  action:
+    service: script.turn_on
+    entity_id: script.light_off_notify_lefteye
+
+- alias: "Livingroom Lights Voice Change Scene"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/livingroom/lights_scene
+  action:
+    service: script.turn_on
+    entity_id: script.light_color_notify_lefteye
+
+- alias: "Livingroom Lights Voice Change Color"
+  hide_entity: true
+  trigger:
+    - platform: mqtt
+      topic: voice/livingroom/lights_color
+    - platform: mqtt
+      topic: voice/livingroom/lights_scene  
+  action:
+    - service: notify.lefteye
+      data:
+        title: "Home Assistant"
+        message: "Changing Color of Livingroom Lights"
+        data:
+          icon: "info"
+          displaytime: 20000
+    - service: light.turn_on
+      data_template:
+        profile: "{{ trigger.payload }}"
+        entity_id: group.livingroom_lights
+
+#- alias: "Livingroom Lights Voice Change Adjust"
+#  hide_entity: true
+#  trigger:
+#    platform: mqtt
+#    topic: voice/livingroom/lights_adjust
+#  action:
+#  #TODO, also must copy scene, color and adjust for bedroom
+#    service: script.turn_on
+#    entity_id: script.light_color_notify_lefteye
+#    data_template:
+#        color_profile: '{{ trigger.payload }}'
+
+- alias: "Livingroom Lights Voice Dim"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/livingroom/lights_adjust
+    payload: 'dim'
+  action:
+    service: light.turn_on
+    data_template:
+#      entity_id: group.livingroom_lights
+      entity_id:
+        - light.lamp
+#        - light.strip
+      brightness: >
+        {% if states('light.lamp.brightness') | int > 200 %}
+          150
+        {% else %}
+          50
+        {% endif %}
+
+- alias: "Livingroom Lights Voice Bright"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/livingroom/lights_adjust
+    payload: 'bright'
+  action:
+    service: light.turn_on
+    data_template:
+#      entity_id: group.livingroom_lights
+      entity_id:
+        - light.lamp
+ #       - light.strip
+      brightness: >
+        {% if states('light.lamp.brightness') | int < 51 %}
+          150
+        {% else %}
+          254
+        {% endif %}

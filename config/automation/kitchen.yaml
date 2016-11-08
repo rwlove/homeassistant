@@ -1,0 +1,61 @@
+- alias: "Kitchen Lights Voice Change On"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/kitchen/lights_on
+  action:
+    service: script.turn_on
+    entity_id: script.kitchen_light_on
+
+- alias: "Kitchen Lights Voice Change Off"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/kitchen/lights_off
+  action:
+    service: script.turn_on
+    entity_id: script.kitchen_light_off
+
+- alias: "Kitchen Lights Voice Change Color"
+  hide_entity: true
+  trigger:
+    - platform: mqtt
+      topic: voice/kitchen/lights_color
+    - platform: mqtt
+      topic: voice/kitchen/lights_scene
+  action:
+    - service: notify.righteye
+      data:
+        title: "Home Assistant"
+        message: "Changing Color of Kitchen Lights"
+        data:
+          icon: "info"
+          displaytime: 20000
+    - service: light.turn_on
+      data_template:
+        profile: "{{ trigger.payload }}"
+        entity_id: group.kitchen_lights
+
+- alias: "Kitchen Lights Voice Dim"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/kitchen/lights_adjust
+    payload: 'dim'
+  action:
+    service: light.turn_on
+    data_template:
+      brightness: "{{ states.light.kitchen_1.brightness | float - 100 }}"
+      entity_id: group.kitchen_lights
+
+- alias: "Kitchen Lights Voice Bright"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/kitchen/lights_adjust
+    payload: 'bright'
+  action:
+    service: light.turn_on
+    data_template:
+      brightness: "{{ states.light.kitchen_1.brightness | float + 100 }}"
+      entity_id: group.kitchen_lights

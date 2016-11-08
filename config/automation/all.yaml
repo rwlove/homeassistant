@@ -1,0 +1,51 @@
+- alias: "All Voice Change On"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/all/lights_on
+  action:
+    service: light.turn_on
+    entity_id: group.all_lights
+
+- alias: "All Voice Change Off"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/all/lights_off
+  action:
+    - service: light.turn_off
+      entity_id: group.all_lights
+    - service: switch.turn_off
+      entity_id: switch.ge_12727_inwall_smart_switch_toggle_switch_2
+
+- alias: "All Voice Change Color"
+  hide_entity: true
+  trigger:
+    - platform: mqtt
+      topic: voice/all/lights_color
+    - platform: mqtt
+      topic: voice/all/lights_scene
+  action:
+    - service: notify.lefteye
+      data:
+        title: "Home Assistant"
+        message: "Changing Color of All"
+        data:
+          icon: "info"
+          displaytime: 20000
+    - service: light.turn_on
+      data_template:
+        profile: "{{ trigger.payload }}"
+        entity_id: group.all_lights
+
+- alias: "All Voice Change Adjust"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/all/lights_adjust
+  action:
+  #TODO, also must copy scene, color and adjust for all
+    service: script.turn_on
+    entity_id: script.light_color_notify_lefteye
+    data_template:
+        color_profile: '{{ trigger.payload }}'

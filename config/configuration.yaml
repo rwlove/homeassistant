@@ -1,0 +1,95 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: !secret homeassistant_name
+  # Location required to calculate the time the sun rises and sets
+  latitude: 45.528437
+  longitude: -122.681432
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 199
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Los_Angeles
+
+sensor: !include_dir_list sensors/
+light: !include devices/lights.yaml
+media_player: !include_dir_list devices/kodi
+automation: !include_dir_merge_list automation/
+notify: !include_dir_list notify/
+script: !include_dir_merge_named scripts/
+group: !include groups.yaml
+#zwave: !include_dir_list zwave/
+customize: !include customize.yaml
+scene: !include scenes.yaml
+zwave: !include zwave.yaml
+
+switch:
+  - platform: thinkingcleaner
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+logger:
+  default: debug
+
+http:
+# Uncomment this to add a password (recommended!)
+  api_password: !secret http_password
+#  ssl_certificate: /fullchain.pem
+#  ssl_key: /privkey.pem
+#  ssl_certificate: /server.cert
+#  ssl_key: /server.key
+
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+#discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Weather Prediction
+#sensor:
+#  platform: yr
+
+nest:
+  username: !secret nest_username
+  password: !secret nest_password
+
+#climate:
+#  platform: nest
+
+#device_tracker:
+#  - platform: nmap_tracker
+#    hosts: 192.168.2.1/29
+#    exclude:
+#    - 192.168.2.0
+#    - 192.168.2.4
+#    - 192.168.2.5
+#    - 192.168.2.6
+#    - 192.168.2.7
+#    consider_home: 180
+##    track_new_devices: yes
+#    track_new_devices: no
+
+mqtt:
+  broker: mosca
+  port: 1883
+  client_id: home-assistant-1
+  keepalive: 60
+  username: !secret mqtt_username
+  password: !secret mqtt_password

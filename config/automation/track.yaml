@@ -1,0 +1,17 @@
+- alias: "Track Voice Change On"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/track/lights_on
+  action:
+    service: switch.turn_on
+    entity_id: switch.ge_12727_inwall_smart_switch_toggle_switch_2
+
+- alias: "Track Voice Change Off"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/track/lights_off
+  action:
+    service: switch.turn_off
+    entity_id: switch.ge_12727_inwall_smart_switch_toggle_switch_2

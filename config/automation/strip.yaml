@@ -1,0 +1,49 @@
+- alias: "Strip Voice Change On"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/strip/lights_on
+  action:
+    service: light.turn_on
+    entity_id: light.lightstrip
+
+- alias: "Strip Voice Change Off"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/strip/lights_off
+  action:
+    service: light.turn_off
+    entity_id: light.lightstrip
+
+- alias: "Strip Voice Change Color"
+  hide_entity: true
+  trigger:
+    - platform: mqtt
+      topic: voice/strip/lights_color
+    - platform: mqtt
+      topic: voice/strip/lights_scene
+  action:
+    - service: notify.lefteye
+      data:
+        title: "Home Assistant"
+        message: "Changing Color of Strip"
+        data:
+          icon: "info"
+          displaytime: 20000
+    - service: light.turn_on
+      data_template:
+        profile: "{{ trigger.payload }}"
+        entity_id: light.lightstrip
+
+- alias: "Strip Voice Change Adjust"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/strip/lights_adjust
+  action:
+  #TODO, also must copy scene, color and adjust for strip
+    service: script.turn_on
+    entity_id: script.light_color_notify_lefteye
+    data_template:
+        color_profile: '{{ trigger.payload }}'

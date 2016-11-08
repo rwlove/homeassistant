@@ -1,0 +1,25 @@
+- alias: "Motion Detection Nightlight"
+#  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.aeotec_zw100_multisensor_6_burglar_3
+    from: '0'
+    to: '8'
+  action:
+    service: script.turn_on
+    entity_id: script.timed_nightlight
+  condition:
+    condition: and
+    conditions:
+#      - condition: time
+#        before: '07:00:00'
+#        after: '15:00:00'
+      - condition: numeric_state
+        entity_id: sensor.aeotec_zw100_multisensor_6_luminance_3
+        below: 4
+      - condition: state
+        entity_id: group.livingroom_lights
+        state: 'off'
+      - condition: state
+        entity_id: group.kitchen_lights
+        state: 'off'

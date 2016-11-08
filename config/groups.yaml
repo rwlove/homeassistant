@@ -1,0 +1,203 @@
+default_view:
+  view: yes
+  entities:
+    - group.bedroom
+    - group.livingroom
+    - group.kitchen
+    - group.bathroom
+    - group.locations
+    - configurator.philips_hue
+
+sensors:
+  view: yes
+  entities:
+    - switch.ge_12727_inwall_smart_switch_toggle_switch_2
+    - sensor.aeotec_zw100_multisensor_6_burglar_3
+    - sensor.aeotec_zw100_multisensor_6_luminance_3
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity_3
+    - sensor.aeotec_zw100_multisensor_6_temperature_3
+    - sensor.aeotec_zw100_multisensor_6_ultraviolet_3
+    - sensor.aeotec_zw100_multisensor_6_burglar_4
+    - sensor.aeotec_zw100_multisensor_6_luminance_4
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity_4
+    - sensor.aeotec_zw100_multisensor_6_temperature_4
+    - sensor.aeotec_zw100_multisensor_6_ultraviolet_4
+
+scenes:
+  view: yes
+  entities:
+    - scene.nightlight_on
+    - scene.nightlight_off
+
+scripts:
+  view: yes
+  entities:
+    - script.kitchen_light_off
+    - script.kitchen_light_on
+    - script.light_color_notify_lefteye
+    - script.light_color_notify_righteye
+    - script.light_off_notify_lefteye
+    - script.light_off_notify_righteye
+    - script.light_on_notify_lefteye
+    - script.light_on_notify_righteye
+    - script.timed_nightlight
+    - script.timer_off
+
+automation:
+  view: yes
+  entities:
+    - automation.motion_detection_nightlight
+    - automation.kitchen_motion_detection_on
+    - automation.kitchen_motion_detection_off
+    - automation.bathroom_motion_detection_on
+    - automation.bathroom_motion_detection_off
+
+weather:
+  view: yes
+  entities:
+  - group.weather_inside
+  - group.weather_outside
+
+weather_inside:
+#  view: yes
+  name: "Weather Inside"
+  entities:
+  - sensor.aeotec_zw100_multisensor_6_temperature_3
+  - sensor.aeotec_zw100_multisensor_6_relative_humidity_3
+
+weather_outside:
+#  view: yes
+  name: "Weather Outside"
+  entities:
+  - sensor.portland_current
+  - sensor.portland_humidity
+  - sensor.portland_pressure
+  - sensor.portland_temperature
+  - sensor.portland_temperature_max
+  - sensor.portland_temperature_min
+  - sensor.portland_visibility
+  - sensor.portland_wind_speed
+
+lights_display:
+  name: Lights
+  view: yes
+#  icon: mdi:lightbulb
+  entities:
+    - group.kitchen_lights
+    - group.bedroom_lights
+    - group.livingroom_lights
+    - group.bathroom_lights
+
+kodi:
+  name: Kodi
+  view: yes
+  entities:
+  - media_player.kodi_bedroom_righteye
+  - media_player.kodi_livingroom_lefteye
+
+roomba:
+  name: Roomba
+  view: yes
+  entities:
+  - sensor.roomba_state
+#    friendly_name: Roomba State
+  - sensor.roomba_battery
+#    friendly_name: Roomba Battery
+#    icon: mdi:battery
+#    unit_of_measurement: %
+  - sensor.roomba_capacity
+#    friendly_name: Roomba Capacity
+  - switch.roomba_clean
+#    friendly_name: Roomba Clean
+  - switch.roomba_dock
+#    friendly_name: Roomba Dock
+  - switch.roomba_find
+#    friendly_name: Roomba Find
+
+bedroom:
+  name: Bedroom
+  entities:
+    - group.bedroom_lights
+
+livingroom:
+  name: Livingroom
+  entities:
+    - group.livingroom_lights
+    - sensor.aeotec_zw100_multisensor_6_burglar_3
+    - sensor.aeotec_zw100_multisensor_6_luminance_3
+    - sensor.roomba_state
+
+livingroom_sensor:
+  name: Livingroom Sensor
+  entities:
+    - sensor.aeotec_zw100_multisensor_6_burglar_3
+    - sensor.aeotec_zw100_multisensor_6_luminance_3
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity_3
+    - sensor.aeotec_zw100_multisensor_6_temperature_3
+    - sensor.aeotec_zw100_multisensor_6_ultraviolet_3
+
+kitchen_sensor:
+  name: Kitchen Sensor
+  entities:
+    - sensor.aeotec_zw100_multisensor_6_burglar_4
+    - sensor.aeotec_zw100_multisensor_6_luminance_4
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity_4
+    - sensor.aeotec_zw100_multisensor_6_temperature_4
+    - sensor.aeotec_zw100_multisensor_6_ultraviolet_4
+
+bathroom_sensor:
+  name: Bathroom Sensor
+  entities:
+    - binary_sensor.__sensor_5
+
+bathroom:
+  name: Bathroom
+#  view: yes
+  entities:
+    - group.bathroom_sensor
+    - group.bathroom_lights
+
+kitchen:
+  name: Kitchen
+  entities:
+    - group.kitchen_lights
+    - sensor.aeotec_zw100_multisensor_6_burglar_4
+    - sensor.aeotec_zw100_multisensor_6_luminance_4
+
+#roomba:
+#  name: Roomba
+#  entities:
+#    - sensor.roomba_state
+#    - sensor.roomba_battery
+#    - sensor.roomba_capacity
+
+locations:
+  name: Locations
+  entities:
+    - device_tracker.galaxythesteamedcrabcom
+
+bedroom_lights:
+  name: "Bedroom Lights"
+  entities:
+    - light.left_back
+    - light.right_back
+    - light.left_front
+    - light.right_front
+
+livingroom_lights:
+  name: "Livingroom Lights"
+  entities:
+    - light.lamp
+    - light.lightstrip
+    - switch.ge_12727_inwall_smart_switch_toggle_switch_2
+
+kitchen_lights:
+  name: "Kitchen Lights"
+  entities:
+    - light.kitchen_1
+    - light.kitchen_2
+
+bathroom_lights:
+  name: "Bathroom Lights"
+  entities:
+    - light.__level_6

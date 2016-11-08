@@ -1,0 +1,49 @@
+- alias: "Lamp Voice Change On"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/lamp/lights_on
+  action:
+    service: light.turn_on
+    entity_id: light.lamp
+
+- alias: "Lamp Voice Change Off"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/lamp/lights_off
+  action:
+    service: light.turn_off
+    entity_id: light.lamp
+
+- alias: "Lamp Voice Change Color"
+  hide_entity: true
+  trigger:
+    - platform: mqtt
+      topic: voice/lamp/lights_color
+    - platform: mqtt
+      topic: voice/lamp/lights_scene
+  action:
+    - service: notify.lefteye
+      data:
+        title: "Home Assistant"
+        message: "Changing Color of Lamp"
+        data:
+          icon: "info"
+          displaytime: 20000
+    - service: light.turn_on
+      data_template:
+        profile: "{{ trigger.payload }}"
+        entity_id: light.lamp
+
+- alias: "Lamp Voice Change Adjust"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/lamp/lights_adjust
+  action:
+  #TODO, also must copy scene, color and adjust for lamp
+    service: script.turn_on
+    entity_id: script.light_color_notify_lefteye
+    data_template:
+        color_profile: '{{ trigger.payload }}'
