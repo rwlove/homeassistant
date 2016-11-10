@@ -24,16 +24,10 @@ scenes:
 scripts:
   view: yes
   entities:
-    - script.kitchen_light_off
-    - script.kitchen_light_on
-    - script.light_color_notify_lefteye
-    - script.light_color_notify_righteye
-    - script.light_off_notify_lefteye
-    - script.light_off_notify_righteye
-    - script.light_on_notify_lefteye
-    - script.light_on_notify_righteye
     - script.timed_nightlight
     - script.timer_off
+    - script.timed_bathroom_nightlight
+    - script.bathroom_timer_off
 
 automation:
   view: yes

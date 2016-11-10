@@ -1,0 +1,22 @@
+timed_bathroom_nightlight:
+  alias: "Turn on Bathroom Nightlight and set timer"
+  sequence:
+    # Cancel old timer
+    - service: script.turn_off
+      data:
+        entity_id: script.bathroom_timer_off
+    - service: homeassistant.turn_on
+      data:
+        entity_id: group.bathroom_lights
+    - service: script.turn_on
+      data:
+        entity_id: script.bathroom_timer_off
+
+bathroom_timer_off:
+  alias: "Turn off Bathroom Nightlight after 10 minutes"
+  sequence:
+    - delay:
+        minutes: 10
+    - service: homeassistant.turn_off
+      data:
+        entity_id: group.bathroom_lights
