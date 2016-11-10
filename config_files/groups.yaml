@@ -8,8 +8,12 @@ default_view:
     - group.locations
 #    - configurator.philips_hue
 
-nest:
+climate:
   view: yes
+  entities:
+    - group.weather_inside
+    - group.weather_outside
+
 
 sensors:
   view: yes
@@ -41,21 +45,14 @@ automation:
     - automation.bathroom_motion_detection_on
     - automation.bathroom_motion_detection_off
 
-weather:
-  view: yes
-  entities:
-  - group.weather_inside
-  - group.weather_outside
-
 weather_inside:
-#  view: yes
   name: "Weather Inside"
   entities:
+  - climate.entrywaynest
   - sensor.aeotec_zw100_multisensor_6_temperature_3
   - sensor.aeotec_zw100_multisensor_6_relative_humidity_3
 
 weather_outside:
-#  view: yes
   name: "Weather Outside"
   entities:
   - sensor.portland_current
@@ -70,7 +67,6 @@ weather_outside:
 lights_display:
   name: Lights
   view: yes
-#  icon: mdi:lightbulb
   entities:
     - group.kitchen_lights
     - group.bedroom_lights
@@ -89,19 +85,11 @@ roomba:
   view: yes
   entities:
   - sensor.roomba_state
-#    friendly_name: Roomba State
   - sensor.roomba_battery
-#    friendly_name: Roomba Battery
-#    icon: mdi:battery
-#    unit_of_measurement: %
   - sensor.roomba_capacity
-#    friendly_name: Roomba Capacity
   - switch.roomba_clean
-#    friendly_name: Roomba Clean
   - switch.roomba_dock
-#    friendly_name: Roomba Dock
   - switch.roomba_find
-#    friendly_name: Roomba Find
 
 bedroom:
   name: Bedroom
