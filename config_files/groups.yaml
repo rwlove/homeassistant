@@ -49,8 +49,8 @@ weather_inside:
   name: "Weather Inside"
   entities:
   - climate.entrywaynest
-  - sensor.aeotec_zw100_multisensor_6_temperature_3
-  - sensor.aeotec_zw100_multisensor_6_relative_humidity_3
+  - sensor.aeotec_zw100_multisensor_6_temperature_3_1
+  - sensor.aeotec_zw100_multisensor_6_relative_humidity_6_relative_humidity_3_5
 
 weather_outside:
   name: "Weather Outside"
@@ -100,32 +100,32 @@ livingroom:
   name: Livingroom
   entities:
     - group.livingroom_lights
-    - sensor.aeotec_zw100_multisensor_6_burglar_3
-    - sensor.aeotec_zw100_multisensor_6_luminance_3
+    - sensor.aeotec_zw100_multisensor_6_burglar_3_10
+    - sensor.aeotec_zw100_multisensor_6_luminance_3_3
     - sensor.roomba_state
 
 livingroom_sensor:
   name: Livingroom Sensor
   entities:
-    - sensor.aeotec_zw100_multisensor_6_burglar_3
-    - sensor.aeotec_zw100_multisensor_6_luminance_3
-    - sensor.aeotec_zw100_multisensor_6_relative_humidity_3
-    - sensor.aeotec_zw100_multisensor_6_temperature_3
-    - sensor.aeotec_zw100_multisensor_6_ultraviolet_3
+    - sensor.aeotec_zw100_multisensor_6_burglar_3_10
+    - sensor.aeotec_zw100_multisensor_6_luminance_3_3
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity_3_5
+    - sensor.aeotec_zw100_multisensor_6_temperature_3_1
+    - sensor.aeotec_zw100_multisensor_6_ultraviolet_3_27
 
 kitchen_sensor:
   name: Kitchen Sensor
   entities:
-    - sensor.aeotec_zw100_multisensor_6_burglar_4
-    - sensor.aeotec_zw100_multisensor_6_luminance_4
-    - sensor.aeotec_zw100_multisensor_6_relative_humidity_4
-    - sensor.aeotec_zw100_multisensor_6_temperature_4
-    - sensor.aeotec_zw100_multisensor_6_ultraviolet_4
+    - sensor.aeotec_zw100_multisensor_6_burglar_4_10
+    - sensor.aeotec_zw100_multisensor_6_luminance_4_3
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity_4_5
+    - sensor.aeotec_zw100_multisensor_6_temperature_4_1
+    - sensor.aeotec_zw100_multisensor_6_ultraviolet_4_27
 
 bathroom_sensor:
   name: Bathroom Sensor
   entities:
-    - binary_sensor.__sensor_5
+    - binary_sensor.__sensor_5_0
 
 bathroom:
   name: Bathroom
@@ -138,15 +138,8 @@ kitchen:
   name: Kitchen
   entities:
     - group.kitchen_lights
-    - sensor.aeotec_zw100_multisensor_6_burglar_4
-    - sensor.aeotec_zw100_multisensor_6_luminance_4
-
-#roomba:
-#  name: Roomba
-#  entities:
-#    - sensor.roomba_state
-#    - sensor.roomba_battery
-#    - sensor.roomba_capacity
+    - sensor.aeotec_zw100_multisensor_6_burglar_4_10
+    - sensor.aeotec_zw100_multisensor_6_luminance_4_3
 
 locations:
   name: Locations
@@ -166,7 +159,7 @@ livingroom_lights:
   entities:
     - light.lamp
     - light.lightstrip
-    - switch.ge_12727_inwall_smart_switch_toggle_switch_2
+    - switch.ge_12727_inwall_smart_switch_toggle_switch_2_0
 
 kitchen_lights:
   name: "Kitchen Lights"
@@ -177,4 +170,4 @@ kitchen_lights:
 bathroom_lights:
   name: "Bathroom Lights"
   entities:
-    - light.__level_6
+    - light.__level_6_0

@@ -11,4 +11,4 @@ light_off_notify_lefteye:
     data:
       entity_id: group.livingroom_lights
   - service: switch.turn_off
-    entity_id: switch.ge_12727_inwall_smart_switch_toggle_switch_2
+    entity_id: switch.ge_12727_inwall_smart_switch_toggle_switch_2_0

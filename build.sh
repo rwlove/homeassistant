@@ -5,3 +5,5 @@
 docker build -t services/homeassistant .
 
 rm config_files.tar.gz
+
+docker run --rm services/homeassistant:latest hass --script check_config --config /config

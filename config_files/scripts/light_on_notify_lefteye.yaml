@@ -13,4 +13,4 @@ light_on_notify_lefteye:
       brightness: 255
       entity_id: group.livingroom_lights
   - service: switch.turn_on
-    entity_id: switch.ge_12727_inwall_smart_switch_toggle_switch_2
+    entity_id: switch.ge_12727_inwall_smart_switch_toggle_switch_2_0
