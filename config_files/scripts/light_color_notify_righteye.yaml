@@ -9,7 +9,6 @@ light_color_notify_righteye:
         displaytime: 20000
   - service: light.turn_on
     data_template:
-#      profile: red
       profile: '{{ color_profile }}'
 #      brightness: 255
       entity_id: group.bedroom_lights

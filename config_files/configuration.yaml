@@ -60,11 +60,7 @@ history:
 logbook:
 
 # Track the sun
-sun:
-
-# Weather Prediction
-#sensor:
-#  platform: yr
+#sun:
 
 nest:
   username: !secret nest_username

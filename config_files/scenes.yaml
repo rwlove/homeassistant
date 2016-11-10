@@ -1,21 +1,11 @@
-- name: Kitchen Nightlight On
-  entities:
-    group.kitchen_lights:
-      state: on
-      profile: pink
-      brightness: 100
-    switch.ge_12727_inwall_smart_switch_toggle_switch_2:
-      state: on
-      brightness: 30
-
-- name: Kitchen Bright On
+- name: "Kitchen Bright On"
   entities:
     group.kitchen_lights:
       state: on
       profile: white
       brightness: 255
 
-- name: Nightlight On
+- name: "Livingroom / Kitchen Nightlight On"
   entities:
     group.livingroom_lights:
       state: on
@@ -26,7 +16,7 @@
       profile: pink
       brightness: 100
 
-- name: Nightlight Off
+- name: "Livingroom / Kitchen Nightlight Off"
   entities:
     group.livingroom_lights:
       state: off

@@ -1,5 +1,5 @@
 timed_nightlight:
-  alias: "Turn on nightlight and set timer"
+  alias: "Turn Livingroom / Kitchen Nightlight On and Set Timer"
   sequence:
     # Cancel old timer
     - service: script.turn_off
@@ -13,7 +13,7 @@ timed_nightlight:
         entity_id: script.timer_off
 
 timer_off:
-  alias: "Turn off nightlight after 10 minutes"
+  alias: "Turn Livingroom / Kitchen Nightlight Off After 10 Minutes"
   sequence:
     - delay:
         minutes: 10
