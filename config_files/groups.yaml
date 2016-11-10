@@ -8,6 +8,9 @@ default_view:
     - group.locations
 #    - configurator.philips_hue
 
+nest:
+  view: yes
+
 sensors:
   view: yes
   entities:
