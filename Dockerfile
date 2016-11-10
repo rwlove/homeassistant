@@ -19,7 +19,10 @@ COPY certs/server.cert /server.cert
 COPY certs/new/privkey.pem /privkey.pem
 COPY certs/new/fullchain.pem /fullchain.pem
 
-RUN pip3 install homeassistant==0.30.2
+RUN easy_install --upgrade pytz
+RUN pip install --upgrade pip
+RUN pip3 install homeassistant
+#RUM install --upgrade homeassistant
 
 ADD config_files.tar.gz /config
 

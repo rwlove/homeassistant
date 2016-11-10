@@ -7,7 +7,7 @@ timed_nightlight:
         entity_id: script.timer_off
     - service: scene.turn_on
       data:
-        entity_id: scene.nightlight_on
+        entity_id: scene.livingroom__kitchen_nightlight_on
     - service: script.turn_on
       data:
         entity_id: script.timer_off
@@ -19,4 +19,4 @@ timer_off:
         minutes: 10
     - service: scene.turn_on
       data:
-        entity_id: scene.nightlight_off
+        entity_id: scene.livingroom__kitchen_nightlight_off
