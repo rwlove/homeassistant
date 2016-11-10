@@ -11,17 +11,9 @@ default_view:
 sensors:
   view: yes
   entities:
-    - switch.ge_12727_inwall_smart_switch_toggle_switch_2
-    - sensor.aeotec_zw100_multisensor_6_burglar_3
-    - sensor.aeotec_zw100_multisensor_6_luminance_3
-    - sensor.aeotec_zw100_multisensor_6_relative_humidity_3
-    - sensor.aeotec_zw100_multisensor_6_temperature_3
-    - sensor.aeotec_zw100_multisensor_6_ultraviolet_3
-    - sensor.aeotec_zw100_multisensor_6_burglar_4
-    - sensor.aeotec_zw100_multisensor_6_luminance_4
-    - sensor.aeotec_zw100_multisensor_6_relative_humidity_4
-    - sensor.aeotec_zw100_multisensor_6_temperature_4
-    - sensor.aeotec_zw100_multisensor_6_ultraviolet_4
+    - group.kitchen_sensor
+    - group.livingroom_sensor
+    - group.bathroom_sensor
 
 scenes:
   view: yes

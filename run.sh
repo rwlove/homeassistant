@@ -13,4 +13,4 @@ docker run \
        -v ${PWD}/logs/home-assistant.log:/config/home-assistant.log \
        -v /etc/localtime:/etc/localtime:ro \
        -v /dev/ttyACM0:/dev/ttyACM0 \
-       services/homeassistant
+       services/homeassistant:latest
