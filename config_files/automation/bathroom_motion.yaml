@@ -2,7 +2,7 @@
 #  hide_entity: true
   trigger:
     platform: state
-    entity_id: binary_sensor.__sensor_5
+    entity_id: binary_sensor.__sensor_5_0
     from: 'off'
     to: 'on'
   action:

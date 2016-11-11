@@ -25,8 +25,8 @@ sensors:
 scenes:
   view: yes
   entities:
-    - scene.nightlight_on
-    - scene.nightlight_off
+    - scene.livingroom__kitchen_nightlight_on
+    - scene.livingroom__kitchen_nightlight_off
 
 scripts:
   view: yes
