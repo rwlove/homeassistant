@@ -14,9 +14,9 @@
 #      - condition: time
 #        before: '07:00:00'
 #        after: '15:00:00'
-      - condition: numeric_state
-        entity_id: sensor.aeotec_zw100_multisensor_6_luminance_3_3
-        below: 4
+#      - condition: numeric_state
+#        entity_id: sensor.aeotec_zw100_multisensor_6_luminance_3_3
+#        below: 4
       - condition: state
         entity_id: group.livingroom_lights
         state: 'off'
