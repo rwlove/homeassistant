@@ -20,6 +20,6 @@
       - condition: state
         entity_id: group.livingroom_lights
         state: 'off'
-      - condition: state
-        entity_id: group.kitchen_lights
-        state: 'off'
+#      - condition: state
+#        entity_id: group.kitchen_lights
+#        state: 'off'
