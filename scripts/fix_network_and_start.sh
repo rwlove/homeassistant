@@ -11,4 +11,4 @@ ip route add default via 192.168.1.1
 
 sleep 10
 
-/usr/local/bin/hass --debug --verbose --config /config --daemon --log-rotate-days 7
+/usr/local/bin/hass --config /config --log-rotate-days 7
