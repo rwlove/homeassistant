@@ -33,7 +33,7 @@ switch:
 frontend:
 
 logger:
-  default: error
+  default: info
 
 http:
 # Uncomment this to add a password (recommended!)
