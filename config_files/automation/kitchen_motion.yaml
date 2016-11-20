@@ -5,13 +5,8 @@
     from: 'off'
     to: 'on'
   action:
-    service: homeassistant.turn_on
-    entity_id:
-      - light.kitchen_1
-      - light.kitchen_2
-    data:
-      brightness: 255
-      color_name: white
+    service: scene.turn_on
+    entity_id: scene.kitchen_bright_on
 
 - alias: "Kitchen Motion Detection Off"
   trigger:
