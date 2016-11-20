@@ -17,10 +17,10 @@ notify_kodi_frontends:
 
 notify_kodi_frontends_new:
   sequence:
-  - service: notify.righteye
-    data_template:
+  - service: notify.notify
+    data:
       title: "Home Assistant"
-      message: "This is a test, do not be alarmed!"
+      message: "this is still a test, delete me"
       data:
         icon: "info"
         displaytime: 10000
