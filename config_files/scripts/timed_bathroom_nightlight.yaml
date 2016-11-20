@@ -1,22 +1,42 @@
+bathroom_lights_on:
+  alias: "Turn On Bathroom Lights"
+  sequence:
+  - service: script.turn_on
+    data:
+      entity_id: script.notify_kodi_frontends
+      variables:
+        message: "Turning On Bathroom Lights!"
+  - service: homeassistant.turn_on
+    data:
+      entity_id: group.bathroom_lights
+
+bathroom_lights_off:
+  alias: "Turn Off Bathroom Lights"
+  sequence:
+  - service: script.turn_on
+    data:
+      entity_id: script.notify_kodi_frontends
+      variables:
+        message: "Turning Off Bathroom Lights!"
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.bathroom_lights
+
 timed_bathroom_nightlight:
   alias: "Motion Detected: Cancel Existing Off-Timer, Turn On Bathroom Lights and Start Off-Timer"
   sequence:
-    # Cancel old timer
     - service: script.turn_off
       data:
-        entity_id: script.bathroom_timer_off
-    - service: homeassistant.turn_on
-      data:
-        entity_id: group.bathroom_lights
+        entity_id: script.bathroom_off_timer
     - service: script.turn_on
       data:
-        entity_id: script.bathroom_timer_off
+        entity_id: script.bathroom_lights_on
 
-bathroom_timer_off:
+bathroom_off_timer:
   alias: "Wait 20 Minutes then Turn Off Bathroom Lights"
   sequence:
     - delay:
         minutes: 20
-    - service: homeassistant.turn_off
+    - service: script.turn_on
       data:
-        entity_id: group.bathroom_lights
+        entity_id: script.bathroom_light_off

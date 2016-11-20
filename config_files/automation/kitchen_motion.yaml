@@ -1,4 +1,4 @@
-- alias: "Kitchen Motion Detection Nightlight On"
+- alias: "Kitchen Motion Detection On"
   trigger:
     platform: state
     entity_id: binary_sensor.__sensor_5_0

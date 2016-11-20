@@ -1,4 +1,4 @@
-- alias: "Bathroom Motion Detection On"
+- alias: "Bathroom Motion On"
 #  hide_entity: true
   trigger:
     platform: state
@@ -8,3 +8,13 @@
   action:
     service: script.turn_on
     entity_id: script.timed_bathroom_nightlight
+
+- alias: "Bathroom Motion Detection Off"
+  trigger:
+    platform: state
+    entity_id: sensor.aeotec_zw100_multisensor_6_burglar_4_10
+    from: '8'
+    to: '0'
+  action:
+    service: script.turn_on
+    entity_id: script.bathroom_off_timer
