@@ -4,8 +4,13 @@
     platform: mqtt
     topic: voice/all/lights_on
   action:
-    service: light.turn_on
-    entity_id: group.all_lights
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Turning On All Lights!"
+    - service: light.turn_on
+      entity_id: group.all_lights
 
 - alias: "All Voice Change Off"
   hide_entity: true
@@ -13,6 +18,11 @@
     platform: mqtt
     topic: voice/all/lights_off
   action:
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Turning Off All Lights!"
     - service: light.turn_off
       entity_id: group.all_lights
     - service: switch.turn_off
@@ -26,13 +36,11 @@
     - platform: mqtt
       topic: voice/all/lights_scene
   action:
-    - service: notify.lefteye
+    - service: script.turn_on
       data:
-        title: "Home Assistant"
-        message: "Changing Color of All"
-        data:
-          icon: "info"
-          displaytime: 20000
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Changing Color of All Lights!"
     - service: light.turn_on
       data_template:
         profile: "{{ trigger.payload }}"

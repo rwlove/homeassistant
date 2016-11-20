@@ -24,13 +24,11 @@
     - platform: mqtt
       topic: voice/kitchen/lights_scene
   action:
-    - service: notify.righteye
+    - service: script.turn_on
       data:
-        title: "Home Assistant"
-        message: "Changing Color of Kitchen Lights"
-        data:
-          icon: "info"
-          displaytime: 20000
+        entity_id: script_notify_kodi_frontends
+        variables:
+          message: "Changing Color of Kitchen Lights"
     - service: light.turn_on
       data_template:
         profile: "{{ trigger.payload }}"
