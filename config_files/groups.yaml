@@ -108,6 +108,12 @@ roomba:
   - switch.roomba_dock
   - switch.roomba_find
 
+settings:
+  name: Settings
+  view: yes
+  entities:
+  - input_boolean.notifications_on
+
 bedroom:
   name: Bedroom
   entities:
