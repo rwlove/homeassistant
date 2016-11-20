@@ -13,10 +13,10 @@ timed_bathroom_nightlight:
         entity_id: script.bathroom_timer_off
 
 bathroom_timer_off:
-  alias: "Turn Bathroom Nightlight Off After 15 Minutes"
+  alias: "Turn Bathroom Nightlight Off After 20 Minutes"
   sequence:
     - delay:
-        minutes: 15
+        minutes: 20
     - service: homeassistant.turn_off
       data:
         entity_id: group.bathroom_lights
