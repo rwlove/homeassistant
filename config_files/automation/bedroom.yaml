@@ -64,3 +64,14 @@
 #  action:
 #    service: script.turn_on
 #    entity_id: script.light_off_notify_righteye
+
+
+- alias: Bedroom Lights - Adjust Brightness
+  trigger:
+    platform: state
+    entity_id: input_slider.bedroom_brightness
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: group.bedroom_lights
+        brightness: '{{ trigger.to_state.state | int }}'

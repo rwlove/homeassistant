@@ -22,6 +22,7 @@ customize: !include customize.yaml
 scene: !include scenes.yaml
 zwave: !include zwave.yaml
 input_boolean: !include input_boolean.yaml
+input_slider: !include input_slider.yaml
 
 switch:
   - platform: thinkingcleaner
