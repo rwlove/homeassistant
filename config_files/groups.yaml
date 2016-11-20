@@ -117,6 +117,7 @@ settings:
 bedroom:
   name: Bedroom
   entities:
+    - input_select.scene_bedroom
     - input_slider.bedroom_brightness
     - group.bedroom_lights
 

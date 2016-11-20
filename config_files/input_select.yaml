@@ -1,0 +1,21 @@
+scene_bedroom:
+  name: Scene
+  options:
+    - Select
+    - Concentrate
+    - Energize
+    - Reading
+    - Relax
+    - 'OFF'
+  initial: 'Select'
+
+scene_livingroom:
+  name: Scene
+  options:
+    - Select
+    - Concentrate
+    - Energize
+    - Reading
+    - Relax
+    - 'OFF'
+  initial: 'Select'
