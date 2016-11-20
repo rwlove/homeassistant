@@ -32,7 +32,7 @@ bathroom_scripts:
   name: Bathroom
   entities:
     - script.timed_bathroom_nightlight
-    - script.bathroom_timer_off
+    - script.bathroom_off_timer
 
 livingroom_scripts:
   name: Livingroom
