@@ -26,7 +26,7 @@
   action:
     - service: script.notify_kodi_frontends
       data:
-        message: 'Changing Color of Bedroom Lights'
+        message: 'Changing Color of Bedroom Lights to {{ trigger.payload }}'
     - service: light.turn_on
       data_template:
         profile: "{{ trigger.payload }}"

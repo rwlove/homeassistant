@@ -28,7 +28,7 @@
       data:
         entity_id: script_notify_kodi_frontends
         variables:
-          message: "Changing Color of Kitchen Lights"
+          message: "Changing Color of Kitchen Lights to {{ trigger.payload }}"
     - service: light.turn_on
       data_template:
         profile: "{{ trigger.payload }}"
