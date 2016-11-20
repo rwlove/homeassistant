@@ -24,7 +24,7 @@
     - platform: mqtt
       topic: voice/bedroom/lights_scene
   action:
-    - service: script.notify_kodi_frontends_new
+    - service: script.notify_kodi_frontends
       data:
         message: 'Changing Color of Bedroom Lights'
     - service: light.turn_on

@@ -1,0 +1,4 @@
+notifications_on:
+  name: Notifications
+  initial: off
+  icon: mdi:comment-alert

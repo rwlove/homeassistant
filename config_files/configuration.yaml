@@ -21,6 +21,7 @@ group: !include groups.yaml
 customize: !include customize.yaml
 scene: !include scenes.yaml
 zwave: !include zwave.yaml
+input_boolean: !include input_boolean.yaml
 
 switch:
   - platform: thinkingcleaner

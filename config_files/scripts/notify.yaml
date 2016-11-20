@@ -1,5 +1,15 @@
 notify_kodi_frontends:
   sequence:
+  - condition: state
+    entity_id: input_boolean.notifications_on
+    state: 'on'
+  - service: notify.notify
+    data_template:
+      title: "Home Assistant"
+      message: "{{ message }}"
+      data:
+        icon: "info"
+        displaytime: 10000    
   - service: notify.righteye
     data_template:
       title: "Home Assistant"
@@ -11,16 +21,6 @@ notify_kodi_frontends:
     data_template:
       title: "Home Assistant"
       message: "{{ message }}"
-      data:
-        icon: "info"
-        displaytime: 10000
-
-notify_kodi_frontends_new:
-  sequence:
-  - service: notify.notify
-    data:
-      title: "Home Assistant"
-      message: "this is still a test, delete me"
       data:
         icon: "info"
         displaytime: 10000
