@@ -18,8 +18,6 @@ RUN pip install --upgrade pip
 RUN pip3 install homeassistant
 #RUM install --upgrade homeassistant
 
-ADD config_files.tar.gz /config
-
 EXPOSE 8123
 
 #####
@@ -31,3 +29,5 @@ rm -rf /var/lib/apt/lists/* && \
 rm -rf /tmp/*
 
 CMD ["/usr/local/bin/runHomeassistant.sh"]
+
+ADD config_files.tar.gz /config
