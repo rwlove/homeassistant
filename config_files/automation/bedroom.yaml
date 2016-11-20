@@ -24,13 +24,11 @@
     - platform: mqtt
       topic: voice/bedroom/lights_scene
   action:
-    - service: notify.righteye
+    - service: script.turn_on
       data:
-        title: "Home Assistant"
-        message: "Changing Color of Bedroom Lights"
-        data:
-          icon: "info"
-          displaytime: 20000
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Changing Color of Bedroom Lights!"
     - service: light.turn_on
       data_template:
         profile: "{{ trigger.payload }}"
