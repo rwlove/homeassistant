@@ -24,26 +24,12 @@
     - platform: mqtt
       topic: voice/strip/lights_scene
   action:
-    - service: notify.lefteye
+    - service: script.turn_on
       data:
-        title: "Home Assistant"
-        message: "Changing Color of Strip"
-        data:
-          icon: "info"
-          displaytime: 20000
+        entity_id: script_notify_kodi_frontends
+        variables:
+          message: "Changing Color of Strip"
     - service: light.turn_on
       data_template:
         profile: "{{ trigger.payload }}"
         entity_id: light.lightstrip
-
-- alias: "Strip Voice Change Adjust"
-  hide_entity: true
-  trigger:
-    platform: mqtt
-    topic: voice/strip/lights_adjust
-  action:
-  #TODO, also must copy scene, color and adjust for strip
-    service: script.turn_on
-    entity_id: script.light_color_notify_lefteye
-    data_template:
-        color_profile: '{{ trigger.payload }}'

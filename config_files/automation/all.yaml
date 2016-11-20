@@ -45,15 +45,3 @@
       data_template:
         profile: "{{ trigger.payload }}"
         entity_id: group.all_lights
-
-- alias: "All Voice Change Adjust"
-  hide_entity: true
-  trigger:
-    platform: mqtt
-    topic: voice/all/lights_adjust
-  action:
-  #TODO, also must copy scene, color and adjust for all
-    service: script.turn_on
-    entity_id: script.light_color_notify_lefteye
-    data_template:
-        color_profile: '{{ trigger.payload }}'

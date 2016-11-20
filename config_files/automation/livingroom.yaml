@@ -5,7 +5,7 @@
     topic: voice/livingroom/lights_on
   action:
     service: script.turn_on
-    entity_id: script.light_on_notify_lefteye
+    entity_id: script.livingroom_lights_on
 
 - alias: "Livingroom Lights Voice Change Off"
   hide_entity: true
@@ -14,16 +14,7 @@
     topic: voice/livingroom/lights_off
   action:
     service: script.turn_on
-    entity_id: script.light_off_notify_lefteye
-
-- alias: "Livingroom Lights Voice Change Scene"
-  hide_entity: true
-  trigger:
-    platform: mqtt
-    topic: voice/livingroom/lights_scene
-  action:
-    service: script.turn_on
-    entity_id: script.light_color_notify_lefteye
+    entity_id: script.livingroom_lights_off
 
 - alias: "Livingroom Lights Voice Change Color"
   hide_entity: true
@@ -42,18 +33,6 @@
       data_template:
         profile: "{{ trigger.payload }}"
         entity_id: group.livingroom_lights
-
-#- alias: "Livingroom Lights Voice Change Adjust"
-#  hide_entity: true
-#  trigger:
-#    platform: mqtt
-#    topic: voice/livingroom/lights_adjust
-#  action:
-#  #TODO, also must copy scene, color and adjust for bedroom
-#    service: script.turn_on
-#    entity_id: script.light_color_notify_lefteye
-#    data_template:
-#        color_profile: '{{ trigger.payload }}'
 
 - alias: "Livingroom Lights Voice Dim"
   hide_entity: true

@@ -5,7 +5,7 @@
     topic: voice/bedroom/lights_on
   action:
     service: script.turn_on
-    entity_id: script.light_on_notify_righteye
+    entity_id: script.bedroom_lights_on
 
 - alias: "Bedroom Lights Voice Change Off"
   hide_entity: true
@@ -14,7 +14,7 @@
     topic: voice/bedroom/lights_off
   action:
     service: script.turn_on
-    entity_id: script.light_off_notify_righteye
+    entity_id: script.bedroom_lights_off
 
 - alias: "Bedroom Lights Voice Change Color"
   hide_entity: true
@@ -58,11 +58,11 @@
       brightness: "{{ states.light.right_front.brightness | float + 100 }}"
       entity_id: group.bedroom_lights
 
-- alias: "Bedroom Lights Invert"
-  hide_entity: true
-  trigger:
-    platform: mqtt
-    topic: remote/bedroom/lights_invert
-  action:
-    service: script.turn_on
-    entity_id: script.light_off_notify_righteye
+#- alias: "Bedroom Lights Invert"
+#  hide_entity: true
+#  trigger:
+#    platform: mqtt
+#    topic: remote/bedroom/lights_invert
+#  action:
+#    service: script.turn_on
+#    entity_id: script.light_off_notify_righteye

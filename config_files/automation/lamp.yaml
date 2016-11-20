@@ -24,26 +24,12 @@
     - platform: mqtt
       topic: voice/lamp/lights_scene
   action:
-    - service: notify.lefteye
+    - service: script.turn_on
       data:
-        title: "Home Assistant"
-        message: "Changing Color of Lamp"
-        data:
-          icon: "info"
-          displaytime: 20000
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Changing Color of Lamp"
     - service: light.turn_on
       data_template:
         profile: "{{ trigger.payload }}"
         entity_id: light.lamp
-
-- alias: "Lamp Voice Change Adjust"
-  hide_entity: true
-  trigger:
-    platform: mqtt
-    topic: voice/lamp/lights_adjust
-  action:
-  #TODO, also must copy scene, color and adjust for lamp
-    service: script.turn_on
-    entity_id: script.light_color_notify_lefteye
-    data_template:
-        color_profile: '{{ trigger.payload }}'
