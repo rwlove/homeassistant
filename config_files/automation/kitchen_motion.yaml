@@ -1,14 +1,9 @@
 - alias: "Kitchen Motion Detection Nightlight On"
-#  hide_entity: true
   trigger:
     platform: state
     entity_id: binary_sensor.__sensor_5_0
     from: 'off'
     to: 'on'
-#  condition:
-#    condition: time
-#    before: '07:00:00'
-#    after: '17:00:00'
   action:
     service: homeassistant.turn_on
     entity_id:
@@ -17,30 +12,8 @@
     data:
       brightness: 255
       color_name: white
-#      rgb_color: [255, 0, 0]
-#      {% if now.hour > 20 %}25{% else %}75{% endif %}
-#- alias: "Kitchen Motion Detection Brightlight On"
-##  hide_entity: true
-#  trigger:
-#    platform: state
-#    entity_id: sensor.aeotec_zw100_multisensor_6_burglar_4
-#    from: '0'
-#    to: '8'
-#  condition:
-#    condition: time
-#    before: '16:99:99'
-#    after: '07:00:01'
-#  action:
-#    service: homeassistant.turn_on
-#    entity_id:
-#      - light.kitchen_1
-#      - light.kitchen_2
-#    data:
-#      brightness: 250
-#      rgb_color: [255, 0, 0]
 
 - alias: "Kitchen Motion Detection Off"
- # hide_entity: true
   trigger:
     platform: state
     entity_id: binary_sensor.__sensor_5_0
