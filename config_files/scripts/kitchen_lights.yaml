@@ -1,12 +1,10 @@
 kitchen_light_on:
   sequence:
-  - service: notify.righteye
+  - service: script.turn_on
     data:
-      title: "Home Assistant"
-      message: "Turning on Kitchen Lights!"
-      data:
-        icon: "info"
-        displaytime: 20000
+      entity_id: script.notify_kodi_frontends
+      variables:
+        message: "Turning on Kitchen Lights!"
   - service: light.turn_on
     data:
       color_name: white
