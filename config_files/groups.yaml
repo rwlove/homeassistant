@@ -28,13 +28,27 @@ scenes:
     - scene.livingroom__kitchen_nightlight_on
     - scene.livingroom__kitchen_nightlight_off
 
-scripts:
-  view: yes
+bathroom_scripts:
+  entities:
+    - script.timed_bathroom_nightlight
+    - script.bathroom_timer_off
+
+livingroom_scripts:
   entities:
     - script.timed_nightlight
     - script.timer_off
-    - script.timed_bathroom_nightlight
-    - script.bathroom_timer_off
+
+kitchen_scripts:
+  entities:
+    - script.kitchen_motion_on
+    - script.kitchen_off_timer
+
+scripts:
+  view: yes
+  entities:
+    - group.livingroom_scripts
+    - group.kitchen_scripts
+    - group.bathroom_scripts
 
 automation:
   view: yes
