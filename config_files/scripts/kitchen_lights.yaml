@@ -21,3 +21,24 @@ kitchen_motion_on:
     - service: script.turn_on
       data:
         entity_id: script.kitchen_light_on
+
+kitchen_light_off:
+  sequence:
+  - service: notify.righteye
+    data:
+      title: "Home Assistant"
+      message: "Turning off Kitchen Lights!"
+      data:
+        icon: "info"
+        displaytime: 20000
+  - service: light.turn_off
+    data:
+      entity_id: group.kitchen_lights
+
+kitchen_off_timer:
+  sequence:
+    - delay:
+        minutes: 10
+    - service: script.turn_on
+      data:
+        entity_id: script.kitchen_light_off
