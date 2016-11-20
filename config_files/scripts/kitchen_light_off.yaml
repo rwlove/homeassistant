@@ -10,3 +10,11 @@ kitchen_light_off:
   - service: light.turn_off
     data:
       entity_id: group.kitchen_lights
+
+kitchen_off_timer:
+  sequence:
+    - delay:
+        minutes: 10
+    - service: script.turn_on
+      data:
+        entity_id: script.kitchen_light_off

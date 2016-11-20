@@ -12,3 +12,12 @@ kitchen_light_on:
       color_name: white
       brightness: 255
       entity_id: group.kitchen_lights
+
+kitchen_motion_on:
+  sequence:
+    - service: script.turn_off
+      data:
+        entity_id: script.kitchen_off_timer
+    - service: script.turn_on
+      data:
+        entity_id: script.kitchen_light_on

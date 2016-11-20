@@ -5,8 +5,8 @@
     from: 'off'
     to: 'on'
   action:
-    service: scene.turn_on
-    entity_id: scene.kitchen_bright_on
+    service: script.turn_on
+    entity_id: script.kitchen_motion_on
 
 - alias: "Kitchen Motion Detection Off"
   trigger:
@@ -15,5 +15,5 @@
     from: 'on'
     to: 'off'
   action:
-    service: light.turn_off
-    entity_id: group.kitchen_lights
+    service: script.turn_on
+    entity_id: script.kitchen_off_timer
