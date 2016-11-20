@@ -29,16 +29,19 @@ scenes:
     - scene.livingroom__kitchen_nightlight_off
 
 bathroom_scripts:
+  name: Bathroom
   entities:
     - script.timed_bathroom_nightlight
     - script.bathroom_timer_off
 
 livingroom_scripts:
+  name: Livingroom
   entities:
     - script.timed_nightlight
     - script.timer_off
 
 kitchen_scripts:
+  name: Kitchen
   entities:
     - script.kitchen_motion_on
     - script.kitchen_off_timer
@@ -50,14 +53,14 @@ scripts:
     - group.kitchen_scripts
     - group.bathroom_scripts
 
-automation:
-  view: yes
-  entities:
-    - automation.motion_detection_nightlight
-    - automation.kitchen_motion_detection_on
-    - automation.kitchen_motion_detection_off
-    - automation.bathroom_motion_detection_on
-    - automation.bathroom_motion_detection_off
+#automation:
+#  view: yes
+#  entities:
+#    - automation.motion_detection_nightlight
+#    - automation.kitchen_motion_detection_on
+#    - automation.kitchen_motion_detection_off
+#    - automation.bathroom_motion_detection_on
+#    - automation.bathroom_motion_detection_off
 
 weather_inside:
   name: "Weather Inside"

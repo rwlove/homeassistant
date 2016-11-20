@@ -1,5 +1,5 @@
 timed_nightlight:
-  alias: "Turn Livingroom / Kitchen Nightlight On and Set Timer"
+  alias: "Motion Detected: Cancel Existing Off-Timer, Turn On Livingroom and Kitchen Lights and Start Off-Timer"
   sequence:
     # Cancel old timer
     - service: script.turn_off
@@ -13,7 +13,7 @@ timed_nightlight:
         entity_id: script.timer_off
 
 timer_off:
-  alias: "Turn Livingroom / Kitchen Nightlight Off After 10 Minutes"
+  alias: "Wait 20 Minutes then Turn Off Kitchen Lights"
   sequence:
     - delay:
         minutes: 10
