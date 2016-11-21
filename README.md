@@ -14,3 +14,4 @@ TODO
 - fix brightness slider for all rooms
 - don't turn off bathroom lights if humidity is detected
 - can I determine the state of my Samsung TVs even if they're not smart?
+- PS4 wakeup
