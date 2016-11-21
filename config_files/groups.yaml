@@ -14,7 +14,6 @@ climate:
     - group.weather_inside
     - group.weather_outside
 
-
 sensors:
   view: yes
   entities:
@@ -37,7 +36,8 @@ bathroom_scripts:
 livingroom_scripts:
   name: Livingroom
   entities:
-    - script.timed_nightlight
+    - script.timed_nightlight_with_kitchen
+    - script.timed_nitghtlight_without_kitchen
     - script.livingroom_timer_off
 
 kitchen_scripts:
