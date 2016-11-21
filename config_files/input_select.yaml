@@ -2,10 +2,24 @@ scene_bedroom:
   name: Scene
   options:
     - Select
+    - Blue
+    - Red
+    - Pink
+    - Orange
+    - White
+    - Purple
+    - Normal
+    - Movie
+    - Green
+    - Teal
+    - Aqua
     - Concentrate
     - Energize
     - Reading
     - Relax
+    - Romantic
+    - Warm
+    - Stretch
     - 'OFF'
   initial: 'Select'
 
@@ -13,6 +27,23 @@ scene_livingroom:
   name: Scene
   options:
     - Select
+    - Blue
+    - Red
+    - Pink
+    - Orange
+    - White
+    - Purple
+    - Normal
+    - Movie
+    - Green
+    - Teal
+    - Aqua
+    - Concentrate
+    - Energize
+    - Reading
+    - Relax
+    - Romantic
+    - Warm
     - Concentrate
     - Energize
     - Reading

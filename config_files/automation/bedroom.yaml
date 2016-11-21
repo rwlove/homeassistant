@@ -31,6 +31,10 @@
       data_template:
         profile: "{{ trigger.payload }}"
         entity_id: group.bedroom_lights
+    - service: input_select.select_value
+      data_template:
+        entity_id: input_select.scene_bedroom
+        value: '{{ trigger.payload }}'
 
 - alias: "Bedroom Lights Voice Dim"
   hide_entity: true
