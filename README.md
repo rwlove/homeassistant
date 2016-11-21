@@ -12,3 +12,5 @@ TODO
 - fireplace zwave
 - fix scene selector for all rooms
 - fix brightness slider for all rooms
+- don't turn off bathroom lights if humidity is detected
+- can I determine the state of my Samsung TVs even if they're not smart?
