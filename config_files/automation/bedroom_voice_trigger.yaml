@@ -13,8 +13,12 @@
     platform: mqtt
     topic: voice/bedroom/lights_off
   action:
-    service: script.turn_on
-    entity_id: script.bedroom_lights_off
+    - service: script.turn_on
+      entity_id: script.bedroom_lights_off
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.scene_bedroom
+        option: 'OFF'
 
 - alias: "Bedroom Lights Voice Change Color"
   hide_entity: true
@@ -31,7 +35,7 @@
       data_template:
         profile: "{{ trigger.payload }}"
         entity_id: group.bedroom_lights
-    - service: input_select.select_value
+    - service: input_select.select_option
       data_template:
         entity_id: input_select.scene_bedroom
         value: '{{ trigger.payload }}'
@@ -87,7 +91,7 @@
 #    to: CUSTOM
   action:
     - service: script.notify_kodi_frontends
-      data:
+      data_template:
         message: 'Changing Bedroom Lights to Scene: {{ input_select.scene_bedroom }} and Brightness: {{ states.input_slider.bedroom_brightness.state }}'
     - service: light.turn_on
       data_template:
