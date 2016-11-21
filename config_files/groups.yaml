@@ -31,12 +31,13 @@ livingroom_scripts:
   name: Livingroom
   entities:
     - script.timed_nightlight_with_kitchen
-    - script.timed_nitghtlight_without_kitchen
+    - script.timed_nightlight_without_kitchen
     - script.livingroom_timer_off
 
 kitchen_scripts:
   name: Kitchen
   entities:
+    - script.timed_nightlight_only_kitchen
     - script.kitchen_motion_on
     - script.kitchen_off_timer
 

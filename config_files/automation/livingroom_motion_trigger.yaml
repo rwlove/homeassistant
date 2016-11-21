@@ -1,4 +1,4 @@
-- alias: "Motion Detection Nightlight (Kitchen Light On)"
+- alias: "Motion Detection Nightlight (Kitchen Light Off)"
 #  hide_entity: true
   trigger:
     platform: state
@@ -18,7 +18,7 @@
     service: script.turn_on
     entity_id: script.timed_nightlight_without_kitchen
 
-- alias: "Motion Detection Nightlight (Kitchen Light Off)"
+- alias: "Motion Detection Nightlight (Kitchen Light On)"
 #  hide_entity: true
   trigger:
     platform: state
@@ -33,7 +33,27 @@
         state: 'off'
       - condition: state
         entity_id: group.kitchen_lights
-        state: 'off'    
+        state: 'off'
   action:
     service: script.turn_on
     entity_id: script.timed_nightlight_with_kitchen
+
+- alias: "Motion Detection Nightlight (Kitchen Light Only)"
+#  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.aeotec_zw100_multisensor_6_burglar_3_10
+    from: '0'
+    to: '8'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: group.livingroom_lights
+        state: 'on'
+      - condition: state
+        entity_id: group.kitchen_lights
+        state: 'off'    
+  action:
+    service: script.turn_on
+    entity_id: script.timed_nightlight_only_kitchen

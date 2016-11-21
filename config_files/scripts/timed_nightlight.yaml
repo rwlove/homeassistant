@@ -18,6 +18,20 @@ timed_nightlight_with_kitchen:
       data:
         entity_id: script.livingroom_timer_off
 
+timed_nightlight_only_kitchen:
+  alias: "Motion Detected: Cancel Existing Off-Timer, Turn On Kitchen Lights and Start Off-Timer"
+  sequence:
+    # Cancel old timers
+    - service: script.turn_off
+      data:
+        entity_id: script.kitchen_timer_off
+    - service: scene.turn_on
+      data:
+        entity_id: scene.kitchen_nightlight_on
+    - service: script.turn_on
+      data:
+        entity_id: script.kitchen_off_timer
+
 timed_nightlight_without_kitchen:
   alias: "Motion Detected: Cancel Existing Off-Timer, Turn On Livingroom and Start Off-Timer"
   sequence:
