@@ -7,3 +7,8 @@ This is my personal Home Assisstant build and configuration. The Dockerfile has 
 TODO
 -Certs don't work, so cannot access webui outside of home network
 -Light dimming on Phillips Hue doesn't work
+-Don't allow livingroom nightlight (pink) to override the kitchen motion (white)
+- mpd on lefteye and righteye (in containers)
+- fireplace zwave
+- fix scene selector for all rooms
+- fix brightness slider for all rooms
