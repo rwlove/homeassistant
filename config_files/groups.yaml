@@ -38,7 +38,7 @@ livingroom_scripts:
   name: Livingroom
   entities:
     - script.timed_nightlight
-    - script.timer_off
+    - script.livingroom_timer_off
 
 kitchen_scripts:
   name: Kitchen
