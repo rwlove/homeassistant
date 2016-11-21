@@ -5,6 +5,20 @@
       profile: white
       brightness: 255
 
+- name: "Livingroom Nightlight On"
+  entities:
+    group.livingroom_lights:
+      state: on
+      profile: pink
+      brightness: 150
+
+- name: "Kitchen Nightlight On"
+  entities:
+    group.kitchen_lights:
+      state: on
+      profile: pink
+      brightness: 100
+
 - name: "Livingroom / Kitchen Nightlight On"
   entities:
     group.livingroom_lights:
