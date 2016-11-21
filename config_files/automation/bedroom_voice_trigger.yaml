@@ -92,9 +92,9 @@
   action:
     - service: script.notify_kodi_frontends
       data_template:
-        message: 'Changing Bedroom Lights to Scene: {{ input_select.scene_bedroom }} and Brightness: {{ states.input_slider.bedroom_brightness.state }}'
+        message: 'Changing Bedroom Lights to Scene: {{ states.input_select.scene_bedroom.state }} and Brightness: {{ states.input_slider.bedroom_brightness.state }}'
     - service: light.turn_on
       data_template:
         entity_id: group.bedroom_lights
         brightness: '{{ states.input_slider.bedroom_brightness.state | int }}'
-        profile: "{{ input_select.scene_bedroom }}"
+        profile: "{{ states.input_select.scene_bedroom.state }}"
