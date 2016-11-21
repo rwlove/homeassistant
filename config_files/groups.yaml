@@ -21,12 +21,6 @@ sensors:
     - group.livingroom_sensor
     - group.bathroom_sensor
 
-scenes:
-  view: yes
-  entities:
-    - scene.livingroom__kitchen_nightlight_on
-    - scene.livingroom__kitchen_nightlight_off
-
 bathroom_scripts:
   name: Bathroom
   entities:
