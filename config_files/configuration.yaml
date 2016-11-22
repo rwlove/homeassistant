@@ -21,6 +21,7 @@ script: !include_dir_merge_named scripts/
 group: !include groups.yaml
 scene: !include scenes.yaml
 zwave: !include zwave.yaml
+logger: !include logger.yaml
 input_boolean: !include input_boolean.yaml
 input_slider: !include input_slider.yaml
 input_select: !include input_select.yaml
@@ -33,9 +34,6 @@ switch:
 
 # Enables the frontend
 frontend:
-
-logger:
-  default: info
 
 http:
 # Uncomment this to add a password (recommended!)
