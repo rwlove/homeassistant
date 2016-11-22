@@ -15,3 +15,4 @@ TODO
 - don't turn off bathroom lights if humidity is detected
 - can I determine the state of my Samsung TVs even if they're not smart?
 - PS4 wakeup
+- power state of motion sensors and other batery operated devices in web ui
