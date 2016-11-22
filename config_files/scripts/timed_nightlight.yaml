@@ -24,7 +24,7 @@ timed_nightlight_only_kitchen:
     # Cancel old timers
     - service: script.turn_off
       data:
-        entity_id: script.kitchen_timer_off
+        entity_id: script.kitchen_off_timer
     - service: scene.turn_on
       data:
         entity_id: scene.kitchen_nightlight_on
