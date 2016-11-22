@@ -1,0 +1,9 @@
+platform: template
+  sensors:
+    livingroom_motion:
+      value_template: "{%if states.sensor.aeotec_zw100_multisensor_6_burglar_3_10.state == '8' %}Detected{% elif states.sensor.aeotec_zw100_multisensor_6_burglar_3_10.state == '3' %}Tampered With{% elif states.sensor.aeotec_zw100_multisensor_6_burglar_3_10.state == '0' %}On Standby{% endif %}"
+      friendly_name: "Motion"
+
+    bathroom_motion:
+      value_template: "{%if states.sensor.aeotec_zw100_multisensor_6_burglar_4_10.state == '8' %}Detected{% elif states.sensor.aeotec_zw100_multisensor_6_burglar_4_10.state == '3' %}Tampered With{% elif states.sensor.aeotec_zw100_multisensor_6_burglar_4_10.state == '0' %}On Standby{% endif %}"
+      friendly_name: "Motion"

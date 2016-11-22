@@ -120,14 +120,14 @@ livingroom:
   name: Livingroom
   entities:
     - group.livingroom_lights
-    - sensor.aeotec_zw100_multisensor_6_burglar_3_10
+    - sensor.livingroom_motion
     - sensor.aeotec_zw100_multisensor_6_luminance_3_3
     - sensor.roomba_state
 
 livingroom_sensor:
   name: Livingroom Sensor
   entities:
-    - sensor.aeotec_zw100_multisensor_6_burglar_3_10
+    - sensor.livingroom_motion
     - sensor.aeotec_zw100_multisensor_6_luminance_3_3
     - sensor.aeotec_zw100_multisensor_6_relative_humidity_3_5
     - sensor.aeotec_zw100_multisensor_6_temperature_3_1
@@ -141,7 +141,7 @@ kitchen_sensor:
 bathroom_sensor:
   name: Bathroom Sensor
   entities:
-    - sensor.aeotec_zw100_multisensor_6_burglar_4_10
+    - sensor.bathroom_motion
     - sensor.aeotec_zw100_multisensor_6_luminance_4_3
     - sensor.aeotec_zw100_multisensor_6_relative_humidity_4_5
     - sensor.aeotec_zw100_multisensor_6_temperature_4_1
@@ -152,7 +152,7 @@ bathroom:
 #  view: yes
   entities:
     - group.bathroom_lights
-    - sensor.aeotec_zw100_multisensor_6_burglar_4_10
+    - sensor.bathroom_motion
     - sensor.aeotec_zw100_multisensor_6_relative_humidity_4_5
 
 kitchen:
