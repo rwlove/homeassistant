@@ -64,7 +64,22 @@ binary_sensor.aeotec_zw100_multisensor_6_sensor_3_0:
 binary_sensor.aeotec_zw100_multisensor_6_sensor_4_0:
   hidden: true
 
+sensor.aeotec_zw100_multisensor_6_sourcenodeid_3_2:
+  hidden: true
+  
+sensor.aeotec_zw100_multisensor_6_sourcenodeid_4_2:
+  hidden: true
+
+sensor.aeotec_zw100_multisensor_6_alarm_level_3_0:
+  hidden: true
+
+sensor.aeotec_zw100_multisensor_6_alarm_level_3_1:
+  hidden: true
+
 sensor.__alarm_type_4_0:
+  hidden: true
+
+sensor.__alarm_type_4_1:
   hidden: true
 
 sensor.roomba_state:
