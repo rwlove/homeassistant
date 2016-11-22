@@ -38,9 +38,7 @@
     - service: input_select.select_option
       data_template:
         entity_id: input_select.scene_bedroom
-        option: >
-          {% set cap = capitalize(trigger.payload) %}
-          '{{ cap }}'
+        option: {{ trigger.payload | capfirst }}
 
 - alias: "Bedroom Lights Voice Dim"
   hide_entity: true
