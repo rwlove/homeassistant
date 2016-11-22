@@ -20,7 +20,7 @@ bathroom_lights_off:
         message: "Turning Off Bathroom Lights!"
   - service: light.turn_off
     data:
-      entity_id: group.bathroom_lights
+      entity_id: light.__level_6_0
 
 timed_bathroom_nightlight:
   alias: "Bathroom Nightlight"
@@ -39,4 +39,4 @@ bathroom_off_timer:
         minutes: 20
     - service: script.turn_on
       data:
-        entity_id: script.bathroom_light_off
+        entity_id: script.bathroom_lights_off
