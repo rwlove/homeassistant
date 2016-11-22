@@ -50,6 +50,15 @@ binary_sensor.__sensor_5_0:
   friendly_name: "Motion Detected"
   polling_intensity: 1
 
+binary_sensor.aeotec_zw100_multisensor_6_sensor_3_0:
+  hidden: true
+
+binary_sensor.aeotec_zw100_multisensor_6_sensor_4_0:
+  hidden: true
+
+sensor.__alarm_type_4_0:
+  hidden: true
+
 sensor.roomba_state:
   friendly_name: "State"
 
