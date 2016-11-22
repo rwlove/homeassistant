@@ -1,0 +1,12 @@
+- platform: template
+  sensors:
+    kitchen_motion:
+      friendly_name: "Motion"
+      value_template: >-
+        {% if is_state("binary_sensor.__sensor_5_0", "on") %}
+          Detected
+        {% elif is_state("binary_sensor.__sensor_5_0", "off") %}
+          On Standby
+        {% else %}
+          Unknown
+        {% endif %}

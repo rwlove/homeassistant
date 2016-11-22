@@ -136,7 +136,7 @@ livingroom_sensor:
 kitchen_sensor:
   name: Kitchen Sensor
   entities:
-    - binary_sensor.__sensor_5_0
+    - sensor.kitchen_motion
 
 bathroom_sensor:
   name: Bathroom Sensor
@@ -160,7 +160,7 @@ kitchen:
   entities:
     - input_slider.bar_brightness
     - group.kitchen_lights
-    - binary_sensor.__sensor_5_0
+    - sensor.kitchen_motion
 
 locations:
   name: Locations
