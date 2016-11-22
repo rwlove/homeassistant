@@ -12,7 +12,7 @@ homeassistant:
   time_zone: America/Los_Angeles
   customize: !include customize.yaml
 
-sensor: !include_dir_list sensors/
+sensor: !include_dir_merge_named sensors/
 light: !include devices/lights.yaml
 media_player: !include_dir_list devices/kodi
 automation: !include_dir_merge_list automation/
