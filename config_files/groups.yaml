@@ -186,6 +186,7 @@ kitchen_lights:
   entities:
     - light.kitchen_1
     - light.kitchen_2
+    - light.__level_7_0
 
 bathroom_lights:
   name: "Bathroom Lights"
