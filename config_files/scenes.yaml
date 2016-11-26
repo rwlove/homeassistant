@@ -14,7 +14,11 @@
 
 - name: "Kitchen Nightlight On"
   entities:
-    group.kitchen_lights:
+    light.kitchen_1:
+      state: on
+      profile: pink
+      brightness: 100
+    light.kitchen_2:
       state: on
       profile: pink
       brightness: 100
@@ -25,7 +29,11 @@
       state: on
       profile: pink
       brightness: 150
-    group.kitchen_lights:
+    light.kitchen_1:
+      state: on
+      profile: pink
+      brightness: 100
+    light.kitchen_2:
       state: on
       profile: pink
       brightness: 100
