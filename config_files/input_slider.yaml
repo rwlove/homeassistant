@@ -4,3 +4,10 @@ bedroom_brightness:
   min: 0
   max: 255
   step: 1
+
+bar_brightness:
+  name: Brightness
+  initial: 255
+  min: 0
+  max: 255
+  step: 1

@@ -158,6 +158,7 @@ bathroom:
 kitchen:
   name: Kitchen
   entities:
+    - input_slider.bar_brightness
     - group.kitchen_lights
     - binary_sensor.__sensor_5_0
 
