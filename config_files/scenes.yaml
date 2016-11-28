@@ -11,7 +11,7 @@
       state: on
       profile: pink
       brightness: 150
-    light.strip:
+    light.lightstrip:
       state: on
       profile: pink
       brightness: 150
