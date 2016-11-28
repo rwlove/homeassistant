@@ -33,7 +33,11 @@
 
 - name: "Livingroom / Kitchen Nightlight On"
   entities:
-    group.livingroom_lights:
+    light.lamp:
+      state: on
+      profile: pink
+      brightness: 150
+    light.lightstrip:
       state: on
       profile: pink
       brightness: 150
