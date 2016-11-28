@@ -46,6 +46,12 @@
       profile: pink
       brightness: 100
 
+- name: "Kitchen Lights Off"
+  entities:
+    group.kitchen_lights:
+      state: off
+      transition: 2
+
 - name: "Livingroom / Kitchen Nightlight Off"
   entities:
     group.livingroom_lights:

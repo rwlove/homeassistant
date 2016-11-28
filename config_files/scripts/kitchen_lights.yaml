@@ -6,11 +6,9 @@ kitchen_light_on:
       entity_id: script.notify_kodi_frontends
       variables:
         message: "Turning On Kitchen Lights!"
-  - service: light.turn_on
+  - service: scene.turn_on
     data:
-      color_name: white
-      brightness: 255
-      entity_id: group.kitchen_lights
+      entity_id: scene.kitchen_bright_on
 
 kitchen_motion_on:
   alias: "Motion Detected: Cancel Existing Off-Timer and Turn On Kitchen Lights"
@@ -30,9 +28,9 @@ kitchen_light_off:
       entity_id: script_notify_kodi_frontends
       variables:
         message: "Turning off Kitchen Lights!"
-  - service: light.turn_off
+  - service: scene.turn_on
     data:
-      entity_id: group.kitchen_lights
+      entity_id: scene.kitchen_lights_off
 
 kitchen_off_timer:
   alias: "Wait 10 Minutes then Turn Off Kitchen Lights"
