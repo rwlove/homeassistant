@@ -7,7 +7,11 @@
 
 - name: "Livingroom Nightlight On"
   entities:
-    group.livingroom_lights:
+    light.lamp:
+      state: on
+      profile: pink
+      brightness: 150
+    light.strip:
       state: on
       profile: pink
       brightness: 150
