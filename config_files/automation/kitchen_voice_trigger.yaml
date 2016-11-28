@@ -57,3 +57,13 @@
     data_template:
       brightness: "{{ states.light.kitchen_1.brightness | float + 100 }}"
       entity_id: group.kitchen_lights
+
+- alias: Kitchen Lights - Adjust Brightness
+  trigger:
+    platform: state
+    entity_id: input_slider.bar_brightness
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: group.kitchen_lights
+        brightness: '{{ trigger.to_state.state | int }}'
