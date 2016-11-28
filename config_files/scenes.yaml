@@ -22,6 +22,10 @@
       state: on
       profile: pink
       brightness: 100
+    light.hallway:
+      state: on
+      profile: pink
+      brightness: 100
 
 - name: "Livingroom / Kitchen Nightlight On"
   entities:
@@ -34,6 +38,10 @@
       profile: pink
       brightness: 100
     light.kitchen_2:
+      state: on
+      profile: pink
+      brightness: 100
+    light.hallway:
       state: on
       profile: pink
       brightness: 100
