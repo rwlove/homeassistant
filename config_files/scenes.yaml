@@ -56,15 +56,31 @@
 
 - name: "Kitchen Lights Off"
   entities:
-    group.kitchen_lights:
+    light.kitchen_1:
       state: off
       transition: 2
+    light.kitchen_2:
+      state: off
+      transition: 2
+    light.hallway:
+      state: off
+      transition: 2
+    light.__level_7_0
+      state: off
 
 - name: "Livingroom / Kitchen Nightlight Off"
   entities:
     group.livingroom_lights:
       state: off
       transition: 2
-    group.kitchen_lights:
+    light.kitchen_1:
       state: off
       transition: 2
+    light.kitchen_2:
+      state: off
+      transition: 2
+    light.hallway:
+      state: off
+      transition: 2
+    light.__level_7_0
+      state: off
