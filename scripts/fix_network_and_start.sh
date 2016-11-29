@@ -11,4 +11,6 @@ ip route add default via 192.168.1.1
 
 sleep 1
 
+/usr/local/bin/fix_zwave_light_dimming.sh
+
 /usr/local/bin/hass --config /config --log-rotate-days 7
