@@ -34,7 +34,7 @@
     - service: input_select.select_option
       data_template:
         entity_id: input_select.scene_bedroom
-        option: "{{ trigger.payload|title }}"
+        option: "{{ trigger.payload | title }}"
 
 - alias: "Bedroom Lights Voice Dim"
   hide_entity: true
@@ -80,7 +80,7 @@
         entity_id: group.bedroom_lights
         brightness: '{{ trigger.to_state.state | int }}'
 
-- alias: Bedroom Light - Scene and Brightness Slider
+- alias: Bedroom Lights - Scene and Brightness Slider
   trigger:
     platform: state
     entity_id: input_select.scene_bedroom
@@ -92,4 +92,4 @@
       data_template:
         entity_id: group.bedroom_lights
         brightness: '{{ states.input_slider.bedroom_brightness.state | int }}'
-        profile: "{{ states.input_select.scene_bedroom.state }}"
+        profile: "{{ states.input_select.scene_bedroom.state | lower }}"

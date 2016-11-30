@@ -24,14 +24,12 @@
     - platform: mqtt
       topic: voice/kitchen/lights_scene
   action:
-    - service: script.turn_on
+    - service: script.notify_kodi_frontends
       data:
-        entity_id: script_notify_kodi_frontends
-        variables:
-          message: "Changing Color of Kitchen Lights to {{ trigger.payload }}"
+        message: "Changing Color of Kitchen Lights to {{ trigger.payload }}"
     - service: light.turn_on
       data_template:
-        profile: "{{ trigger.payload }}"
+        profile: "{{ trigger.payload | title }}"
         entity_id: group.kitchen_lights
 
 - alias: "Kitchen Lights Voice Dim"
@@ -68,7 +66,7 @@
         entity_id: group.kitchen_lights
         brightness: '{{ trigger.to_state.state | int }}'
 
-- alias: Kitchen Light - Scene and Brightness Slider
+- alias: Kitchen Lights - Scene and Brightness Slider
   trigger:
     platform: state
     entity_id: input_select.scene_kitchen
@@ -80,4 +78,4 @@
       data_template:
         entity_id: group.kitchen_lights
         brightness: '{{ states.input_slider.kitchen_brightness.state | int }}'
-        profile: "{{ states.input_select.scene_kitchen.state }}"
+        profile: "{{ states.input_select.scene_kitchen.state | lower }}"

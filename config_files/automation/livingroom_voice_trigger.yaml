@@ -24,15 +24,13 @@
     - platform: mqtt
       topic: voice/livingroom/lights_scene  
   action:
-    - service: script.turn_on
+    - service: script.notify_kodi_frontends
       data:
-        entity_id: script_notify_kodi_frontends
-        variables:
-          message: "Changing Color of Livingroom Lights to {{ trigger.payload }}"
+        message: "Changing Color of Livingroom Lights to {{ trigger.payload }}"
     - service: input_select.select_value
       data_template:
         entity_id: input_select.scene_livingroom
-        value: '{{ trigger.payload }}'
+        value: '{{ trigger.payload | title }}'
 
 - alias: "Livingroom Lights Voice Dim"
   hide_entity: true
@@ -73,3 +71,17 @@
         {% else %}
           254
         {% endif %}
+
+- alias: Livingroom Lights - Scene and Brightness Slider
+  trigger:
+    platform: state
+    entity_id: input_select.scene_livingroom
+  action:
+    - service: script.notify_kodi_frontends
+      data_template:
+        message: 'Changing Livingroom Lights to Scene: {{ states.input_select.scene_livingroom.state }} and Brightness: {{ states.input_slider.livingroom_brightness.state }}'
+    - service: light.turn_on
+      data_template:
+        entity_id: group.livingroom_lights
+        brightness: '{{ states.input_slider.livingroom_brightness.state | int }}'
+        profile: "{{ states.input_select.scene_livingroom.state | lower }}"

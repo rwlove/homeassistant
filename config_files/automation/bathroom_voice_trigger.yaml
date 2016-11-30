@@ -16,23 +16,21 @@
     service: light.turn_off
     entity_id: group.bathroom_lights
 
-#- alias: "Bathroom Lights Voice Change Color"
-#  hide_entity: true
-#  trigger:
-#    - platform: mqtt
-#      topic: voice/bathroom/lights_color
-#    - platform: mqtt
-#      topic: voice/bathroom/lights_scene
-#  action:
-#    - service: script.turn_on
-#      data:
-#        entity_id: script.notify_kodi_frontends
-#          variables:
-#            message: "Changing Color of Bathroom Lights"
-#    - service: light.turn_on
-#      data_template:
-#        profile: "{{ trigger.payload }}"
-#        entity_id: group.bathroom_lights
+- alias: "Bathroom Lights Voice Change Color"
+  hide_entity: true
+  trigger:
+    - platform: mqtt
+      topic: voice/bathroom/lights_color
+    - platform: mqtt
+      topic: voice/bathroom/lights_scene
+  action:
+    - service: script.notify_kodi_frontends
+      data:
+        message: "Changing Color of Bathroom Lights to {{ trigger.payload }}"
+    - service: light.turn_on
+      data_template:
+        profile: "{{ trigger.payload | title }}"
+        entity_id: group.bathroom_lights
 
 - alias: "Bathroom Lights Voice Dim"
   hide_entity: true
@@ -90,4 +88,4 @@
       data_template:
         entity_id: group.bathroom_lights
         brightness: '{{ states.input_slider.bathroom_brightness.state | int }}'
-        profile: "{{ states.input_select.scene_bathroom.state }}"
+        profile: "{{ states.input_select.scene_bathroom.state | lower }}"
