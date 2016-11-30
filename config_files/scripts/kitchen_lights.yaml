@@ -25,7 +25,7 @@ kitchen_light_off:
   sequence:
   - service: script.turn_on
     data:
-      entity_id: script_notify_kodi_frontends
+      entity_id: script.notify_kodi_frontends
       variables:
         message: "Turning off Kitchen Lights!"
   - service: scene.turn_on
