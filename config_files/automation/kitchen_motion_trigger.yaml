@@ -16,4 +16,4 @@
     to: 'off'
   action:
     service: script.turn_on
-    entity_id: script.kitchen_off_timer
+    entity_id: script.kitchen_timer_off

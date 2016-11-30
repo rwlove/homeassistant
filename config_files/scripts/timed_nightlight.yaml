@@ -13,7 +13,7 @@ timed_nightlight_with_kitchen:
         entity_id: scene.livingroom__kitchen_nightlight_on
     - service: script.turn_on
       data:
-        entity_id: script.kitchen_off_timer
+        entity_id: script.kitchen_timer_off
     - service: script.turn_on
       data:
         entity_id: script.livingroom_timer_off
@@ -24,13 +24,13 @@ timed_nightlight_only_kitchen:
     # Cancel old timers
     - service: script.turn_off
       data:
-        entity_id: script.kitchen_off_timer
+        entity_id: script.kitchen_timer_off
     - service: scene.turn_on
       data:
         entity_id: scene.kitchen_nightlight_on
     - service: script.turn_on
       data:
-        entity_id: script.kitchen_off_timer
+        entity_id: script.kitchen_timer_off
 
 timed_nightlight_without_kitchen:
   alias: "Livingroom Nightlight without Kitchen"

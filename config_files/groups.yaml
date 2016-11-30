@@ -39,7 +39,7 @@ kitchen_scripts:
   entities:
     - script.timed_nightlight_only_kitchen
     - script.kitchen_motion_on
-    - script.kitchen_off_timer
+    - script.kitchen_timer_off
 
 scripts:
   view: yes
