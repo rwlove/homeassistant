@@ -57,3 +57,13 @@
   action:
     service: script.turn_on
     entity_id: script.timed_nightlight_only_kitchen
+
+- alias: Livingroom Lights - Adjust Brightness
+  trigger:
+    platform: state
+    entity_id: input_slider.livingroom_brightness
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: group.livingroom_lights
+        brightness: '{{ trigger.to_state.state | int }}'
