@@ -27,10 +27,10 @@
     - service: script.notify_kodi_frontends
       data:
         message: "Changing Color of Bathroom Lights to {{ trigger.payload }}"
-    - service: light.turn_on
+    - service: input_select.select_option
       data_template:
+        entity_id: input_select.scene_bathroom
         profile: "{{ trigger.payload | title }}"
-        entity_id: group.bathroom_lights
 
 - alias: "Bathroom Lights Voice Dim"
   hide_entity: true

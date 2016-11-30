@@ -27,10 +27,10 @@
     - service: script.notify_kodi_frontends
       data:
         message: "Changing Color of Kitchen Lights to {{ trigger.payload }}"
-    - service: light.turn_on
+    - service: input_select.select_option
       data_template:
+        entity_id: input_select.scene_kitchen
         profile: "{{ trigger.payload | title }}"
-        entity_id: group.kitchen_lights
 
 - alias: "Kitchen Lights Voice Dim"
   hide_entity: true

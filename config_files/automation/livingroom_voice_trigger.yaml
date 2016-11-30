@@ -27,7 +27,7 @@
     - service: script.notify_kodi_frontends
       data:
         message: "Changing Color of Livingroom Lights to {{ trigger.payload }}"
-    - service: input_select.select_value
+    - service: input_select.select_option
       data_template:
         entity_id: input_select.scene_livingroom
         value: '{{ trigger.payload | title }}'
