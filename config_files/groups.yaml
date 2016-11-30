@@ -119,6 +119,7 @@ bedroom:
 livingroom:
   name: Livingroom
   entities:
+    - input_select.scene_livingroom
     - input_slider.livingroom_brightness
     - group.livingroom_lights
     - sensor.livingroom_motion
@@ -152,6 +153,7 @@ bathroom:
   name: Bathroom
 #  view: yes
   entities:
+    - input_select.scene_bathroom
     - input_slider.bathroom_brightness
     - group.bathroom_lights
     - sensor.bathroom_motion
@@ -160,6 +162,7 @@ bathroom:
 kitchen:
   name: Kitchen
   entities:
+    - input_select.scene_kitchen
     - input_slider.bar_brightness
     - group.kitchen_lights
     - sensor.kitchen_motion

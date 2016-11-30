@@ -77,3 +77,17 @@
       data_template:
         entity_id: group.bathroom_lights
         brightness: '{{ trigger.to_state.state | int }}'
+
+- alias: Bathroom Light - Scene and Brightness Slider
+  trigger:
+    platform: state
+    entity_id: input_select.scene_bathroom
+  action:
+    - service: script.notify_kodi_frontends
+      data_template:
+        message: 'Changing Bathroom Lights to Scene: {{ states.input_select.scene_bathroom.state }} and Brightness: {{ states.input_slider.bathroom_brightness.state }}'
+    - service: light.turn_on
+      data_template:
+        entity_id: group.bathroom_lights
+        brightness: '{{ states.input_slider.bathroom_brightness.state | int }}'
+        profile: "{{ states.input_select.scene_bathroom.state }}"

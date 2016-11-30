@@ -50,3 +50,59 @@ scene_livingroom:
     - Relax
     - 'OFF'
   initial: 'Select'
+
+scene_kitchen:
+  name: Scene
+  options:
+    - Select
+    - Blue
+    - Red
+    - Pink
+    - Orange
+    - White
+    - Purple
+    - Normal
+    - Movie
+    - Green
+    - Teal
+    - Aqua
+    - Concentrate
+    - Energize
+    - Reading
+    - Relax
+    - Romantic
+    - Warm
+    - Concentrate
+    - Energize
+    - Reading
+    - Relax
+    - 'OFF'
+  initial: 'Select'
+
+scene_bathroom:
+  name: Scene
+  options:
+    - Select
+    - Blue
+    - Red
+    - Pink
+    - Orange
+    - White
+    - Purple
+    - Normal
+    - Movie
+    - Green
+    - Teal
+    - Aqua
+    - Concentrate
+    - Energize
+    - Reading
+    - Relax
+    - Romantic
+    - Warm
+    - Concentrate
+    - Energize
+    - Reading
+    - Relax
+    - 'OFF'
+  initial: 'Select'
