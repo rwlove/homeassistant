@@ -151,6 +151,7 @@ bathroom:
   name: Bathroom
 #  view: yes
   entities:
+    - input_slider.bathroom_brightness
     - group.bathroom_lights
     - sensor.bathroom_motion
     - sensor.aeotec_zw100_multisensor_6_relative_humidity_4_5
@@ -194,3 +195,4 @@ bathroom_lights:
   name: "Bathroom Lights"
   entities:
     - light.__level_6_0
+    - light.lightstrip_2

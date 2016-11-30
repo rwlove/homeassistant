@@ -67,3 +67,13 @@
         {% else %}
           254
         {% endif %}
+
+- alias: Bathroom Lights - Adjust Brightness
+  trigger:
+    platform: state
+    entity_id: input_slider.bathroom_brightness
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: group.bathroom_lights
+        brightness: '{{ trigger.to_state.state | int }}'
