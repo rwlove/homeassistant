@@ -67,3 +67,4 @@
       data_template:
         entity_id: group.kitchen_lights
         brightness: '{{ trigger.to_state.state | int }}'
+

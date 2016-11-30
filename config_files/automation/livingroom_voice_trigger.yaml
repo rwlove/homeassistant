@@ -29,10 +29,6 @@
         entity_id: script_notify_kodi_frontends
         variables:
           message: "Changing Color of Livingroom Lights to {{ trigger.payload }}"
-    - service: light.turn_on
-      data_template:
-        profile: "{{ trigger.payload }}"
-        entity_id: group.livingroom_lights
     - service: input_select.select_value
       data_template:
         entity_id: input_select.scene_livingroom

@@ -31,10 +31,6 @@
     - service: script.notify_kodi_frontends
       data:
         message: 'Changing Color of Bedroom Lights to {{ trigger.payload }}'
-    - service: light.turn_on
-      data_template:
-        profile: "{{ trigger.payload }}"
-        entity_id: group.bedroom_lights
     - service: input_select.select_option
       data_template:
         entity_id: input_select.scene_bedroom
