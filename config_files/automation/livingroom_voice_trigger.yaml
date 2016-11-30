@@ -50,7 +50,7 @@
 #      entity_id: group.livingroom_lights
       entity_id:
         - light.lamp
-#        - light.lightstrip
+#        - light.lightstrip_1
       brightness: >
         {% if states('light.lamp.brightness') | int > 200 %}
           150
@@ -70,7 +70,7 @@
 #      entity_id: group.livingroom_lights
       entity_id:
         - light.lamp
- #       - light.lightstrip
+ #       - light.lightstrip_1
       brightness: >
         {% if states('light.lamp.brightness') | int < 51 %}
           150

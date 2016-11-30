@@ -11,7 +11,7 @@
       state: on
       profile: pink
       brightness: 150
-    light.lightstrip:
+    light.lightstrip_1:
       state: on
       profile: pink
       brightness: 150
@@ -37,7 +37,7 @@
       state: on
       profile: pink
       brightness: 150
-    light.lightstrip:
+    light.lightstrip_1:
       state: on
       profile: pink
       brightness: 150
@@ -65,7 +65,7 @@
     light.hallway:
       state: off
       transition: 2
-    light.__level_7_0
+    light.__level_7_0:
       state: off
 
 - name: "Livingroom / Kitchen Nightlight Off"
@@ -82,5 +82,5 @@
     light.hallway:
       state: off
       transition: 2
-    light.__level_7_0
+    light.__level_7_0:
       state: off

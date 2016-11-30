@@ -5,7 +5,7 @@
     topic: voice/strip/lights_on
   action:
     service: light.turn_on
-    entity_id: light.lightstrip
+    entity_id: light.lightstrip_1
 
 - alias: "Strip Voice Change Off"
   hide_entity: true
@@ -14,7 +14,7 @@
     topic: voice/strip/lights_off
   action:
     service: light.turn_off
-    entity_id: light.lightstrip
+    entity_id: light.lightstrip_1
 
 - alias: "Strip Voice Change Color"
   hide_entity: true
@@ -32,4 +32,4 @@
     - service: light.turn_on
       data_template:
         profile: "{{ trigger.payload }}"
-        entity_id: light.lightstrip
+        entity_id: light.lightstrip_1

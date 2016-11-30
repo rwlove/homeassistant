@@ -179,7 +179,7 @@ livingroom_lights:
   name: "Livingroom Lights"
   entities:
     - light.lamp
-    - light.lightstrip
+    - light.lightstrip_1
     - switch.ge_12727_inwall_smart_switch_toggle_switch_2_0
 
 kitchen_lights:
