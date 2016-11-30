@@ -88,7 +88,6 @@
   trigger:
     platform: state
     entity_id: input_select.scene_bedroom
-#    to: CUSTOM
   action:
     - service: script.notify_kodi_frontends
       data_template:
