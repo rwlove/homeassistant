@@ -30,7 +30,7 @@
     - service: input_select.select_option
       data_template:
         entity_id: input_select.scene_kitchen
-        profile: "{{ trigger.payload | title }}"
+        option: "{{ trigger.payload | title }}"
 
 - alias: "Kitchen Lights Voice Dim"
   hide_entity: true
