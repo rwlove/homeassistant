@@ -11,6 +11,7 @@ docker run \
        --privileged \
        -h homeassistant \
        -v ${PWD}/logs/home-assistant.log:/config/home-assistant.log \
+       -v ${PWD}/logs/OZW_Log.txt:/config/OZW_Log.txt \
        -v /etc/localtime:/etc/localtime:ro \
        -v /dev/ttyACM0:/dev/ttyACM0 \
        services/homeassistant:latest
