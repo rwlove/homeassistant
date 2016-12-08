@@ -4,3 +4,4 @@
     homeassistant.components.automation: info
     homeassistant.components.scripts: info
     homeassistant.components.mqtt: info
+    homeassistant.components.zwave: info

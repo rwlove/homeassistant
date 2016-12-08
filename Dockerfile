@@ -25,6 +25,8 @@ EXPOSE 8123
 # Clean up
 #####
 
+ADD options.xml /usr/src/app/build/python-openzwave/openzwave/config/options.xml
+
 RUN apt-get -y clean && \
 rm -rf /var/lib/apt/lists/* && \
 rm -rf /tmp/*
