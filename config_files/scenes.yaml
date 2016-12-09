@@ -84,3 +84,22 @@
       transition: 2
     light.__level_7_0:
       state: off
+
+- name: "Bathroom Bright On"
+  entities:
+    light.__level_6_0:
+      state: on
+      brightness: 255
+    light.lightstrip_2:
+      state: on
+      brightness: 255
+
+- name: "Bathroom Nightlight On"
+  entities:
+    light.__level_6_0:
+      state: on
+      brightness: 35
+    light.lightstrip_2:
+      state: on
+      brightness: 35
+      profile: pink

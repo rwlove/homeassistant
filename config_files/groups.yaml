@@ -25,6 +25,7 @@ bathroom_scripts:
   name: Bathroom
   entities:
     - script.timed_bathroom_nightlight
+    - script.timed_bathroom_bright
     - script.bathroom_off_timer
 
 livingroom_scripts:

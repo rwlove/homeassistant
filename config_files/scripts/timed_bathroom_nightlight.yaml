@@ -1,14 +1,26 @@
-bathroom_lights_on:
+bathroom_bright_on:
   alias: "Turn On Bathroom Lights"
   sequence:
   - service: script.turn_on
     data:
       entity_id: script.notify_kodi_frontends
       variables:
-        message: "Turning On Bathroom Lights!"
-  - service: homeassistant.turn_on
+        message: "Turning On Bathroom Lights Bright!"
+  - service: scene.turn_on
     data:
-      entity_id: group.bathroom_lights
+      entity_id: scene.bathroom_bright_on
+
+bathroom_nightlight_on:
+  alias: "Turn On Bathroom Nightlight"
+  sequence:
+  - service: script.turn_on
+    data:
+      entity_id: script.notify_kodi_frontends
+      variables:
+        message: "Turning On Bathroom Nightlight!"
+  - service: scene.turn_on
+    data:
+      entity_id: scene.bathroom_nightlight_on
 
 bathroom_lights_off:
   alias: "Turn Off Bathroom Lights"
@@ -30,7 +42,17 @@ timed_bathroom_nightlight:
         entity_id: script.bathroom_off_timer
     - service: script.turn_on
       data:
-        entity_id: script.bathroom_lights_on
+        entity_id: script.bathroom_nightlight_on
+
+timed_bathroom_bright:
+  alias: "Bathroom Lights Bright"
+  sequence:
+    - service: script.turn_off
+      data:
+        entity_id: script.bathroom_off_timer
+    - service: script.turn_on
+      data:
+        entity_id: script.bathroom_bright_on
 
 bathroom_off_timer:
   alias: "Wait 20 Minutes then Turn Off Bathroom Lights"
