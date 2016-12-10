@@ -22,6 +22,7 @@ group: !include groups.yaml
 scene: !include scenes.yaml
 zwave: !include zwave.yaml
 logger: !include logger.yaml
+history: !include history.yaml
 input_boolean: !include input_boolean.yaml
 input_slider: !include input_slider.yaml
 input_select: !include input_select.yaml
@@ -49,9 +50,6 @@ updater:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
-
-# Enables support for tracking state changes over time.
-history:
 
 # View all events in a logbook
 logbook:

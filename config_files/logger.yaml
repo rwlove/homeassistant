@@ -1,5 +1,6 @@
   default: info
-#  logs:
+  logs:
+    homeassistant.components.history: debug
 #    homeassistant.platform.thinkingcleaner: debug
 #    homeassistant.components.switch: debug
 #    homeassistant.components.sensor: info

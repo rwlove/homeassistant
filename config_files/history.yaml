@@ -1,0 +1,36 @@
+exclude:
+  domains:
+    - light
+    - automation
+    - scripts
+    - locations
+    - switch
+    - climate
+    - sensor
+  entities:
+    - group.bedroom
+    - group.livingroom
+    - group.kitchen
+    - group.bathroom
+    - group.all_lights
+    - group.all_switches
+    - group.bedroom_scripts
+    - group.kitchen_scripts
+    - group.livingroom_scripts
+    - group.bathroom_scripts
+    - group.livingroom_sensors
+    - group.bathroom_sensors
+    - group.kitchen_sensors
+
+include:
+#  domains:
+  entities:
+    - group.weather_inside
+    - group.weather_outside
+    - group.bedroom_lights
+    - sensor.livingroom_motion
+    - group.livingroom_lights
+    - sensor.kitchen_motion
+    - group.kitchen_lights
+    - sensor.bathroom_motion
+    - group.bathroom_lights
