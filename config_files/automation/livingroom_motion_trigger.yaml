@@ -12,7 +12,7 @@
         entity_id: group.livingroom_lights
         state: 'off'
       - condition: state
-        entity_id: group.kitchen_lights
+        entity_id: light.kitchen_1
         state: 'on'
   action:
     service: script.turn_on
@@ -32,7 +32,7 @@
         entity_id: group.livingroom_lights
         state: 'off'
       - condition: state
-        entity_id: group.kitchen_lights
+        entity_id: light.kitchen_1
         state: 'off'
   action:
     service: script.turn_on
@@ -52,7 +52,7 @@
         entity_id: group.livingroom_lights
         state: 'on'
       - condition: state
-        entity_id: group.kitchen_lights
+        entity_id: light.kitchen_1
         state: 'off'    
   action:
     service: script.turn_on
