@@ -92,6 +92,21 @@ kodi:
   - media_player.kodi_bedroom_righteye
   - media_player.kodi_livingroom_lefteye
 
+nest:
+  name: Nest
+  view: yes
+  entities:
+  - binary_sensor.entryway_thermostat_nest_fan
+  - binary_sensor.entryway_thermostat_nest_has_leaf
+  - binary_sensor.entryway_thermostat_nest_is_locked
+  - binary_sensor.entryway_thermostat_nest_is_using_emergency_heat
+  - binary_sensor.entryway_thermostat_nest_online
+  - climate.entryway_nest
+  - sensor.entryway_thermostat_nest_humidity
+  - sensor.entryway_thermostat_nest_operation_mode
+  - sensor.entryway_thermostat_nest_target
+  - sensor.entryway_thermostat_nest_temperature
+
 roomba:
   name: Roomba
   view: yes
