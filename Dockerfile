@@ -11,7 +11,6 @@ RUN apt-get -y install isc-dhcp-client
 
 RUN mv /sbin/dhclient /usr/sbin/dhclient
 COPY scripts/fix_network_and_start.sh /usr/bin/fix_network_and_start.sh
-COPY scripts/fix_zwave_light_dimming.sh /usr/local/bin/fix_zwave_light_dimming.sh
 RUN ln -s /usr/bin/fix_network_and_start.sh /usr/local/bin/runHomeassistant.sh
 
 RUN easy_install --upgrade pytz
