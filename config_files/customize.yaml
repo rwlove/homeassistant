@@ -53,9 +53,13 @@ switch.ge_12727_inwall_smart_switch_toggle_switch_2_0:
 
 light.__level_6_0:
   friendly_name: "Lights"
+  refresh_value: true
+  delay: 4
 
 light.__level_7_0:
   friendly_name: "Bar Lights"
+  refresh_value: true
+  delay: 4
 
 binary_sensor.__sensor_5_0:
   friendly_name: "Kitchen Motion"
