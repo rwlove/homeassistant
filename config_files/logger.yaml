@@ -1,4 +1,4 @@
-  default: debug
+  default: info
 #  logs:
 #    homeassistant.components.sensor: info
 #    homeassistant.components.automation: info
