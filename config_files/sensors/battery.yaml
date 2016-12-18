@@ -1,0 +1,13 @@
+- platform: template
+  sensors:
+    batt_livingroom_motion:
+      friendly_name: 'Living Room Sensor'
+      value_template: '{{ states.sensor.aeotec_zw100_multisensor_6_burglar_3_10.attributes.battery_level }}'
+      unit_of_measurement: '%'
+
+- platform: template
+  sensors:
+    batt_bathroom_motion:
+      friendly_name: 'Bathroom Sensor'
+      value_template: '{{ states.sensor.aeotec_zw100_multisensor_6_burglar_4_10.attributes.battery_level }}'
+      unit_of_measurement: '%'
