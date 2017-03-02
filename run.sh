@@ -3,6 +3,7 @@
 . settings.conf
 
 MODE=d #default is daemon
+ZWAVE_DEV=""
 
 while getopts ":i" opt; do
     case $opt in
@@ -16,9 +17,24 @@ while getopts ":i" opt; do
     esac
 done
 
+for f in $( ls /dev/ttyAC* ) ; do
+    echo "Testing file: $f"
+    if [ -c "${f}" ] ; then
+	ZWAVE_DEV="${f}"
+	echo "  - VALID Z-Wave Device"
+    else
+	echo "  - invalid Z-Wave Device"
+    fi
+done
 
 [ ! -d logs ] && mkdir logs/
 [ ! -f logs/home-assistant.log ] && touch logs/home-assistant.log
+
+if [ "" == "${ZWAVE_DEV}" ] ; then
+    echo "Exiting, no Z-Wave device found"
+    echo "Exiting, no Z-Wave device found" >> ${PWD}/logs/home-assistant.log
+    exit -1
+fi  
 
 docker run \
        --mac-address="${MAC_ADDRESS}" \
@@ -28,5 +44,5 @@ docker run \
        -v ${PWD}/logs/home-assistant.log:/config/home-assistant.log \
        -v ${PWD}/logs/OZW_Log.txt:/config/OZW_Log.txt \
        -v /etc/localtime:/etc/localtime:ro \
-       -v /dev/ttyACM0:/dev/ttyACM0 \
+       -v ${ZWAVE_DEV}:/dev/ttyACM0 \
        services/homeassistant:latest ${CMD}
