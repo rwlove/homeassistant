@@ -1,6 +1,6 @@
   default: info
   logs:
-    homeassistant.components.history: debug
+#    homeassistant.components.history: debug
 #    homeassistant.platform.thinkingcleaner: debug
 #    homeassistant.components.switch: debug
 #    homeassistant.components.sensor: info
@@ -9,3 +9,4 @@
 #    homeassistant.components.mqtt: info
 #    homeassistant.components.zwave: debug
 #    homeassistant.components.light: debug
+    homeassistant.components.http: debug
