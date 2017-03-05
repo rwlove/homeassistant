@@ -1,7 +1,7 @@
 alias: lefteye
 platform: kodi
 #  host: http://192.168.1.5
-host: http://lefteye
+host: lefteye
 port: 8080
 name: Kodi Livingroom (lefteye)
 #  username: USERNAME
