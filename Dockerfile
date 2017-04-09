@@ -16,7 +16,7 @@ RUN ln -s /usr/bin/fix_network_and_start.sh /usr/local/bin/runHomeassistant.sh
 RUN easy_install --upgrade pytz
 RUN pip install --upgrade pip
 RUN pip3 install homeassistant
-#RUM install --upgrade homeassistant
+#RUN install --upgrade homeassistant
 
 EXPOSE 8123
 
