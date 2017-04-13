@@ -13,8 +13,12 @@
     platform: mqtt
     topic: voice/livingroom/lights_off
   action:
-    service: script.turn_on
-    entity_id: script.livingroom_lights_off
+    - service: script.turn_on
+      entity_id: script.livingroom_lights_off
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.scene_livingroom
+        option: 'OFF'
 
 - alias: "Livingroom Lights Voice Change Color"
   hide_entity: true
