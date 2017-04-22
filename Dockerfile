@@ -26,6 +26,9 @@ EXPOSE 8123
 
 ADD options.xml /usr/src/app/build/python-openzwave/openzwave/config/options.xml
 
+# Workaround for bug: https://community.home-assistant.io/t/0-36-docker-zwave-component-cant-find-zwcfg-xsd-anymore/9754
+RUN ln -s /config/zwcfg.xsd /usr/src/app/build/python-openzwave/openzwave/config/zwcfg.xsd
+
 RUN apt-get -y clean && \
 rm -rf /var/lib/apt/lists/* && \
 rm -rf /tmp/*
