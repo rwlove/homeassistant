@@ -1,0 +1,90 @@
+- alias: Livingroom Lights - Input Select Change Color
+  trigger:
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Blue'
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Red'
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Pink'
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Orange'
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'White'
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Purple'
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Green'
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Teal'
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Aqua'
+  action:
+    - service: script.notify_kodi_frontends
+      data_template:
+        message: 'Changing Livingroom Lights to Scene: {{ states.input_select.scene_livingroom.state }} and Brightness: {{ states.input_slider.livingroom_brightness.state }}'
+    - service: light.turn_on
+      data_template:
+        entity_id: group.livingroom_lights
+        brightness: '{{ states.input_slider.livingroom_brightness.state | int }}'
+        profile: "{{ states.input_select.scene_livingroom.state | lower }}"
+
+- alias: Livingroom Lights - Input Select Change Scene
+  trigger:
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Normal'
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Movie'
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Concentrate'
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Energize'
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Reading'
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Relax'
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Romantic'
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Warm'
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'Stretch'
+  action:
+    - service: script.notify_kodi_frontends
+      data_template:
+        message: 'Changing Livingroom Lights to Scene: {{ states.input_select.scene_livingroom.state }} and Brightness: {{ states.input_slider.livingroom_brightness.state }}'
+    - service: light.turn_on
+      data_template:
+        entity_id: group.livingroom_lights
+        brightness: '{{ states.input_slider.livingroom_brightness.state | int }}'
+        profile: "{{ states.input_select.scene_livingroom.state | lower }}"
+
+- alias: Livingroom Lights - Input Select Turn Off
+  trigger:
+    - platform: state
+      entity_id: input_select.scene_livingroom
+      state: 'OFF'
+  action:
+    - service: script.turn_on
+      entity_id: script.livingroom_lights_off
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.scene_livingroom
+        option: 'OFF'

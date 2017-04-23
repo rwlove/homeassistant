@@ -1,26 +1,26 @@
-- alias: "Bathroom Lights Voice Change On"
+- alias: "Bathroom Lights - Voice Change On"
   hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/bathroom/lights_on
   action:
-    service: light.turn_on
-    entity_id: group.bathroom_lights
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.scene_bathroom
+        option: 'White'
 
-- alias: "Bathroom Lights Voice Change Off"
+- alias: "Bathroom Lights - Voice Change Off"
   hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/bathroom/lights_off
   action:
-    - service: light.turn_off
-      entity_id: group.bathroom_lights
     - service: input_select.select_option
       data:
         entity_id: input_select.scene_bathroom
         option: 'OFF'
 
-- alias: "Bathroom Lights Voice Change Color"
+- alias: "Bathroom Lights - Voice Change Color/Scene"
   hide_entity: true
   trigger:
     - platform: mqtt
@@ -36,7 +36,7 @@
         entity_id: input_select.scene_bathroom
         option: "{{ trigger.payload | title }}"
 
-- alias: "Bathroom Lights Voice Dim"
+- alias: "Bathroom Lights - Voice Change Dim"
   hide_entity: true
   trigger:
     platform: mqtt
@@ -53,7 +53,7 @@
           50
         {% endif %}
 
-- alias: "Bathroom Lights Voice Bright"
+- alias: "Bathroom Lights - Voice Change Bright"
   hide_entity: true
   trigger:
     platform: mqtt
@@ -69,27 +69,3 @@
         {% else %}
           254
         {% endif %}
-
-- alias: Bathroom Lights - Adjust Brightness
-  trigger:
-    platform: state
-    entity_id: input_slider.bathroom_brightness
-  action:
-    - service: light.turn_on
-      data_template:
-        entity_id: group.bathroom_lights
-        brightness: '{{ trigger.to_state.state | int }}'
-
-- alias: Bathroom Light - Scene and Brightness Slider
-  trigger:
-    platform: state
-    entity_id: input_select.scene_bathroom
-  action:
-    - service: script.notify_kodi_frontends
-      data_template:
-        message: 'Changing Bathroom Lights to Scene: {{ states.input_select.scene_bathroom.state }} and Brightness: {{ states.input_slider.bathroom_brightness.state }}'
-    - service: light.turn_on
-      data_template:
-        entity_id: group.bathroom_lights
-        brightness: '{{ states.input_slider.bathroom_brightness.state | int }}'
-        profile: "{{ states.input_select.scene_bathroom.state | lower }}"

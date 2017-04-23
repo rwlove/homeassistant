@@ -1,0 +1,90 @@
+- alias: Bathroom Lights - Input Select Change Color
+  trigger:
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Blue'
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Red'
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Pink'
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Orange'
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'White'
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Purple'
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Green'
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Teal'
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Aqua'
+  action:
+    - service: script.notify_kodi_frontends
+      data_template:
+        message: 'Changing Bathroom Lights to Scene: {{ states.input_select.scene_bathroom.state }} and Brightness: {{ states.input_slider.bathroom_brightness.state }}'
+    - service: light.turn_on
+      data_template:
+        entity_id: group.bathroom_lights
+        brightness: '{{ states.input_slider.bathroom_brightness.state | int }}'
+        profile: "{{ states.input_select.scene_bathroom.state | lower }}"
+
+- alias: Bathroom Lights - Input Select Change Scene
+  trigger:
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Normal'
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Movie'
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Concentrate'
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Energize'
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Reading'
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Relax'
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Romantic'
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Warm'
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'Stretch'
+  action:
+    - service: script.notify_kodi_frontends
+      data_template:
+        message: 'Changing Bathroom Lights to Scene: {{ states.input_select.scene_bathroom.state }} and Brightness: {{ states.input_slider.bathroom_brightness.state }}'
+    - service: light.turn_on
+      data_template:
+        entity_id: group.bathroom_lights
+        brightness: '{{ states.input_slider.bathroom_brightness.state | int }}'
+        profile: "{{ states.input_select.scene_bathroom.state | lower }}"
+
+- alias: Bathroom Lights - Input Select Turn Off
+  trigger:
+    - platform: state
+      entity_id: input_select.scene_bathroom
+      state: 'OFF'
+  action:
+    - service: script.turn_on
+      entity_id: script.bathroom_lights_off
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.scene_bathroom
+        option: 'OFF'

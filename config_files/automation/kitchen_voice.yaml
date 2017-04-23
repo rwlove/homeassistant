@@ -1,26 +1,26 @@
-- alias: "Kitchen Lights Voice Change On"
+- alias: "Kitchen Lights - Voice Change On"
   hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/kitchen/lights_on
   action:
-    service: script.turn_on
-    entity_id: script.kitchen_light_on
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.scene_kitchen
+        option: 'White'
 
-- alias: "Kitchen Lights Voice Change Off"
+- alias: "Kitchen Lights - Voice Change Off"
   hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/kitchen/lights_off
   action:
-    - service: script.turn_on
-      entity_id: script.kitchen_light_off
     - service: input_select.select_option
       data:
         entity_id: input_select.scene_kitchen
         option: 'OFF'
 
-- alias: "Kitchen Lights Voice Change Color"
+- alias: "Kitchen Lights Voice - Change Color/Scene"
   hide_entity: true
   trigger:
     - platform: mqtt
@@ -36,7 +36,7 @@
         entity_id: input_select.scene_kitchen
         option: "{{ trigger.payload | title }}"
 
-- alias: "Kitchen Lights Voice Dim"
+- alias: "Kitchen Lights - Voice Change Dim"
   hide_entity: true
   trigger:
     platform: mqtt
@@ -48,7 +48,7 @@
       brightness: "{{ states.light.kitchen_1.brightness | float - 100 }}"
       entity_id: group.kitchen_lights
 
-- alias: "Kitchen Lights Voice Bright"
+- alias: "Kitchen Lights - Voice Change Bright"
   hide_entity: true
   trigger:
     platform: mqtt
@@ -59,27 +59,3 @@
     data_template:
       brightness: "{{ states.light.kitchen_1.brightness | float + 100 }}"
       entity_id: group.kitchen_lights
-
-- alias: Kitchen Lights - Adjust Brightness
-  trigger:
-    platform: state
-    entity_id: input_slider.bar_brightness
-  action:
-    - service: light.turn_on
-      data_template:
-        entity_id: group.kitchen_lights
-        brightness: '{{ trigger.to_state.state | int }}'
-
-- alias: Kitchen Lights - Scene and Brightness Slider
-  trigger:
-    platform: state
-    entity_id: input_select.scene_kitchen
-  action:
-    - service: script.notify_kodi_frontends
-      data_template:
-        message: 'Changing Kitchen Lights to Scene: {{ states.input_select.scene_kitchen.state }} and Brightness: {{ states.input_slider.kitchen_brightness.state }}'
-    - service: light.turn_on
-      data_template:
-        entity_id: group.kitchen_lights
-        brightness: '{{ states.input_slider.kitchen_brightness.state | int }}'
-        profile: "{{ states.input_select.scene_kitchen.state | lower }}"

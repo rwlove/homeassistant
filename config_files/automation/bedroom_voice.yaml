@@ -1,0 +1,61 @@
+- alias: "Bedroom Lights - Voice Change On"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/bedroom/lights_on
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.scene_bedroom
+        option: 'White'
+
+- alias: "Bedroom Lights - Voice Change Off"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/bedroom/lights_off
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.scene_bedroom
+        option: 'OFF'
+
+- alias: "Bedroom Lights - Voice Change Color/Scene"
+  hide_entity: true
+  trigger:
+    - platform: mqtt
+      topic: voice/bedroom/lights_color
+    - platform: mqtt
+      topic: voice/bedroom/lights_scene
+  action:
+    - service: script.notify_kodi_frontends
+      data:
+        message: 'Changing Color of Bedroom Lights to {{ trigger.payload }}'
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.scene_bedroom
+        option: "{{ trigger.payload | title }}"
+
+- alias: "Bedroom Lights - Voice Change Dim"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/bedroom/lights_adjust
+    payload: 'dim'
+  action:
+    service: light.turn_on
+    data_template:
+      brightness: "{{ states.light.right_front.brightness | float - 100 }}"
+      entity_id: group.bedroom_lights
+
+- alias: "Bedroom Lights - Voice Change Bright"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/bedroom/lights_adjust
+    payload: 'bright'
+  action:
+    service: light.turn_on
+    data_template:
+      brightness: "{{ states.light.right_front.brightness | float + 100 }}"
+      entity_id: group.bedroom_lights

@@ -1,32 +1,32 @@
-- alias: "Livingroom Lights Voice Change On"
+- alias: "Livingroom Lights - Voice Change On"
   hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/livingroom/lights_on
   action:
-    service: script.turn_on
-    entity_id: script.livingroom_lights_on
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.scene_livingroom
+        option: 'White'
 
-- alias: "Livingroom Lights Voice Change Off"
+- alias: "Livingroom Lights - Voice Change Off"
   hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/livingroom/lights_off
   action:
-    - service: script.turn_on
-      entity_id: script.livingroom_lights_off
     - service: input_select.select_option
       data:
         entity_id: input_select.scene_livingroom
         option: 'OFF'
 
-- alias: "Livingroom Lights Voice Change Color"
+- alias: "Livingroom Lights - Voice Change Color/Scene"
   hide_entity: true
   trigger:
     - platform: mqtt
       topic: voice/livingroom/lights_color
     - platform: mqtt
-      topic: voice/livingroom/lights_scene  
+      topic: voice/livingroom/lights_scene
   action:
     - service: script.notify_kodi_frontends
       data:
@@ -36,7 +36,7 @@
         entity_id: input_select.scene_livingroom
         option: "{{ trigger.payload | title }}"
 
-- alias: "Livingroom Lights Voice Dim"
+- alias: "Livingroom Lights - Voice Change Dim"
   hide_entity: true
   trigger:
     platform: mqtt
@@ -56,7 +56,7 @@
           50
         {% endif %}
 
-- alias: "Livingroom Lights Voice Bright"
+- alias: "Livingroom Lights - Voice Change Bright"
   hide_entity: true
   trigger:
     platform: mqtt
@@ -75,17 +75,3 @@
         {% else %}
           254
         {% endif %}
-
-- alias: Livingroom Lights - Scene and Brightness Slider
-  trigger:
-    platform: state
-    entity_id: input_select.scene_livingroom
-  action:
-    - service: script.notify_kodi_frontends
-      data_template:
-        message: 'Changing Livingroom Lights to Scene: {{ states.input_select.scene_livingroom.state }} and Brightness: {{ states.input_slider.livingroom_brightness.state }}'
-    - service: light.turn_on
-      data_template:
-        entity_id: group.livingroom_lights
-        brightness: '{{ states.input_slider.livingroom_brightness.state | int }}'
-        profile: "{{ states.input_select.scene_livingroom.state | lower }}"
