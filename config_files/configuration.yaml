@@ -26,6 +26,7 @@ history: !include history.yaml
 input_boolean: !include input_boolean.yaml
 input_slider: !include input_slider.yaml
 input_select: !include input_select.yaml
+light_state: 
 
 switch:
   - platform: thinkingcleaner
