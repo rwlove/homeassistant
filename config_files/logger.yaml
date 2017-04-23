@@ -11,3 +11,4 @@
 #    homeassistant.components.zwave: debug
 #    homeassistant.components.light: debug
 #    homeassistant.components.http: debug
+     custom_components.light_state: debug

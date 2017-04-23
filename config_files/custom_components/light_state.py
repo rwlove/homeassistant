@@ -22,6 +22,7 @@ def setup(hass, config):
     mqtt = loader.get_component('mqtt')
     topic = config[DOMAIN].get('topic', DEFAULT_TOPIC)
     entity_id = 'light_state.last_color'
+    _LOGGER.info("The 'light_state' component is ready!")
 
     # Listener to be called when we receive a message.
     def message_received(topic, payload, qos):
