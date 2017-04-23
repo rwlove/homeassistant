@@ -8,6 +8,9 @@
 #    homeassistant.components.scripts: info
      homeassistant.components.mqtt: info
      homeassistant.components.input_select: debug
-#    homeassistant.components.zwave: debug
+     homeassistant.components.zwave: debug
 #    homeassistant.components.light: debug
 #    homeassistant.components.http: debug
+     homeassistant.components.websocket_api: error
+     homeassistant.core: error
+     homeassistant.components.media_player: error
