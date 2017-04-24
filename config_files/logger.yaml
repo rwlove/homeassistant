@@ -1,4 +1,4 @@
-  default: warning
+  default: debug
   logs:
 #    homeassistant.components.history: debug
 #    homeassistant.platform.thinkingcleaner: debug
