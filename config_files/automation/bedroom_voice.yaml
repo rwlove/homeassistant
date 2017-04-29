@@ -43,9 +43,9 @@
     topic: voice/bedroom/lights_adjust
     payload: 'dim'
   action:
-    service: light.turn_on
+    service: homeassistant.turn_on
     data_template:
-      brightness: "{{ states.light.right_front.brightness | float - 100 }}"
+      brightness: "{{ states.light.right_front.attributes.brightness | int - 100 }}"
       entity_id: group.bedroom_lights
 
 - alias: "Bedroom Lights - Voice Change Bright"
@@ -55,7 +55,7 @@
     topic: voice/bedroom/lights_adjust
     payload: 'bright'
   action:
-    service: light.turn_on
+    service: homeassistant.turn_on
     data_template:
-      brightness: "{{ states.light.right_front.brightness | float + 100 }}"
+      brightness: "{{ states.light.right_front.attributes.brightness | int + 100 }}"
       entity_id: group.bedroom_lights
