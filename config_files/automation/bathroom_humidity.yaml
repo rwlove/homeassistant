@@ -1,0 +1,13 @@
+- alias: "Shower Running"
+#  hide_entity: true
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.aeotec_zw100_multisensor_6_relative_humidity_4_5
+    above: 55
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.bathroom_off_timer
+    - service: script.turn_on
+      data:
+        entity_id: script.timed_bathroom_bright
