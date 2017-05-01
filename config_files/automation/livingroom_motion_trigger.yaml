@@ -3,7 +3,6 @@
   trigger:
     platform: state
     entity_id: sensor.aeotec_zw100_multisensor_6_burglar_3_10
-    from: '0'
     to: '8'
   condition:
     condition: and
@@ -23,7 +22,6 @@
   trigger:
     platform: state
     entity_id: sensor.aeotec_zw100_multisensor_6_burglar_3_10
-    from: '0'
     to: '8'
   condition:
     condition: and
@@ -43,7 +41,6 @@
   trigger:
     platform: state
     entity_id: sensor.aeotec_zw100_multisensor_6_burglar_3_10
-    from: '0'
     to: '8'
   condition:
     condition: and
