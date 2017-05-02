@@ -43,6 +43,9 @@ timed_bathroom_nightlight:
     - service: script.turn_on
       data:
         entity_id: script.bathroom_nightlight_on
+    - service: script.turn_on
+      data:
+        entity_id: script.bathroom_off_timer
 
 timed_bathroom_bright:
   alias: "Bathroom Lights Bright"
@@ -53,6 +56,9 @@ timed_bathroom_bright:
     - service: script.turn_on
       data:
         entity_id: script.bathroom_bright_on
+    - service: script.turn_on
+      data:
+        entity_id: script.bathroom_off_timer
 
 bathroom_off_timer:
   alias: "Wait 20 Minutes then Turn Off Bathroom Lights"

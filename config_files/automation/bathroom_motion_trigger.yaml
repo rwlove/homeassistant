@@ -11,9 +11,6 @@
   action:
     - service: script.turn_on
       data:
-        entity_id: script.bathroom_off_timer
-    - service: script.turn_on
-      data:
         entity_id: script.timed_bathroom_nightlight
 
 - alias: "Bathroom Motion On (Day)"
@@ -27,9 +24,6 @@
     after: '07:01:00'
     before: '16:59:00'
   action:
-    - service: script.turn_on
-      data:
-        entity_id: script.bathroom_off_timer
     - service: script.turn_on
       data:
         entity_id: script.timed_bathroom_bright
