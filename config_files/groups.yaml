@@ -19,6 +19,7 @@ sensors:
   entities:
     - group.kitchen_sensor
     - group.livingroom_sensor
+    - group.bathroom_sensor_early
     - group.bathroom_sensor
 
 bathroom_scripts:
@@ -48,15 +49,6 @@ scripts:
     - group.livingroom_scripts
     - group.kitchen_scripts
     - group.bathroom_scripts
-
-#automation:
-#  view: yes
-#  entities:
-#    - automation.motion_detection_nightlight
-#    - automation.kitchen_motion_detection_on
-#    - automation.kitchen_motion_detection_off
-#    - automation.bathroom_motion_detection_on
-#    - automation.bathroom_motion_detection_off
 
 weather_inside:
   name: "Weather Inside"
@@ -167,9 +159,22 @@ kitchen_sensor:
   name: Kitchen Sensor
   entities:
     - sensor.kitchen_motion
+    - sensor.aeotec_zw100_multisensor_6_luminance_9_3
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity_9_5
+    - sensor.aeotec_zw100_multisensor_6_temperature_9_1
+    - sensor.aeotec_zw100_multisensor_6_ultraviolet_9_27
+
+bathroom_sensor_early:
+  name: Bathroom Sensor (Early)
+  entities:
+    - sensor.bathroom_motion
+    - sensor.aeotec_zw100_multisensor_6_luminance_8_3
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity_8_5
+    - sensor.aeotec_zw100_multisensor_6_temperature_8_1
+    - sensor.aeotec_zw100_multisensor_6_ultraviolet_8_27
 
 bathroom_sensor:
-  name: Bathroom Sensor
+  name: Bathroom Sensor (Primary)
   entities:
     - sensor.bathroom_motion
     - sensor.aeotec_zw100_multisensor_6_luminance_4_3
