@@ -103,3 +103,13 @@
       state: on
       brightness: 35
       profile: blue
+
+- name: "Bathroom Nightlight On"
+  entities:
+    light.__level_6_0:
+      state: on
+      brightness: 10
+    light.lightstrip_2:
+      state: on
+      brightness: 10
+      profile: blue

@@ -27,3 +27,18 @@
     - service: script.turn_on
       data:
         entity_id: script.timed_bathroom_bright
+
+- alias: "Early Bathroom Motion On"
+#  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.aeotec_zw100_multisensor_6_burglar_8_10
+    to: '8'
+  condition:
+    condition: state
+    entity_id: group.bathroom_lights
+    state: 'off'
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.timed_bathroom_early

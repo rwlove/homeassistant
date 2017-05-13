@@ -10,6 +10,18 @@ bathroom_bright_on:
     data:
       entity_id: scene.bathroom_bright_on
 
+bathroom_early_on:
+  alias: "Turn On Early Bathroom Lights"
+  sequence:
+  - service: script.turn_on
+    data:
+      entity_id: script.notify_kodi_frontends
+      variables:
+        message: "Turning On Bathroom Lights (Early)!"
+  - service: scene.turn_on
+    data:
+      entity_id: scene.bathroom_very_dim
+
 bathroom_nightlight_on:
   alias: "Turn On Bathroom Nightlight"
   sequence:
@@ -60,11 +72,33 @@ timed_bathroom_bright:
       data:
         entity_id: script.bathroom_off_timer
 
+timed_bathroom_early:
+  alias: "Bathroom Lights Bright"
+  sequence:
+    - service: script.turn_off
+      data:
+        entity_id: script.bathroom_early_off_timer
+    - service: script.turn_on
+      data:
+        entity_id: script.bathroom_early_on
+    - service: script.turn_on
+      data:
+        entity_id: script.bathroom_early_off_timer
+
 bathroom_off_timer:
   alias: "Wait 20 Minutes then Turn Off Bathroom Lights"
   sequence:
     - delay:
         minutes: 20
+    - service: script.turn_on
+      data:
+        entity_id: script.bathroom_lights_off
+
+bathroom_early_off_timer:
+  alias: "Wait 2 Minutes then Turn Off Bathroom Lights"
+  sequence:
+    - delay:
+        minutes: 2
     - service: script.turn_on
       data:
         entity_id: script.bathroom_lights_off
