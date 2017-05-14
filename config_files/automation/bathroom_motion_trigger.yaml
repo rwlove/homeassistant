@@ -36,7 +36,7 @@
     to: '8'
   condition:
     condition: state
-    entity_id: group.bathroom_lights
+    entity_id: light.lightstrip_2
     state: 'off'
   action:
     - service: script.turn_on
