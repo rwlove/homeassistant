@@ -73,7 +73,7 @@ timed_bathroom_bright:
         entity_id: script.bathroom_off_timer
 
 timed_bathroom_early:
-  alias: "Bathroom Lights Bright"
+  alias: "Bathroom Lights Early"
   sequence:
     - service: script.turn_off
       data:
