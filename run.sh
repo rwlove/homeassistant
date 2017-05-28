@@ -37,7 +37,7 @@ if [ "" == "${ZWAVE_DEV}" ] ; then
 fi  
 
 docker run \
-       --mac-address="${MAC_ADDRESS}" \
+       --network="none" \
        -${MODE}t \
        --privileged \
        -h homeassistant \
@@ -46,3 +46,5 @@ docker run \
        -v /etc/localtime:/etc/localtime:ro \
        -v ${ZWAVE_DEV}:/dev/ttyACM0 \
        services/homeassistant:latest ${CMD}
+
+add_contianer_to_network.sh -n homeassistant -b br0 -m ${MAC_ADDRESS} -v "hass"
