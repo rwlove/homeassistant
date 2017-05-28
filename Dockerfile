@@ -4,7 +4,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get -y update && \
 apt-get -y dist-upgrade && \
-apt-get -y install apt-utils && \
+apt-get -y install apt-utils \
+libudev-dev && \
 dpkg --configure -a
 
 COPY scripts/runHomeassistant.sh /usr/bin/runHomeassistant.sh
