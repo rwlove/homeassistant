@@ -36,8 +36,8 @@
     to: '8'
   condition:
     condition: state
-    entity_id: light.lightstrip_2
-    state: 'off'
+    entity_id: sensor.aeotec_zw100_multisensor_6_burglar_4_10
+    state: '0'
   action:
     - service: script.turn_on
       data:
