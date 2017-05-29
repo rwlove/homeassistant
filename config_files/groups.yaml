@@ -137,6 +137,7 @@ bedroom:
     - input_select.scene_bedroom
     - input_slider.bedroom_brightness
     - group.bedroom_lights
+    - switch.my_smart_plug_mini
 
 livingroom:
   name: Livingroom
