@@ -138,7 +138,7 @@ bedroom:
     - input_slider.bedroom_brightness
     - group.bedroom_lights
     - switch.my_smart_plug_mini
-    - binary_sensor.__sensor_10_0
+    - sensor.bed_pressure
 
 livingroom:
   name: Livingroom

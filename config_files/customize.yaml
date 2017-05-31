@@ -182,3 +182,6 @@ switch.roomba_dock:
 
 switch.roomba_find:
   friendly_name: "Find"
+
+sensor.bed_pressure:
+  friendly_name: "In Bed?"
