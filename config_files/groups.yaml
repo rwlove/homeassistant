@@ -230,10 +230,10 @@ kitchen_lights:
     - light.hallway
     - light.kitchen_1
     - light.kitchen_2
-    - light.__level_7_0
+    - light.unknown_id0063_unknown_type4944_id3033_level_7_0
 
 bathroom_lights:
   name: "Bathroom Lights"
   entities:
-    - light.__level_6_0
+    - light.unknown_id0063_unknown_type4944_id3033_level_6_0
     - light.lightstrip_2

@@ -65,7 +65,7 @@
     light.hallway:
       state: off
       transition: 2
-    light.__level_7_0:
+    light.unknown_id0063_unknown_type4944_id3033_level_7_0:
       state: off
 
 - name: "Livingroom / Kitchen Nightlight Off"
@@ -82,12 +82,12 @@
     light.hallway:
       state: off
       transition: 2
-    light.__level_7_0:
+    light.unknown_id0063_unknown_type4944_id3033_level_7_0:
       state: off
 
 - name: "Bathroom Bright On"
   entities:
-    light.__level_6_0:
+    light.unknown_id0063_unknown_type4944_id3033_level_6_0:
       state: on
       brightness: 255
     light.lightstrip_2:
@@ -96,7 +96,7 @@
 
 - name: "Bathroom Nightlight On"
   entities:
-    light.__level_6_0:
+    light.unknown_id0063_unknown_type4944_id3033_level_6_0:
       state: on
       brightness: 35
     light.lightstrip_2:
@@ -106,7 +106,7 @@
 
 - name: "Bathroom Nightlight On"
   entities:
-    light.__level_6_0:
+    light.unknown_id0063_unknown_type4944_id3033_level_6_0:
       state: on
       brightness: 10
     light.lightstrip_2:

@@ -97,12 +97,12 @@ sensor.kitchen_motion_early:
 switch.ge_12727_inwall_smart_switch_toggle_switch_2_0:
   friendly_name: "Track Lighting"
 
-light.__level_6_0:
+light.unknown_id0063_unknown_type4944_id3033_level_6_0:
   friendly_name: "Lights"
   refresh_value: true
   delay: 2
 
-light.__level_7_0:
+light.unknown_id0063_unknown_type4944_id3033_level_7_0:
   friendly_name: "Bar Lights"
   refresh_value: true
   delay: 2
