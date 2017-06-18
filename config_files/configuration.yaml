@@ -86,3 +86,11 @@ mqtt:
   keepalive: 60
   username: !secret mqtt_username
   password: !secret mqtt_password
+
+dyson:
+  username: !secret dyson_username
+  password: !secret dyson_password
+  language: !secret dyson_language
+  devices:
+    - device_id: !secret dyson_device_id_1
+      device_ip: !secret dyson_device_ip_1

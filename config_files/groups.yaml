@@ -113,6 +113,10 @@ roomba:
   - switch.roomba_dock
   - switch.roomba_find
 
+dyson:
+  name: Dyson
+  view: yes
+
 battery:
   name: Battery
   view: yes
