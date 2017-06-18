@@ -26,7 +26,7 @@
     - service: light.turn_off
       entity_id: group.all_lights
     - service: switch.turn_off
-      entity_id: switch.ge_12727_inwall_smart_switch_toggle_switch_2_0
+      entity_id: switch.track_lighting_switch_switch
     - service: input_select.select_option
       data:
         entity_id: input_select.scene_bedroom

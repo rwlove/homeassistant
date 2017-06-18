@@ -2,7 +2,7 @@
 #  hide_entity: true
   trigger:
     platform: state
-    entity_id: sensor.aeotec_zw100_multisensor_6_burglar_3_10
+    entity_id: sensor.aeotec_zw100_multisensor_livingroom_burglar
     to: '8'
   condition:
     condition: and
@@ -21,7 +21,7 @@
 #  hide_entity: true
   trigger:
     platform: state
-    entity_id: sensor.aeotec_zw100_multisensor_6_burglar_3_10
+    entity_id: sensor.aeotec_zw100_multisensor_livingroom_burglar
     to: '8'
   condition:
     condition: and
@@ -40,7 +40,7 @@
 #  hide_entity: true
   trigger:
     platform: state
-    entity_id: sensor.aeotec_zw100_multisensor_6_burglar_3_10
+    entity_id: sensor.aeotec_zw100_multisensor_livingroom_burglar
     to: '8'
   condition:
     condition: and

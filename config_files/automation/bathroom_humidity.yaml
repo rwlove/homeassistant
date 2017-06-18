@@ -2,7 +2,7 @@
 #  hide_entity: true
   trigger:
     platform: numeric_state
-    entity_id: sensor.aeotec_zw100_multisensor_6_relative_humidity_4_5
+    entity_id: sensor.aeotec_zw100_multisensor_bathroom_relative_humidity
     above: 60
   action:
     - service: script.turn_on

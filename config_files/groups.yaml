@@ -56,8 +56,8 @@ weather_inside:
   name: "Weather Inside"
   entities:
   - climate.entrywaynest
-  - sensor.aeotec_zw100_multisensor_6_temperature_3_1
-  - sensor.aeotec_zw100_multisensor_6_relative_humidity_6_relative_humidity_3_5
+  - sensor.aeotec_zw100_multisensor_livingroom_temperature
+  - sensor.aeotec_zw100_multisensor_livingroom_relative_humidity
 
 weather_outside:
   name: "Weather Outside"
@@ -148,44 +148,44 @@ livingroom:
     - input_slider.livingroom_brightness
     - group.livingroom_lights
     - sensor.livingroom_motion
-    - sensor.aeotec_zw100_multisensor_6_luminance_3_3
+    - sensor.aeotec_zw100_multisensor_livingroom_luminance
     - sensor.roomba_state
 
 livingroom_sensor:
   name: Livingroom Sensor
   entities:
     - sensor.livingroom_motion
-    - sensor.aeotec_zw100_multisensor_6_luminance_3_3
-    - sensor.aeotec_zw100_multisensor_6_relative_humidity_3_5
-    - sensor.aeotec_zw100_multisensor_6_temperature_3_1
-    - sensor.aeotec_zw100_multisensor_6_ultraviolet_3_27
+    - sensor.aeotec_zw100_multisensor_livingroom_luminance
+    - sensor.aeotec_zw100_multisensor_livingroom_relative_humidity
+    - sensor.aeotec_zw100_multisensor_livingroom_temperature
+    - sensor.aeotec_zw100_multisensor_livingroom_ultraviolet
 
 kitchen_sensor:
   name: Kitchen Sensor
   entities:
     - sensor.kitchen_motion
-    - sensor.aeotec_zw100_multisensor_6_luminance_9_3
-    - sensor.aeotec_zw100_multisensor_6_relative_humidity_9_5
-    - sensor.aeotec_zw100_multisensor_6_temperature_9_1
-    - sensor.aeotec_zw100_multisensor_6_ultraviolet_9_27
+    - sensor.aeotec_zw100_multisensor_kitchen_luminance
+    - sensor.aeotec_zw100_multisensor_kitchen_relative_humidity
+    - sensor.aeotec_zw100_multisensor_kitchen_temperature
+    - sensor.aeotec_zw100_multisensor_kitchen_ultraviolet
 
 bathroom_sensor_early:
   name: Bathroom Sensor (Early)
   entities:
     - sensor.bathroom_motion
-    - sensor.aeotec_zw100_multisensor_6_luminance_8_3
-    - sensor.aeotec_zw100_multisensor_6_relative_humidity_8_5
-    - sensor.aeotec_zw100_multisensor_6_temperature_8_1
-    - sensor.aeotec_zw100_multisensor_6_ultraviolet_8_27
+    - sensor.aeotec_zw100_multisensor_bathroom_early_luminance
+    - sensor.aeotec_zw100_multisensor_bathroom_early_relative_humidity
+    - sensor.aeotec_zw100_multisensor_bathroom_early_temperature
+    - sensor.aeotec_zw100_multisensor_bathroom_early_ultraviolet
 
 bathroom_sensor:
   name: Bathroom Sensor (Primary)
   entities:
     - sensor.bathroom_motion
-    - sensor.aeotec_zw100_multisensor_6_luminance_4_3
-    - sensor.aeotec_zw100_multisensor_6_relative_humidity_4_5
-    - sensor.aeotec_zw100_multisensor_6_temperature_4_1
-    - sensor.aeotec_zw100_multisensor_6_ultraviolet_4_27
+    - sensor.aeotec_zw100_multisensor_bathroom_early_luminance
+    - sensor.aeotec_zw100_multisensor_bathroom_early_relative_humidity
+    - sensor.aeotec_zw100_multisensor_bathroom_early_temperature
+    - sensor.aeotec_zw100_multisensor_bathroom_early_ultraviolet
 
 bathroom:
   name: Bathroom
@@ -195,7 +195,7 @@ bathroom:
     - input_slider.bathroom_brightness
     - group.bathroom_lights
     - sensor.bathroom_motion
-    - sensor.aeotec_zw100_multisensor_6_relative_humidity_4_5
+    - sensor.aeotec_zw100_multisensor_bathroom_relative_humidity
 
 kitchen:
   name: Kitchen
@@ -223,7 +223,7 @@ livingroom_lights:
   entities:
     - light.lamp
     - light.lightstrip_1
-    - switch.ge_12727_inwall_smart_switch_toggle_switch_2_0
+    - switch.track_lighting_switch_switch
 
 kitchen_lights:
   name: "Kitchen Lights"
@@ -231,10 +231,10 @@ kitchen_lights:
     - light.hallway
     - light.kitchen_1
     - light.kitchen_2
-    - light.unknown_id0063_unknown_type4944_id3033_level_7_0
+    - light.bar_light_switch_level
 
 bathroom_lights:
   name: "Bathroom Lights"
   entities:
-    - light.unknown_id0063_unknown_type4944_id3033_level_6_0
+    - light.bathroom_light_switch_level
     - light.lightstrip_2

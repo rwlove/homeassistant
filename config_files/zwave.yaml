@@ -1,3 +1,4 @@
 usb_path: /dev/ttyACM0
 config_path: /usr/src/app/build/python-openzwave/openzwave/config
 polling_interval: 5000 # Be careful about using polling values below 30000 (30 seconds) as polling can flood the zwave network and cause problems. https://home-assistant.io/getting-started/z-wave/
+new_entity_ids: true #remove this in v0.48 or later

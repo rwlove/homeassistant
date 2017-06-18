@@ -12,7 +12,7 @@ livingroom_lights_on:
       entity_id: group.livingroom_lights
   - service: switch.turn_on
     data:
-      entity_id: switch.ge_12727_inwall_smart_switch_toggle_switch_2_0
+      entity_id: switch.track_lighting_switch_switch
 
 livingroom_lights_off:
   sequence:
@@ -26,4 +26,4 @@ livingroom_lights_off:
       entity_id: group.livingroom_lights
   - service: switch.turn_off
     data:
-      entity_id: switch.ge_12727_inwall_smart_switch_toggle_switch_2_0
+      entity_id: switch.track_lighting_switch_switch

@@ -2,83 +2,83 @@ climate.entrywaynest:
   friendly_name: "Entryway Nest Thermostat"
   unit_of_measurement: F
 
-sensor.aeotec_zw100_multisensor_6_ultraviolet_3_27:
+sensor.aeotec_zw100_multisensor_livingroom_ultraviolet:
   friendly_name: "Ultraviolet"
   icon: mdi:sunglasses
 
-sensor.aeotec_zw100_multisensor_6_ultraviolet_4_27:
+sensor.aeotec_zw100_multisensor_bathroom_ultraviolet:
   friendly_name: "Ultraviolet"
   icon: mdi:sunglasses
 
-sensor.aeotec_zw100_multisensor_6_ultraviolet_8_27:
+sensor.aeotec_zw100_multisensor_bathroom_early_ultraviolet:
   friendly_name: "Ultraviolet"
   icon: mdi:sunglasses
 
-sensor.aeotec_zw100_multisensor_6_ultraviolet_9_27:
+sensor.aeotec_zw100_multisensor_kitchen_ultraviolet:
   friendly_name: "Ultraviolet"
   icon: mdi:sunglasses
 
-sensor.aeotec_zw100_multisensor_6_burglar_3_10:
+sensor.aeotec_zw100_multisensor_livingroom_burglar:
   friendly_name: "Motion"
   polling_intensity: 1
 
-sensor.aeotec_zw100_multisensor_6_burglar_4_10:
+sensor.aeotec_zw100_multisensor_bathroom_burglar:
   friendly_name: "Motion"
   polling_intensity: 1
 
-sensor.aeotec_zw100_multisensor_6_burglar_8_10:
+sensor.aeotec_zw100_multisensor_bathroom_early_burglar:
   friendly_name: "Motion"
   polling_intensity: 1
 
-sensor.aeotec_zw100_multisensor_6_burglar_9_10:
+sensor.aeotec_zw100_multisensor_kitchen_burglar:
   friendly_name: "Motion"
   polling_intensity: 1
 
-sensor.aeotec_zw100_multisensor_6_luminance_3_3:
+sensor.aeotec_zw100_multisensor_livingroom_luminance:
   friendly_name: "Luminance"
   icon: mdi:weather-sunny
 
-sensor.aeotec_zw100_multisensor_6_luminance_4_3:
+sensor.aeotec_zw100_multisensor_bathroom_luminance:
   friendly_name: "Luminance"
   icon: mdi:weather-sunny
 
-sensor.aeotec_zw100_multisensor_6_luminance_8_3:
+sensor.aeotec_zw100_multisensor_bathroom_early_luminance:
   friendly_name: "Luminance"
   icon: mdi:weather-sunny
 
-sensor.aeotec_zw100_multisensor_6_luminance_9_3:
+sensor.aeotec_zw100_multisensor_kitchen_luminance:
   friendly_name: "Luminance"
   icon: mdi:weather-sunny
 
-sensor.aeotec_zw100_multisensor_6_relative_humidity_3_5:
+sensor.aeotec_zw100_multisensor_livingroom_relative_humidity:
   friendly_name: "Humidity"
   icon: mdi:water-percent
 
-sensor.aeotec_zw100_multisensor_6_relative_humidity_4_5:
-  friendly_name: "Humidity"
-  icon: mdi:water-percent
-  
-sensor.aeotec_zw100_multisensor_6_relative_humidity_8_5:
-  friendly_name: "Humidity"
-  icon: mdi:water-percent
-
-sensor.aeotec_zw100_multisensor_6_relative_humidity_9_5:
+sensor.aeotec_zw100_multisensor_bathroom_relative_humidity:
   friendly_name: "Humidity"
   icon: mdi:water-percent
   
-sensor.aeotec_zw100_multisensor_6_temperature_3_1:
+sensor.aeotec_zw100_multisensor_bathroom_early_relative_humidity:
+  friendly_name: "Humidity"
+  icon: mdi:water-percent
+
+sensor.aeotec_zw100_multisensor_kitchen_relative_humidity:
+  friendly_name: "Humidity"
+  icon: mdi:water-percent
+  
+sensor.aeotec_zw100_multisensor_livingroom_temperature:
   friendly_name: "Temperature"
   icon: mdi:thermometer
 
-sensor.aeotec_zw100_multisensor_6_temperature_4_1:
+sensor.aeotec_zw100_multisensor_bathroom_temperature:
   friendly_name: "Temperature"
   icon: mdi:thermometer
 
-sensor.aeotec_zw100_multisensor_6_temperature_8_1:
+sensor.aeotec_zw100_multisensor_bathroom_early_temperature:
   friendly_name: "Temperature"
   icon: mdi:thermometer
 
-sensor.aeotec_zw100_multisensor_6_temperature_9_1:
+sensor.aeotec_zw100_multisensor_kitchen_temperature:
   friendly_name: "Temperature"
   icon: mdi:thermometer
 
@@ -94,15 +94,15 @@ sensor.kitchen_motion:
 sensor.kitchen_motion_early:
   friendly_name: "Motion"
 
-switch.ge_12727_inwall_smart_switch_toggle_switch_2_0:
+switch.track_lighting_switch_switch:
   friendly_name: "Track Lighting"
 
-light.unknown_id0063_unknown_type4944_id3033_level_6_0:
+light.bathroom_light_switch_level:
   friendly_name: "Lights"
   refresh_value: true
   delay: 2
 
-light.unknown_id0063_unknown_type4944_id3033_level_7_0:
+light.bar_light_switch_level:
   friendly_name: "Bar Lights"
   refresh_value: true
   delay: 2
