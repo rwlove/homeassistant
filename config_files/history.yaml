@@ -25,8 +25,8 @@ exclude:
 include:
 #  domains:
   entities:
-    - group.weather_inside
-    - group.weather_outside
+    - sensor.aeotec_zw100_multisensor_livingroom_temperature
+    - sensor.portland_current
     - group.bedroom_lights
     - sensor.livingroom_motion
     - group.livingroom_lights
@@ -34,3 +34,4 @@ include:
     - group.kitchen_lights
     - sensor.bathroom_motion
     - group.bathroom_lights
+    - sensor.bed_pressure
