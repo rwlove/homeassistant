@@ -120,9 +120,6 @@ battery:
 #  - sensor.batt_livingroom_motion
   - sensor.batt_kitchen_motion
 #  - sensor.batt_bathroom_motion
-#  binary_sensor.__sensor_4_0.battery_level
-#  - binary_sensor.__sensor_5_0.battery_level
-#  - binary_sensor.aeotec_zw100_multisensor_6_sensor_3_0.battery_level
   - sensor.roomba_battery
 
 settings:
