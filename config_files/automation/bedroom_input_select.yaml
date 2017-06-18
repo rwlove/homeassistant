@@ -2,31 +2,31 @@
   trigger:
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Blue'
+      to: 'Blue'
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Red'
+      to: 'Red'
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Pink'
+      to: 'Pink'
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Orange'
+      to: 'Orange'
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'White'
+      to: 'White'
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Purple'
+      to: 'Purple'
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Green'
+      to: 'Green'
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Teal'
+      to: 'Teal'
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Aqua'
+      to: 'Aqua'
   action:
     - service: script.notify_kodi_frontends
       data_template:
@@ -41,31 +41,31 @@
   trigger:
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Normal'
+      to: 'Normal'
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Movie'
+      to: 'Movie'
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Concentrate'
+      to: 'Concentrate'
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Energize'
+      to: 'Energize'
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Reading'
+      to: 'Reading'
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Relax'
+      to: 'Relax'
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Romantic'
+      to: 'Romantic'
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Warm'
+      to: 'Warm'
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'Stretch'
+      to: 'Stretch'
   action:
     - service: script.notify_kodi_frontends
       data_template:
@@ -80,7 +80,7 @@
   trigger:
     - platform: state
       entity_id: input_select.scene_bedroom
-      state: 'OFF'
+      to: 'OFF'
   action:
     - service: script.turn_on
       entity_id: script.bedroom_lights_off

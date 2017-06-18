@@ -2,31 +2,31 @@
   trigger:
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Blue'
+      to: 'Blue'
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Red'
+      to: 'Red'
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Pink'
+      to: 'Pink'
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Orange'
+      to: 'Orange'
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'White'
+      to: 'White'
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Purple'
+      to: 'Purple'
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Green'
+      to: 'Green'
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Teal'
+      to: 'Teal'
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Aqua'
+      to: 'Aqua'
   action:
     - service: script.notify_kodi_frontends
       data_template:
@@ -41,31 +41,31 @@
   trigger:
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Normal'
+      to: 'Normal'
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Movie'
+      to: 'Movie'
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Concentrate'
+      to: 'Concentrate'
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Energize'
+      to: 'Energize'
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Reading'
+      to: 'Reading'
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Relax'
+      to: 'Relax'
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Romantic'
+      to: 'Romantic'
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Warm'
+      to: 'Warm'
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'Stretch'
+      to: 'Stretch'
   action:
     - service: script.notify_kodi_frontends
       data_template:
@@ -80,7 +80,7 @@
   trigger:
     - platform: state
       entity_id: input_select.scene_kitchen
-      state: 'OFF'
+      to: 'OFF'
   action:
     - service: script.turn_on
       entity_id: script.kitchen_lights_off
