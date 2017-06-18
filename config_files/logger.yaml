@@ -4,9 +4,9 @@
 #    homeassistant.platform.thinkingcleaner: debug
 #    homeassistant.components.switch: debug
 #    homeassistant.components.sensor: info
-     homeassistant.components.automation: info
+#     homeassistant.components.automation: info
 #    homeassistant.components.scripts: info
-     homeassistant.components.mqtt: info
+#     homeassistant.components.mqtt: info
 #     homeassistant.components.input_select: debug
 #     homeassistant.components.zwave: debug
 #    homeassistant.components.light: debug

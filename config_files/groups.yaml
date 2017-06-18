@@ -116,6 +116,9 @@ roomba:
 dyson:
   name: Dyson
   view: yes
+  entities:
+  - fan.purifier_cool_tower
+  - sensor.purifier_cool_tower_filter_life
 
 battery:
   name: Battery
