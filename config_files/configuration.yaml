@@ -94,3 +94,6 @@ dyson:
   devices:
     - device_id: !secret dyson_device_id_1
       device_ip: !secret dyson_device_ip_1
+
+graphite:
+  host: !secret graphite_ip
