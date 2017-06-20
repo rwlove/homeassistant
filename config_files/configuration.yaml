@@ -66,6 +66,14 @@ nest:
 climate:
   platform: nest
 
+panel_iframe:
+  temp_over_time:
+    title: 'Temperature'
+    url: 'http://grafana.thesteamedcrab.com:3000/dashboard/db/homeassistant-temperature?orgId=1&from=1498971478579&to=1499057878579'
+  kitchen_motion:
+    title: 'Kitchen Motion'
+    url: 'http://grafana.thesteamedcrab.com:3000/dashboard/db/homeassistant-kitchen-motion?refresh=5s&orgId=1&from=1499047509780&to=1499058309780'
+
 #device_tracker:
 #  - platform: nmap_tracker
 #    hosts: 192.168.2.1/29
