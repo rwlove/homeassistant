@@ -87,6 +87,16 @@ panel_iframe:
 ##    track_new_devices: yes
 #    track_new_devices: no
 
+device_tracker:
+  - platform: owntracks
+
+zone:
+  name: Home
+  latitude: 45.528472
+  longitude: -122.681457
+  radius: 50
+  icon: mdi:account-multiple
+
 mqtt:
   broker: mosca
   port: 1883
