@@ -1,16 +1,16 @@
-  default: warn
+  default: warning
   logs:
 #    homeassistant.components.history: debug
 #    homeassistant.platform.thinkingcleaner: debug
 #    homeassistant.components.switch: debug
 #    homeassistant.components.sensor: info
-#     homeassistant.components.automation: info
+    homeassistant.components.automation: info
 #    homeassistant.components.scripts: info
-#     homeassistant.components.mqtt: debug
-#     homeassistant.components.input_select: debug
-#     homeassistant.components.zwave: debug
+#    homeassistant.components.mqtt: debug
+#    homeassistant.components.input_select: debug
+#    homeassistant.components.zwave: debug
 #    homeassistant.components.light: debug
 #    homeassistant.components.http: debug
-#     homeassistant.components.websocket_api: error
-#     homeassistant.core: error
-#     homeassistant.components.media_player: error
+#    homeassistant.components.websocket_api: error
+#    homeassistant.core: error
+#    homeassistant.components.media_player: error
