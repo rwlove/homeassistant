@@ -2,7 +2,7 @@
 
 ./helper_scripts/create_config_tarball.sh
 
-docker build $* -t services/homeassistant .
+docker build $* -t services/homeassistant:v0.48 .
 
 rm config_files.tar.gz
 
