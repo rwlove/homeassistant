@@ -53,8 +53,8 @@ updater:
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
-# View all events in a logbook
-logbook:
+# Logbook settings
+logbook: !include logbook.yaml
 
 # Track the sun
 #sun:

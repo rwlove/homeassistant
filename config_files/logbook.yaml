@@ -1,0 +1,26 @@
+exclude:
+  domains:
+#    - locations
+#    - switch
+    - climate
+    - sensor
+    - zwave
+    - group
+    - binary_sensor
+#  entities:
+#    - group.bedroom
+
+include:
+#  domains:
+  entities:
+    - sensor.bathroom_motion
+    - sensor.bathroom_early_motion
+    - sensor.kitchen_motion
+    - sensor.livingroom_motion
+    - sensor.aeotec_zw100_multisensor_bathroom_humidity
+    - sensor.portland_current
+    - group.bedroom_lights
+    - group.livingroom_lights
+    - group.kitchen_lights
+    - group.bathroom_lights
+    - sensor.bed_pressure
