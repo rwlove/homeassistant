@@ -108,9 +108,9 @@
   entities:
     light.bathroom_light_switch_level:
       state: on
-      brightness: 10
+      brightness: 15
     light.lightstrip_2:
       state: on
-      brightness: 10
+      brightness: 35
       profile: teal
 
