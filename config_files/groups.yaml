@@ -175,7 +175,7 @@ kitchen_sensor:
 bathroom_sensor_early:
   name: Bathroom Sensor (Early)
   entities:
-    - sensor.bathroom_motion
+    - sensor.bathroom_motion_early
     - sensor.aeotec_zw100_multisensor_bathroom_early_luminance
     - sensor.aeotec_zw100_multisensor_bathroom_early_relative_humidity
     - sensor.aeotec_zw100_multisensor_bathroom_early_temperature
