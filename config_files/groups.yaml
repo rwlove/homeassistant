@@ -185,10 +185,10 @@ bathroom_sensor:
   name: Bathroom Sensor (Primary)
   entities:
     - sensor.bathroom_motion
-    - sensor.aeotec_zw100_multisensor_bathroom_early_luminance
-    - sensor.aeotec_zw100_multisensor_bathroom_early_relative_humidity
-    - sensor.aeotec_zw100_multisensor_bathroom_early_temperature
-    - sensor.aeotec_zw100_multisensor_bathroom_early_ultraviolet
+    - sensor.aeotec_zw100_multisensor_bathroom_luminance
+    - sensor.aeotec_zw100_multisensor_bathroom_relative_humidity
+    - sensor.aeotec_zw100_multisensor_bathroom_temperature
+    - sensor.aeotec_zw100_multisensor_bathroom_ultraviolet
 
 bathroom:
   name: Bathroom
