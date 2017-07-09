@@ -104,7 +104,7 @@
       brightness: 35
       profile: blue
 
-- name: "Bathroom Nightlight On"
+- name: "Bathroom Very Dim"
   entities:
     light.bathroom_light_switch_level:
       state: on
@@ -112,4 +112,5 @@
     light.lightstrip_2:
       state: on
       brightness: 10
-      profile: blue
+      profile: teal
+
