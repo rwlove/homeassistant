@@ -93,6 +93,7 @@
     light.lightstrip_2:
       state: on
       brightness: 255
+      profile: energize
 
 - name: "Bathroom Nightlight On"
   entities:
