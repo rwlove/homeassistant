@@ -2,3 +2,7 @@ notifications_on:
   name: Notifications
   initial: off
   icon: mdi:comment-alert
+
+bathroom_timer_on:
+  name: "Bathroom Timer"
+  initial: off

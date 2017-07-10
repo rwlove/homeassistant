@@ -34,6 +34,10 @@
     platform: state
     entity_id: sensor.aeotec_zw100_multisensor_bathroom_early_burglar
     to: '8'
+  condition:
+    condition: state
+    entity_id: script.bathroom_off_timer
+    state: 'off'
   action:
     - service: script.turn_on
       data:
