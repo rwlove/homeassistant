@@ -51,6 +51,9 @@ timed_bathroom_nightlight:
   sequence:
     - service: script.turn_off
       data:
+        entity_id: script.bathroom_early_off_timer
+    - service: script.turn_off
+      data:
         entity_id: script.bathroom_off_timer
     - service: script.turn_on
       data:
@@ -62,6 +65,9 @@ timed_bathroom_nightlight:
 timed_bathroom_bright:
   alias: "Bathroom Lights Bright"
   sequence:
+    - service: script.turn_off
+      data:
+        entity_id: script.bathroom_early_off_timer
     - service: script.turn_off
       data:
         entity_id: script.bathroom_off_timer
