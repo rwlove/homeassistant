@@ -23,7 +23,8 @@ exclude:
     - group.kitchen_sensors
 
 include:
-#  domains:
+  domains:
+    - media_player
   entities:
     - sensor.aeotec_zw100_multisensor_livingroom_temperature
     - sensor.portland_current
