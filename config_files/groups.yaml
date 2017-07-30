@@ -87,6 +87,12 @@ kodi:
   - media_player.kodi_bedroom_righteye
   - media_player.kodi_livingroom_lefteye
 
+mpd:
+  name: MPD
+  view: yes
+  entities:
+  - media_player.righteye_mpd
+
 nest:
   name: Nest
   view: yes
