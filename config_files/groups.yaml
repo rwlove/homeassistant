@@ -92,6 +92,7 @@ mpd:
   view: yes
   entities:
   - media_player.righteye_mpd
+  - media_player.lefteye_mpd
 
 nest:
   name: Nest

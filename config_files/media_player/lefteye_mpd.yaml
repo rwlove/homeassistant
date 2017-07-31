@@ -1,0 +1,4 @@
+alias: lefteye_mpd
+platform: mpd
+name: lefteye_mpd
+host: 192.168.1.5
