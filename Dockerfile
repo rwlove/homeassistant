@@ -12,7 +12,7 @@ COPY scripts/runHomeassistant.sh /usr/bin/runHomeassistant.sh
 
 RUN easy_install --upgrade pytz
 RUN pip install --upgrade pip
-RUN pip3 install homeassistant==0.49
+RUN pip3 install homeassistant==0.50.2
 
 EXPOSE 8123
 
