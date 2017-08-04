@@ -14,7 +14,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -y update && \
 apt-get -y dist-upgrade && \
 apt-get -y install apt-utils \
-libudev-dev && \
+libudev-dev \
+inetutils-ping \
+iproute2 && \
 dpkg --configure -a
 
 #####
