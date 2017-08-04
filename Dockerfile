@@ -1,4 +1,4 @@
-FROM homeassistant/home-assistant
+FROM homeassistant/home-assistant:0.50.2
 
 #####
 # Set Environment Variables.
