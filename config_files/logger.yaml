@@ -13,4 +13,4 @@
 #    homeassistant.components.http: debug
 #    homeassistant.components.websocket_api: error
 #    homeassistant.core: error
-    homeassistant.components.media_player: debug
+#    homeassistant.components.media_player: debug
