@@ -59,4 +59,4 @@ rm -rf /tmp/*
 #################################
 
 ADD config_files.tar.gz /config
-RUN pip3 install homeassistant==0.50.2
+RUN pip3 --no-cache-dir install homeassistant==0.50.2
