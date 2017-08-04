@@ -1,16 +1,16 @@
-FROM homeassistant/home-assistant
+FROM ubuntu:17.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get -y update && \
 apt-get -y dist-upgrade && \
 apt-get -y install apt-utils \
-libudev-dev && \
+libudev-dev \
+python3-pip && \
 dpkg --configure -a
 
 COPY scripts/runHomeassistant.sh /usr/bin/runHomeassistant.sh
 
-RUN pip install --upgrade pip
 RUN pip3 install homeassistant==0.50.2
 
 EXPOSE 8123
