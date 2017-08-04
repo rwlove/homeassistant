@@ -15,6 +15,8 @@ RUN apt-get -y update && \
 apt-get -y dist-upgrade && \
 apt-get -y install apt-utils \
 libudev-dev \
+inetutils-ping \
+iproute2 \
 python3-pip && \
 dpkg --configure -a
 
