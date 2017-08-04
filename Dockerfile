@@ -19,6 +19,8 @@ inetutils-ping \
 iproute2 && \
 dpkg --configure -a
 
+RUN pip3 install homeassistant==0.50.2
+
 #####
 # Copy in scripts and config files.
 #################################
@@ -57,4 +59,3 @@ rm -rf /tmp/*
 #################################
 
 ADD config_files.tar.gz /config
-RUN pip3 install homeassistant==0.50.2
