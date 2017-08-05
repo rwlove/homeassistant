@@ -125,6 +125,9 @@ dyson:
   view: yes
   entities:
   - fan.purifier_cool_tower
+  - sensor.purifier_cool_tower_dust
+  - sensor.purifier_cool_tower_temperature
+  - sensor.purifier_cool_tower_humidity
   - sensor.purifier_cool_tower_filter_life
 
 battery:
