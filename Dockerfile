@@ -25,7 +25,7 @@ RUN pip3 install homeassistant==0.50.2
 # Copy in scripts and config files.
 #################################
 
-COPY scripts/runHomeassistant.sh /usr/bin/runHomeassistant.sh
+COPY scripts/hass_entrypoint.sh /hass_entrypoint.sh
 ADD options.xml /usr/src/app/build/python-openzwave/openzwave/config/options.xml
 
 
@@ -42,7 +42,7 @@ RUN ln -s /config/zwcfg.xsd /usr/src/app/build/python-openzwave/openzwave/config
 #################################
 
 EXPOSE 8123
-CMD ["/usr/bin/runHomeassistant.sh"]
+CMD ["/hass_entrypoint.sh"]
 
 
 #####
