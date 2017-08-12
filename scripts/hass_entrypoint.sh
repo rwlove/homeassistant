@@ -5,4 +5,4 @@ while ! ping -c 1 brain; do
     sleep 1
 done
 
-/usr/local/bin/hass --config /config
+python -m homeassistant --config /config
