@@ -3,7 +3,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.aeotec_zw100_multisensor_bathroom_relative_humidity
-    above: 60
+    above: 56
   action:
     - service: script.turn_on
       data:
