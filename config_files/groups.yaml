@@ -8,6 +8,26 @@ default_view:
     - group.locations
 #    - configurator.philips_hue
 
+
+wakeup_sensors:
+  view: no
+  entities:
+    - sensor.wakeup_alarm_time
+    - sensor.wakeup_start_time_lights
+    - sensor.wakeup_fadein_duration
+
+wakeuplight:
+  name: Wakeup light
+  control: hidden
+  view: yes
+  entities:
+    - group.wakeup_sensors
+    - input_slider.wakeup_hour
+    - input_slider.wakeup_minutes
+    - input_slider.wakeup_duration
+    - input_boolean.wakeup
+    - input_boolean.wakeup_weekends
+
 climate:
   view: yes
   entities:

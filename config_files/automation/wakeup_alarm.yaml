@@ -1,0 +1,27 @@
+- alias: 'WakeUp Light Bedroom'
+  trigger:
+    - platform: time
+      minutes: '/1'
+      seconds: 0
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.wakeup
+        state: 'on'
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: input_boolean.wakeup_weekends
+            state: 'on'
+          - condition: time
+            weekday:
+              - mon
+              - tue
+              - wed
+              - thu
+              - fri
+      - condition: template
+        value_template: '{{ now().strftime("%H:%M") == states.sensor.wakeup_start_time_lights.state }}'
+  action:
+    service: script.wakeup_bedroom
