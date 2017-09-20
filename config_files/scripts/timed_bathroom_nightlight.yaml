@@ -92,10 +92,10 @@ timed_bathroom_early:
         entity_id: script.bathroom_early_off_timer
 
 bathroom_off_timer:
-  alias: "Wait 20 Minutes then Turn Off Bathroom Lights"
+  alias: "Wait 30 Minutes then Turn Off Bathroom Lights"
   sequence:
     - delay:
-        minutes: 20
+        minutes: 30
     - service: script.turn_on
       data:
         entity_id: script.bathroom_lights_off
