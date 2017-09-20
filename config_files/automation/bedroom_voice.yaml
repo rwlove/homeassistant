@@ -3,6 +3,10 @@
   trigger:
     platform: mqtt
     topic: voice/bedroom/lights_on
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_bedroom_voice_automation
+    state: 'on'
   action:
     - service: input_select.select_option
       data:
@@ -14,6 +18,10 @@
   trigger:
     platform: mqtt
     topic: voice/bedroom/lights_off
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_bedroom_voice_automation
+    state: 'on'
   action:
     - service: input_select.select_option
       data:
@@ -27,6 +35,10 @@
       topic: voice/bedroom/lights_color
     - platform: mqtt
       topic: voice/bedroom/lights_scene
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_bedroom_voice_automation
+    state: 'on'
   action:
     - service: script.notify_kodi_frontends
       data:
@@ -42,6 +54,10 @@
     platform: mqtt
     topic: voice/bedroom/lights_adjust
     payload: 'dim'
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_bedroom_voice_automation
+    state: 'on'
   action:
     service: homeassistant.turn_on
     data_template:
@@ -54,6 +70,10 @@
     platform: mqtt
     topic: voice/bedroom/lights_adjust
     payload: 'bright'
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_bedroom_voice_automation
+    state: 'on'
   action:
     service: homeassistant.turn_on
     data_template:

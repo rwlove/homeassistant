@@ -143,7 +143,9 @@ settings:
   name: Settings
   view: yes
   entities:
-  - input_boolean.notifications_on
+    - input_boolean.notifications_on
+    - input_boolean.enable_bedroom_voice_automation
+    - input_boolean.enable_bathroom_automation
 
 bedroom:
   name: Bedroom

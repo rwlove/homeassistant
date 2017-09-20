@@ -4,6 +4,10 @@
     platform: numeric_state
     entity_id: sensor.aeotec_zw100_multisensor_bathroom_relative_humidity
     above: 56
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_bathroom_automation
+    state: 'on'
   action:
     - service: script.turn_on
       data:
