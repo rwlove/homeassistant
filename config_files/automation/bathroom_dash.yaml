@@ -1,0 +1,15 @@
+- alias: "Bathroom Lights - Dash Change On"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: dash2
+    payload: 'active'
+  action:
+    - service: input_slider.select_value
+      data:
+        entity_id: input_slider.bathroom_brightness
+        value: 255
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.scene_bathroom
+        option: 'White'
