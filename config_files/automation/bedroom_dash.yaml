@@ -1,0 +1,45 @@
+- alias: "Bedroom Lights - Dash Change On"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: dash1
+    payload: 'active'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.enable_bedroom_voice_automation
+        state: 'on'
+      - condition: state
+        entity_id: light.left_front
+        state: 'off'
+  action:
+    - service: input_slider.select_value
+      data:
+        entity_id: input_slider.bedroom_brightness
+        value: 255
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.scene_bedroom
+        option: 'White'
+
+- alias: "Bedroom Lights - Dash Change Off"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: dash1
+    payload: 'active'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.enable_bedroom_voice_automation
+        state: 'on'
+      - condition: state
+        entity_id: light.left_front
+        state: 'on'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.scene_bedroom
+        option: 'OFF'
