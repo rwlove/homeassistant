@@ -155,6 +155,13 @@ battery:
 #  - sensor.batt_bathroom_motion
   - sensor.roomba_battery
 
+bathroom_dim_or_bright:
+  name: "Bathroom Bright/Dim Times"
+  view: no
+  entities:
+    - input_datetime.dim_time_on
+    - input_datetime.bright_time_on
+
 settings:
   name: Settings
   view: yes
@@ -163,6 +170,8 @@ settings:
     - input_boolean.enable_bedroom_voice_automation
     - input_boolean.enable_bathroom_automation
     - input_boolean.bathroom_light_dim
+    - group.bathroom_dim_or_bright
+
 bedroom:
   name: Bedroom
   entities:

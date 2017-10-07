@@ -61,7 +61,7 @@
 - alias: "Turn Dim On"
   trigger:
     platform: time
-    at: '07:01:00'
+    at: '18:00:00'
   action:
     - service: input_boolean.turn_on
       data:
@@ -70,7 +70,7 @@
 - alias: "Turn Bright On"
   trigger:
     platform: time
-    at: '17:00:00'
+    at: '07:01:00'
   action:
     - service: input_boolean.turn_off
       data:
