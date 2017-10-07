@@ -14,9 +14,9 @@
         entity_id: light.left_front
         state: 'off'
   action:
-    - service: input_slider.select_value
+    - service: input_number.select_value
       data:
-        entity_id: input_slider.bedroom_brightness
+        entity_id: input_number.bedroom_brightness
         value: 255
     - service: input_select.select_option
       data:

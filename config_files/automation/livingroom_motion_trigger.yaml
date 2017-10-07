@@ -58,7 +58,7 @@
 - alias: Livingroom Lights - Adjust Brightness
   trigger:
     platform: state
-    entity_id: input_slider.livingroom_brightness
+    entity_id: input_number.livingroom_brightness
   action:
     - service: light.turn_on
       data_template:

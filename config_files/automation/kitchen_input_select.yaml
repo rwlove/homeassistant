@@ -30,11 +30,11 @@
   action:
     - service: script.notify_kodi_frontends
       data_template:
-        message: 'Changing Kitchen Lights to Scene: {{ states.input_select.scene_kitchen.state }} and Brightness: {{ states.input_slider.kitchen_brightness.state }}'
+        message: 'Changing Kitchen Lights to Scene: {{ states.input_select.scene_kitchen.state }} and Brightness: {{ states.input_number.kitchen_brightness.state }}'
     - service: light.turn_on
       data_template:
         entity_id: group.kitchen_lights
-        brightness: '{{ states.input_slider.kitchen_brightness.state | int }}'
+        brightness: '{{ states.input_number.kitchen_brightness.state | int }}'
         profile: "{{ states.input_select.scene_kitchen.state | lower }}"
 
 - alias: Kitchen Lights - Input Select Change Scene
@@ -69,11 +69,11 @@
   action:
     - service: script.notify_kodi_frontends
       data_template:
-        message: 'Changing Kitchen Lights to Scene: {{ states.input_select.scene_kitchen.state }} and Brightness: {{ states.input_slider.kitchen_brightness.state }}'
+        message: 'Changing Kitchen Lights to Scene: {{ states.input_select.scene_kitchen.state }} and Brightness: {{ states.input_number.kitchen_brightness.state }}'
     - service: light.turn_on
       data_template:
         entity_id: group.kitchen_lights
-        brightness: '{{ states.input_slider.kitchen_brightness.state | int }}'
+        brightness: '{{ states.input_number.kitchen_brightness.state | int }}'
         profile: "{{ states.input_select.scene_kitchen.state | lower }}"
 
 - alias: Kitchen Lights - Input Select Turn Off

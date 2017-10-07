@@ -1,7 +1,7 @@
 - alias: Kitchen Lights - Adjust Brightness
   trigger:
     platform: state
-    entity_id: input_slider.bar_brightness
+    entity_id: input_number.bar_brightness
   action:
     - service: light.turn_on
       data_template:

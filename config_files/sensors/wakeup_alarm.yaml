@@ -2,17 +2,17 @@
   sensors:
     wakeup_alarm_time:
       friendly_name: 'Alarm time'
-      value_template: '{% if states.input_slider.wakeup_hour.state|length == 3 %}0{% endif %}{{ states.input_slider.wakeup_hour.state | int }}:{% if states.input_slider.wakeup_minutes.state|length == 3 %}0{% endif %}{{ states.input_slider.wakeup_minutes.state | int }}'
+      value_template: '{% if states.input_number.wakeup_hour.state|length == 3 %}0{% endif %}{{ states.input_number.wakeup_hour.state | int }}:{% if states.input_number.wakeup_minutes.state|length == 3 %}0{% endif %}{{ states.input_number.wakeup_minutes.state | int }}'
 - platform: template
   sensors:
     wakeup_start_time_lights:
       friendly_name: 'Fade-in start time'
       value_template: >
-        {% if states.sensor.wakeup_alarm_time and states.input_slider.wakeup_duration %}
+        {% if states.sensor.wakeup_alarm_time and states.input_number.wakeup_duration %}
         {% set alarmtime = states.sensor.wakeup_alarm_time.state %}
         {% set alarm_hour = alarmtime.split(":")[0] | int %}
         {% set alarm_min = alarmtime.split(":")[1] | int %}
-        {% set light_dur = states.input_slider.wakeup_duration.state | int %}
+        {% set light_dur = states.input_number.wakeup_duration.state | int %}
         {% set alarm_min_light = alarm_min - light_dur %}
         {% if alarm_min_light  < 0 %}
         {% set alarm_min_light = alarm_min_light + 60 %}
@@ -28,5 +28,5 @@
   sensors:
     wakeup_fadein_duration:
       friendly_name: 'Fade-in duration'
-      value_template: '{{ states.input_slider.wakeup_duration.state | int }}'
+      value_template: '{{ states.input_number.wakeup_duration.state | int }}'
       unit_of_measurement: 'min'

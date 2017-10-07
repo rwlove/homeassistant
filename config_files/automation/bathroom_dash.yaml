@@ -5,9 +5,9 @@
     topic: dash2
     payload: 'active'
   action:
-    - service: input_slider.select_value
+    - service: input_number.select_value
       data:
-        entity_id: input_slider.bathroom_brightness
+        entity_id: input_number.bathroom_brightness
         value: 255
     - service: input_select.select_option
       data:

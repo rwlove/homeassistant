@@ -30,11 +30,11 @@
   action:
     - service: script.notify_kodi_frontends
       data_template:
-        message: 'Changing Bathroom Lights to Scene: {{ states.input_select.scene_bathroom.state }} and Brightness: {{ states.input_slider.bathroom_brightness.state }}'
+        message: 'Changing Bathroom Lights to Scene: {{ states.input_select.scene_bathroom.state }} and Brightness: {{ states.input_number.bathroom_brightness.state }}'
     - service: light.turn_on
       data_template:
         entity_id: group.bathroom_lights
-        brightness: '{{ states.input_slider.bathroom_brightness.state | int }}'
+        brightness: '{{ states.input_number.bathroom_brightness.state | int }}'
         profile: "{{ states.input_select.scene_bathroom.state | lower }}"
 
 - alias: Bathroom Lights - Input Select Change Scene
@@ -69,11 +69,11 @@
   action:
     - service: script.notify_kodi_frontends
       data_template:
-        message: 'Changing Bathroom Lights to Scene: {{ states.input_select.scene_bathroom.state }} and Brightness: {{ states.input_slider.bathroom_brightness.state }}'
+        message: 'Changing Bathroom Lights to Scene: {{ states.input_select.scene_bathroom.state }} and Brightness: {{ states.input_number.bathroom_brightness.state }}'
     - service: light.turn_on
       data_template:
         entity_id: group.bathroom_lights
-        brightness: '{{ states.input_slider.bathroom_brightness.state | int }}'
+        brightness: '{{ states.input_number.bathroom_brightness.state | int }}'
         profile: "{{ states.input_select.scene_bathroom.state | lower }}"
 
 - alias: Bathroom Lights - Input Select Turn Off

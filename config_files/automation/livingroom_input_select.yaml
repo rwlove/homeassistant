@@ -30,11 +30,11 @@
   action:
     - service: script.notify_kodi_frontends
       data_template:
-        message: 'Changing Livingroom Lights to Scene: {{ states.input_select.scene_livingroom.state }} and Brightness: {{ states.input_slider.livingroom_brightness.state }}'
+        message: 'Changing Livingroom Lights to Scene: {{ states.input_select.scene_livingroom.state }} and Brightness: {{ states.input_number.livingroom_brightness.state }}'
     - service: light.turn_on
       data_template:
         entity_id: group.livingroom_lights
-        brightness: '{{ states.input_slider.livingroom_brightness.state | int }}'
+        brightness: '{{ states.input_number.livingroom_brightness.state | int }}'
         profile: "{{ states.input_select.scene_livingroom.state | lower }}"
 
 - alias: Livingroom Lights - Input Select Change Scene
@@ -69,11 +69,11 @@
   action:
     - service: script.notify_kodi_frontends
       data_template:
-        message: 'Changing Livingroom Lights to Scene: {{ states.input_select.scene_livingroom.state }} and Brightness: {{ states.input_slider.livingroom_brightness.state }}'
+        message: 'Changing Livingroom Lights to Scene: {{ states.input_select.scene_livingroom.state }} and Brightness: {{ states.input_number.livingroom_brightness.state }}'
     - service: light.turn_on
       data_template:
         entity_id: group.livingroom_lights
-        brightness: '{{ states.input_slider.livingroom_brightness.state | int }}'
+        brightness: '{{ states.input_number.livingroom_brightness.state | int }}'
         profile: "{{ states.input_select.scene_livingroom.state | lower }}"
 
 - alias: Livingroom Lights - Input Select Turn Off

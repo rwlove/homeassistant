@@ -22,9 +22,9 @@ wakeuplight:
   view: yes
   entities:
     - group.wakeup_sensors
-    - input_slider.wakeup_hour
-    - input_slider.wakeup_minutes
-    - input_slider.wakeup_duration
+    - input_number.wakeup_hour
+    - input_number.wakeup_minutes
+    - input_number.wakeup_duration
     - input_boolean.wakeup
     - input_boolean.wakeup_weekends
 
@@ -167,7 +167,7 @@ bedroom:
   name: Bedroom
   entities:
     - input_select.scene_bedroom
-    - input_slider.bedroom_brightness
+    - input_number.bedroom_brightness
     - group.bedroom_lights
     - switch.my_smart_plug_mini
     - sensor.bed_pressure
@@ -176,7 +176,7 @@ livingroom:
   name: Livingroom
   entities:
     - input_select.scene_livingroom
-    - input_slider.livingroom_brightness
+    - input_number.livingroom_brightness
     - group.livingroom_lights
     - sensor.livingroom_motion
     - sensor.aeotec_zw100_multisensor_livingroom_luminance
@@ -223,7 +223,7 @@ bathroom:
 #  view: yes
   entities:
     - input_select.scene_bathroom
-    - input_slider.bathroom_brightness
+    - input_number.bathroom_brightness
     - group.bathroom_lights
     - sensor.bathroom_motion
     - sensor.aeotec_zw100_multisensor_bathroom_relative_humidity
@@ -232,7 +232,7 @@ kitchen:
   name: Kitchen
   entities:
     - input_select.scene_kitchen
-    - input_slider.bar_brightness
+    - input_number.bar_brightness
     - group.kitchen_lights
     - sensor.kitchen_motion
 

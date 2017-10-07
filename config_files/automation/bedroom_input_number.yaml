@@ -1,7 +1,7 @@
 - alias: Bedroom Lights - Adjust Brightness
   trigger:
     platform: state
-    entity_id: input_slider.bedroom_brightness
+    entity_id: input_number.bedroom_brightness
   action:
     - service: light.turn_on
       data_template:
