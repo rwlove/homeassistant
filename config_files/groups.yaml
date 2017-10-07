@@ -162,14 +162,20 @@ bathroom_dim_or_bright:
     - input_datetime.dim_time_on
     - input_datetime.bright_time_on
 
-settings:
-  name: Settings
-  view: yes
+advanced_settings:
+  name: "Advanced Settings"
+  view: no
   entities:
     - input_boolean.notifications_on
     - input_boolean.enable_bedroom_voice_automation
     - input_boolean.enable_bathroom_automation
     - input_boolean.bathroom_light_dim
+
+settings:
+  name: Settings
+  view: yes
+  entities:
+    - group.advanced_settings
     - group.bathroom_dim_or_bright
 
 bedroom:
