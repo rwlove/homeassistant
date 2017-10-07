@@ -162,7 +162,7 @@ settings:
     - input_boolean.notifications_on
     - input_boolean.enable_bedroom_voice_automation
     - input_boolean.enable_bathroom_automation
-
+    - input_boolean.bathroom_light_dim
 bedroom:
   name: Bedroom
   entities:

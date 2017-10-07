@@ -7,6 +7,10 @@ bathroom_timer_on:
   name: "Bathroom Timer"
   initial: off
 
+bathroom_light_dim:
+  name: "Bathroom Light Dim"
+  initial: off
+
 wakeup:
   name: 'Enable wakeup light'
   icon: mdi:power

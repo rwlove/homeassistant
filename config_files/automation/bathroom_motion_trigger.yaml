@@ -7,9 +7,9 @@
   condition:
     condition: and
     conditions:
-      - condition: time
-        after: '17:00:00'
-        before: '07:00:00'
+      - condition: state
+        entity_id: input_boolean.bathroom_light_dim
+        state: 'on'
       - condition: state
         entity_id: input_boolean.enable_bathroom_automation
         state: 'on'
@@ -27,9 +27,9 @@
   condition:
     condition: and
     conditions:
-      - condition: time
-        after: '07:01:00'
-        before: '16:59:00'
+      - condition: state
+        entity_id: input_boolean.bathroom_light_dim
+        state: 'off'
       - condition: state
         entity_id: input_boolean.enable_bathroom_automation
         state: 'on'
@@ -57,3 +57,21 @@
     - service: script.turn_on
       data:
         entity_id: script.timed_bathroom_early
+
+- alias: "Turn Dim On"
+  trigger:
+    platform: time
+    at: '07:01:00'
+  action:
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.bathroom_light_dim
+
+- alias: "Turn Bright On"
+  trigger:
+    platform: time
+    at: '17:00:00'
+  action:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.bathroom_light_dim
