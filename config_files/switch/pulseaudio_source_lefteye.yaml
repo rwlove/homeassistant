@@ -1,0 +1,17 @@
+- platform: pulseaudio_loopback
+  source_name: 'HASS.monitor'
+  sink_name: 'tunnel.righteye.local.alsa_output.usb-C-Media_INC._USB_Sound_Device-00.analog-stereo'
+  host: 192.168.1.5
+  name: "Source Lefteye Destination Bedroom"
+#port (Optional): The port that Pulseaudio is listening on. Defaults to 4712.
+#buffer_size (Optional): How much data to load from Pulseaudio at once. Default is 1KB.
+#tcp_timeout (Optional): How long to wait for a response from Pulseaudio before giving up. Default is 3 seconds.
+
+- platform: pulseaudio_loopback
+  source_name: 'HASS.monitor'
+  sink_name: 'alsa_output.pci-0000_00_1b.0.hdmi-surround'
+  host: 192.168.1.5
+  name: "Source Lefteye Destination Livingroom"
+#port (Optional): The port that Pulseaudio is listening on. Defaults to 4712.
+#buffer_size (Optional): How much data to load from Pulseaudio at once. Default is 1KB.
+#tcp_timeout (Optional): How long to wait for a response from Pulseaudio before giving up. Default is 3 seconds.

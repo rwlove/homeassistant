@@ -8,6 +8,25 @@ default_view:
     - group.locations
 #    - configurator.philips_hue
 
+audio_source_righteye:
+  view: no
+  name: "Bedroom Audio Source"
+  entities:
+    - switch.source_righteye_destination_bedroom
+    - switch.source_righteye_destination_livingroom
+
+audio_source_lefteye:
+  view: no
+  name: "Livingroom Audio Source"
+  entities:
+    - switch.source_lefteye_destination_livingroom
+    - switch.source_lefteye_destination_bedroom
+
+audio:
+  view: yes
+  entities:
+    - group.audio_source_lefteye
+    - group.audio_source_righteye
 
 wakeup_sensors:
   view: no
