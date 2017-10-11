@@ -28,10 +28,7 @@ input_number: !include input_number.yaml
 input_datetime: !include input_datetime.yaml
 input_select: !include input_select.yaml
 
-switch:
-  - platform: thinkingcleaner
-  - platform: tplink
-    host: 192.168.5.10
+switch: !include_dir_list switch/
 
 # Show links to resources in log and frontend
 #introduction:
