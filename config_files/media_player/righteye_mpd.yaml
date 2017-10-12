@@ -1,4 +1,4 @@
 alias: righteye_mpd
 platform: mpd
 name: righteye_mpd
-host: 192.168.1.4
+host: !secret righteye_ip

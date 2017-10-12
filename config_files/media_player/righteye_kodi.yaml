@@ -1,6 +1,6 @@
 alias: righteye_kodi
 platform: kodi
-host: righteye
+host: !secret righteye_hostname
 port: 8080
 name: Kodi Bedroom (righteye)
 #  username: USERNAME
