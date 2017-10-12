@@ -1,4 +1,4 @@
 alias: "Righteye Notify"
 name: righteye
 platform: kodi
-host: 192.168.1.4
+host: !secret righteye_hostname
