@@ -1,4 +1,4 @@
 platform: hue
-host: 192.168.5.6
+host: !secret hue_bridge_ip
 #    allow_unreachable: true
 
