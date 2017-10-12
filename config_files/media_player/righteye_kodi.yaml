@@ -1,6 +1,5 @@
 alias: righteye_kodi
 platform: kodi
-#  host: http://192.168.1.4
 host: righteye
 port: 8080
 name: Kodi Bedroom (righteye)
