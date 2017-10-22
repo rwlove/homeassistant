@@ -194,6 +194,7 @@ settings:
   name: Settings
   view: yes
   entities:
+    - sensor.uptime
     - group.advanced_settings
     - group.bathroom_dim_or_bright
 
