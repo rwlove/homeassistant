@@ -45,6 +45,6 @@ docker run \
        -v ${PWD}/logs/OZW_Log.txt:/config/OZW_Log.txt \
        -v /etc/localtime:/etc/localtime:ro \
        -v ${ZWAVE_DEV}:/dev/ttyACM0 \
-       services/homeassistant:v0.55 ${CMD}
+       services/homeassistant:v0.56 ${CMD}
 
 add_contianer_to_network.sh -n homeassistant -b br0 -m ${MAC_ADDRESS} -v "hass"
