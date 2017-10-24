@@ -28,3 +28,7 @@ enable_bedroom_voice_automation:
 enable_bathroom_automation:
   name: "Bathroom Automation"
   initial: on
+
+enable_livingroom_automation:
+  name: "Livingroom Automation"
+  initial: on

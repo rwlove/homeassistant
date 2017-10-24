@@ -11,6 +11,9 @@
         entity_id: group.livingroom_lights
         state: 'off'
       - condition: state
+        entity_id: input_boolean.enable_livingroom_automation
+        state: 'on'
+      - condition: state
         entity_id: light.kitchen_1
         state: 'on'
   action:
@@ -30,6 +33,9 @@
         entity_id: group.livingroom_lights
         state: 'off'
       - condition: state
+        entity_id: input_boolean.enable_livingroom_automation
+        state: 'on'
+      - condition: state
         entity_id: light.kitchen_1
         state: 'off'
   action:
@@ -47,6 +53,9 @@
     conditions:
       - condition: state
         entity_id: group.livingroom_lights
+        state: 'on'
+      - condition: state
+        entity_id: input_boolean.enable_livingroom_automation
         state: 'on'
       - condition: state
         entity_id: light.kitchen_1

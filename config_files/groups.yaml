@@ -188,6 +188,7 @@ advanced_settings:
     - input_boolean.notifications_on
     - input_boolean.enable_bedroom_voice_automation
     - input_boolean.enable_bathroom_automation
+    - input_boolean.enable_livingroom_automation
     - input_boolean.bathroom_light_dim
 
 settings:
