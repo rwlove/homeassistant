@@ -5,7 +5,7 @@ date | tee -a build.log
 
 ./helper_scripts/create_config_tarball.sh | tee -a build.log
 
-docker build $* -t services/homeassistant:v0.56.2 . 2>&1 | tee -a build.log
+docker build $* -t services/homeassistant:v0.57.1 . 2>&1 | tee -a build.log
 
 rm config_files.tar.gz
 
