@@ -10,6 +10,7 @@ default_view:
 
 audio_source_righteye:
   view: no
+  control: hidden
   name: "Bedroom Audio Source"
   entities:
     - switch.source_righteye_destination_bedroom
@@ -17,6 +18,7 @@ audio_source_righteye:
 
 audio_source_lefteye:
   view: no
+  control: hidden  
   name: "Livingroom Audio Source"
   entities:
     - switch.source_lefteye_destination_livingroom
@@ -63,6 +65,8 @@ sensors:
 
 bathroom_scripts:
   name: Bathroom
+  view: no
+  control: hidden
   entities:
     - script.timed_bathroom_early
     - script.timed_bathroom_nightlight
@@ -72,6 +76,8 @@ bathroom_scripts:
 
 livingroom_scripts:
   name: Livingroom
+  view: no
+  control: hidden
   entities:
     - script.timed_nightlight_with_kitchen
     - script.timed_nightlight_without_kitchen
@@ -79,6 +85,8 @@ livingroom_scripts:
 
 kitchen_scripts:
   name: Kitchen
+  view: no
+  control: hidden
   entities:
     - script.timed_nightlight_only_kitchen
     - script.kitchen_motion_on
@@ -202,6 +210,7 @@ settings:
 
 bedroom:
   name: Bedroom
+  control: hidden
   entities:
     - input_select.scene_bedroom
     - input_number.bedroom_brightness
