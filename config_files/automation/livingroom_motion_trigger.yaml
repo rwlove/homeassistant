@@ -73,3 +73,19 @@
       data_template:
         entity_id: group.livingroom_lights
         brightness: '{{ trigger.to_state.state | int }}'
+
+- alias: "Livingroom Timer Finished"
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.livingroom_timer
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Livingroom Timer Finished!"
+    - service: script.turn_on
+      data:
+        entity_id: script.livingroom_lights_off
