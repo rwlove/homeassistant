@@ -89,8 +89,6 @@ kitchen_scripts:
   control: hidden
   entities:
     - script.timed_nightlight_only_kitchen
-    - script.kitchen_motion_on
-    - script.kitchen_timer_off
 
 scripts:
   view: yes
