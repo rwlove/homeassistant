@@ -12,6 +12,7 @@ homeassistant:
   time_zone: America/Los_Angeles
   customize: !include customize.yaml
 
+timer: !include timers.yaml
 sensor: !include_dir_merge_list sensors/
 light: !include devices/lights.yaml
 media_player: !include_dir_list media_player/
