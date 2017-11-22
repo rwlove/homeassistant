@@ -75,12 +75,9 @@ timed_bathroom_bright:
 timed_bathroom_early:
   alias: "Bathroom Lights Early"
   sequence:
-    - service: timer.cancel
-      data:
-        entity_id: timer.bathroom_early_timer
     - service: script.turn_on
       data:
         entity_id: script.bathroom_early_on
     - service: timer.start
       data:
-        entity_id: timer.bathroom_timer
+        entity_id: timer.bathroom_early_timer
