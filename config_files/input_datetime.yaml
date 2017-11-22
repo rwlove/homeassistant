@@ -2,10 +2,10 @@ dim_time_on:
   name: Dim Light On
   has_date: false
   has_time: true
-  initial: '2017-08-07 17:00'
+  initial: '17:00'
 
 bright_time_on:
   name: Bright Light On
   has_date: false
   has_time: true
-  initial: '2017-08-07 07:01'
+  initial: '07:00'
