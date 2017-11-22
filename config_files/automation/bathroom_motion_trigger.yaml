@@ -75,3 +75,35 @@
     - service: input_boolean.turn_off
       data:
         entity_id: input_boolean.bathroom_light_dim
+
+- alias: Bathroom Early Timer Finished
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.bathroom_early_timer
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Bathroom Early Timer Finished!"
+    - service: script.turn_on
+      data:
+        entity_id: script.bathroom_lights_off
+
+- alias: Bathroom Timer Finished
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.bathroom_timer
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Bathroom Timer Finished!"
+    - service: script.turn_on
+      data:
+        entity_id: script.bathroom_lights_off

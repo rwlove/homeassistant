@@ -49,62 +49,38 @@ bathroom_lights_off:
 timed_bathroom_nightlight:
   alias: "Bathroom Nightlight"
   sequence:
-    - service: script.turn_off
+    - service: timer.cancel
       data:
-        entity_id: script.bathroom_early_off_timer
-    - service: script.turn_off
-      data:
-        entity_id: script.bathroom_off_timer
+        entity_id: timer.bathroom_early_timer
     - service: script.turn_on
       data:
         entity_id: script.bathroom_nightlight_on
-    - service: script.turn_on
+    - service: timer.start
       data:
-        entity_id: script.bathroom_off_timer
+        entity_id: timer.bathroom_timer
 
 timed_bathroom_bright:
   alias: "Bathroom Lights Bright"
   sequence:
-    - service: script.turn_off
+    - service: timer.cancel
       data:
-        entity_id: script.bathroom_early_off_timer
-    - service: script.turn_off
-      data:
-        entity_id: script.bathroom_off_timer
+        entity_id: timer.bathroom_early_timer
     - service: script.turn_on
       data:
         entity_id: script.bathroom_bright_on
-    - service: script.turn_on
+    - service: timer.start
       data:
-        entity_id: script.bathroom_off_timer
+        entity_id: timer.bathroom_timer
 
 timed_bathroom_early:
   alias: "Bathroom Lights Early"
   sequence:
-    - service: script.turn_off
+    - service: timer.cancel
       data:
-        entity_id: script.bathroom_early_off_timer
+        entity_id: timer.bathroom_early_timer
     - service: script.turn_on
       data:
         entity_id: script.bathroom_early_on
-    - service: script.turn_on
+    - service: timer.start
       data:
-        entity_id: script.bathroom_early_off_timer
-
-bathroom_off_timer:
-  alias: "Wait 30 Minutes then Turn Off Bathroom Lights"
-  sequence:
-    - delay:
-        minutes: 30
-    - service: script.turn_on
-      data:
-        entity_id: script.bathroom_lights_off
-
-bathroom_early_off_timer:
-  alias: "Wait 2 Minutes then Turn Off Bathroom Lights"
-  sequence:
-    - delay:
-        minutes: 2
-    - service: script.turn_on
-      data:
-        entity_id: script.bathroom_lights_off
+        entity_id: timer.bathroom_timer
