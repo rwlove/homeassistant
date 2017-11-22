@@ -4,14 +4,29 @@
     entity_id: sensor.aeotec_zw100_multisensor_kitchen_burglar
     to: '8'
   action:
-    service: script.turn_on
-    entity_id: script.kitchen_motion_on
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Kitchen Motion Detected ; (Re)Starting Kitchen Timer!"
+    - service: script.turn_on
+      data:
+        entity_id: script.kitchen_lights_on
+    - service: timer.start
+      entity_id: timer.kitchen_timer
 
-- alias: "Kitchen Motion Detection Off"
+- alias: "Kitchen Timer Finished"
   trigger:
-    platform: state
-    entity_id: sensor.aeotec_zw100_multisensor_kitchen_burglar
-    to: '0'
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.kitchen_timer
   action:
-    service: script.turn_on
-    entity_id: script.kitchen_timer_off
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Kitchen Timer Finished!"
+    - service: script.turn_on
+      data:
+        entity_id: script.kitchen_lights_off

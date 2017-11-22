@@ -1,4 +1,4 @@
-kitchen_light_on:
+kitchen_lights_on:
   alias: "Turn On Kitchen Lights"
   sequence:
   - service: script.turn_on
@@ -10,17 +10,7 @@ kitchen_light_on:
     data:
       entity_id: scene.kitchen_bright_on
 
-kitchen_motion_on:
-  alias: "Motion Detected: Cancel Existing Off-Timer and Turn On Kitchen Lights"
-  sequence:
-    - service: script.turn_off
-      data:
-        entity_id: script.kitchen_timer_off
-    - service: script.turn_on
-      data:
-        entity_id: script.kitchen_light_on
-
-kitchen_light_off:
+kitchen_lights_off:
   alias: "Turn Off Kitchen Lights"
   sequence:
   - service: script.turn_on
@@ -31,12 +21,3 @@ kitchen_light_off:
   - service: scene.turn_on
     data:
       entity_id: scene.kitchen_lights_off
-
-kitchen_timer_off:
-  alias: "Wait 10 Minutes then Turn Off Kitchen Lights"
-  sequence:
-    - delay:
-        minutes: 10
-    - service: script.turn_on
-      data:
-        entity_id: script.kitchen_light_off
