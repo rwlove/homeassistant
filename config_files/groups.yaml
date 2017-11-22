@@ -184,6 +184,7 @@ bathroom_dim_or_bright:
 advanced_settings:
   name: "Advanced Settings"
   view: no
+  control: hidden
   entities:
     - input_boolean.notifications_on
     - input_boolean.enable_bedroom_voice_automation
