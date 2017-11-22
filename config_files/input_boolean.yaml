@@ -3,10 +3,6 @@ notifications_on:
   initial: off
   icon: mdi:comment-alert
 
-bathroom_timer_on:
-  name: "Bathroom Timer"
-  initial: off
-
 bathroom_light_dim:
   name: "Bathroom Light Dim"
   initial: off
