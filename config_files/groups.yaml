@@ -30,24 +30,40 @@ audio:
     - group.audio_source_lefteye
     - group.audio_source_righteye
 
-wakeup_sensors:
+wakeup_time:
+  name: Wakeup Time
   view: no
+  control: hidden
   entities:
     - sensor.wakeup_alarm_time
     - sensor.wakeup_start_time_lights
     - sensor.wakeup_fadein_duration
 
-wakeuplight:
-  name: Wakeup light
+wakeup_time_settings:
+  name: Wakeup Time Settings
   control: hidden
-  view: yes
+  view: no
   entities:
-    - group.wakeup_sensors
     - input_number.wakeup_hour
     - input_number.wakeup_minutes
     - input_number.wakeup_duration
+
+wakeup_on_off:
+  name: Wakeup Light Settings
+  control: hidden
+  view: no
+  entities:
     - input_boolean.wakeup
     - input_boolean.wakeup_weekends
+
+wakeuplight:
+  name: Wakeup Light
+  control: hidden
+  view: yes
+  entities:
+    - group.wakeup_time
+    - group.wakeup_time_settings
+    - group.wakeup_on_off
 
 climate:
   view: yes
