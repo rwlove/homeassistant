@@ -36,6 +36,8 @@ if [ "" == "${ZWAVE_DEV}" ] ; then
     exit -1
 fi  
 
+echo "Creating Container"
+
 docker run \
        --network="none" \
        -${MODE}t \
