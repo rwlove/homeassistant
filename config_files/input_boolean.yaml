@@ -28,3 +28,7 @@ enable_bathroom_automation:
 enable_livingroom_automation:
   name: "Livingroom Automation"
   initial: on
+
+sleep:
+  name: "Go To Sleep"
+  initial: off

@@ -1,6 +1,7 @@
 default_view:
   view: yes
   entities:
+    - input_boolean.sleep
     - group.bedroom
     - group.livingroom
     - group.kitchen

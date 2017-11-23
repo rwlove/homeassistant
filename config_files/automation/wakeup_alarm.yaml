@@ -25,3 +25,28 @@
         value_template: '{{ now().strftime("%H:%M") == states.sensor.wakeup_start_time_lights.state }}'
   action:
     service: script.wakeup_bedroom
+
+- alias: Sleep Routine
+  trigger:
+    platform: state
+    entity_id: input_boolean.sleep
+    to: 'on'
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Sleep Routine Started!"
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.righteye_mpd
+        media_content_type: playlist
+        media_content_id: sleep
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.righteye_mpd
+        volume_level: 0.60
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.scene_bedroom
+        option: 'OFF'
