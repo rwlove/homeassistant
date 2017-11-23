@@ -1,7 +1,6 @@
 default_view:
   view: yes
   entities:
-    - input_boolean.sleep
     - group.bedroom
     - group.livingroom
     - group.kitchen
@@ -65,6 +64,13 @@ wakeuplight:
     - group.wakeup_time
     - group.wakeup_time_settings
     - group.wakeup_on_off
+
+sleepsettings:
+  name: Sleep
+  control: hidden
+  view: yes
+  entities:
+    - input_boolean.sleep
 
 climate:
   view: yes

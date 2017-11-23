@@ -45,8 +45,23 @@
     - service: media_player.volume_set
       data:
         entity_id: media_player.righteye_mpd
-        volume_level: 0.60
+        volume_level: 0.40
     - service: input_select.select_option
       data:
         entity_id: input_select.scene_bedroom
         option: 'OFF'
+
+- alias: Cancel Sleep Routine
+  trigger:
+    platform: state
+    entity_id: input_boolean.sleep
+    to: 'off'
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Sleep Routine Cancelled!"
+    - service: media_player.media_stop
+      data:
+        entity_id: media_player.righteye_mpd
