@@ -92,10 +92,10 @@ bathroom_scripts:
   control: hidden
   entities:
     - script.timed_bathroom_early
+    - timer.bathroom_early_timer
     - script.timed_bathroom_nightlight
     - script.timed_bathroom_bright
-    - script.bathroom_off_timer
-    - script.bathroom_early_off_timer
+    - timer.bathroom_timer
 
 livingroom_scripts:
   name: Livingroom
@@ -104,6 +104,7 @@ livingroom_scripts:
   entities:
     - script.timed_nightlight_with_kitchen
     - script.timed_nightlight_without_kitchen
+    - timer.livingroom_timer    
 
 kitchen_scripts:
   name: Kitchen
@@ -111,6 +112,7 @@ kitchen_scripts:
   control: hidden
   entities:
     - script.timed_nightlight_only_kitchen
+    - timer.kitchen_timer
 
 scripts:
   view: yes
