@@ -1,0 +1,32 @@
+- alias: "Getting Out Of Bed"
+  trigger:
+    platform: state
+    entity_id: binary_sensor.bed_pressure_sensor_sensor
+    to: 'on'
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Got Out Of Bed!"
+    - service: light.turn_on
+      data:
+        entity_id: light.lightstrip_3
+        brightness: 255
+        color_name: purple
+
+#  hide_entity: true
+- alias: "Getting Into Bed"
+  trigger:
+    platform: state
+    entity_id: binary_sensor.bed_pressure_sensor_sensor
+    to: 'off'
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Getting Into Bed!"
+    - service: light.turn_off
+      data:
+        entity_id: light.lightstrip_3
