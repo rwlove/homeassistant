@@ -1,9 +1,9 @@
 - alias: "Shower Running"
 #  hide_entity: true
   trigger:
-    platform: numeric_state
-    entity_id: sensor.aeotec_zw100_multisensor_bathroom_relative_humidity
-    above: 56
+    platform: state
+    entity_id: binary_sensor.bathroom_high_humidity
+    to: 'on'
   condition:
     condition: state
     entity_id: input_boolean.enable_bathroom_automation
@@ -14,9 +14,6 @@
         entity_id: script.notify_kodi_frontends
         variables:
           message: "Shower Running!"
-    - service: timer.start
-      data:
-        entity_id: timer.bathroom_timer
     - service: script.turn_on
       data:
         entity_id: script.timed_bathroom_bright

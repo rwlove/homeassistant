@@ -285,6 +285,7 @@ bathroom_sensor:
     - sensor.aeotec_zw100_multisensor_bathroom_relative_humidity
     - sensor.aeotec_zw100_multisensor_bathroom_temperature
     - sensor.aeotec_zw100_multisensor_bathroom_ultraviolet
+    - binary_sensor.bathroom_high_humidity
 
 bathroom:
   name: Bathroom
