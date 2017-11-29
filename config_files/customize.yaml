@@ -19,19 +19,19 @@ sensor.aeotec_zw100_multisensor_kitchen_ultraviolet:
   icon: mdi:sunglasses
 
 sensor.aeotec_zw100_multisensor_livingroom_burglar:
-  friendly_name: "Motion"
+  friendly_name: "Livingroom Burglar"
   polling_intensity: 1
 
 sensor.aeotec_zw100_multisensor_bathroom_burglar:
-  friendly_name: "Motion"
+  friendly_name: "Bathroom Burglar"
   polling_intensity: 1
 
 sensor.aeotec_zw100_multisensor_bathroom_early_burglar:
-  friendly_name: "Motion"
+  friendly_name: "Bathroom Early Burglar"
   polling_intensity: 1
 
 sensor.aeotec_zw100_multisensor_kitchen_burglar:
-  friendly_name: "Motion"
+  friendly_name: "Kitchen Burglar"
   polling_intensity: 1
 
 sensor.aeotec_zw100_multisensor_livingroom_luminance:
@@ -83,16 +83,16 @@ sensor.aeotec_zw100_multisensor_kitchen_temperature:
   icon: mdi:thermometer
 
 sensor.livingroom_motion:
-  friendly_name: "Motion"
+  friendly_name: "Livingroom Motion"
 
 sensor.bathroom_motion:
-  friendly_name: "Motion"
+  friendly_name: "Bathroom Motion"
 
 sensor.kitchen_motion:
-  friendly_name: "Motion"
+  friendly_name: "Kitchen Motion"
 
 sensor.kitchen_motion_early:
-  friendly_name: "Motion"
+  friendly_name: "Kitch Early Motion"
 
 switch.track_lighting_switch_switch:
   friendly_name: "Track Lighting"
