@@ -15,18 +15,53 @@
     - service: timer.start
       entity_id: timer.kitchen_timer
 
-- alias: "Kitchen Timer Finished"
+- alias: "Kitchen Timer Finished (Motion Detected)"
   trigger:
     platform: event
     event_type: timer.finished
     event_data:
       entity_id: timer.kitchen_timer
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.enable_kitchen_automation
+        state: 'on'
+      - condition: state
+        entity_id: sensor.aeotec_zw100_multisensor_kitchen_burglar
+        state: '3'
   action:
     - service: script.turn_on
       data:
         entity_id: script.notify_kodi_frontends
         variables:
-          message: "Kitchen Timer Finished!"
+          message: "Kitchen Timer Finished! (Motion Detected)"
+    - service: timer.start
+      data:
+        entity_id: timer.kitchen_timer
+
+# bug: what about if the burglar sensor is tampered with?
+- alias: "Kitchen Timer Finished (Motion Not Detected)"
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.kitchen_timer
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.enable_kitchen_automation
+        state: 'on'
+      - condition: state
+        entity_id: sensor.aeotec_zw100_multisensor_kitchen_burglar
+        state: '0'
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Kitchen Timer Finished! (Motion Not Detected)"
     - service: script.turn_on
       data:
         entity_id: script.kitchen_lights_off
