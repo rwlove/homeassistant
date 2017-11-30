@@ -29,6 +29,10 @@ enable_livingroom_automation:
   name: "Livingroom Automation"
   initial: on
 
+enable_kitchen_automation:
+  name: "Kitchen Automation"
+  initial: on
+
 sleep:
   name: "Go To Sleep"
   initial: off
