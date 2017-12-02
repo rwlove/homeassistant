@@ -33,7 +33,7 @@
         state: 'on'
       - condition: state
         entity_id: sensor.aeotec_zw100_multisensor_kitchen_burglar
-        state: '3'
+        state: '8'
   action:
     - service: script.turn_on
       data:
