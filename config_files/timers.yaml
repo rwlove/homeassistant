@@ -1,5 +1,5 @@
 kitchen_timer:
-  duration: '00:10:00'
+  duration: '00:05:00'
 
 livingroom_timer:
   duration: '00:10:00'
