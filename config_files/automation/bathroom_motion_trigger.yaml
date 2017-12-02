@@ -97,18 +97,52 @@
       data:
         entity_id: script.bathroom_lights_off
 
-- alias: Bathroom Timer Finished
+- alias: Bathroom Timer Finished (Motion Detected)
   trigger:
     platform: event
     event_type: timer.finished
     event_data:
       entity_id: timer.bathroom_timer
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.enable_bathroom_automation
+        state: 'on'
+      - condition: state
+        entity_id: sensor.aeotec_zw100_multisensor_bathroom_burglar
+        state: '8'
   action:
     - service: script.turn_on
       data:
         entity_id: script.notify_kodi_frontends
         variables:
-          message: "Bathroom Timer Finished!"
+          message: "Bathroom Timer Finished! (Motion Detected)"
+    - service: timer.start
+      data:
+        entity_id: timer.bathroom_timer
+
+- alias: Bathroom Timer Finished (Motion Not Detected)
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.bathroom_timer
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.enable_bathroom_automation
+        state: 'on'
+      - condition: state
+        entity_id: sensor.aeotec_zw100_multisensor_bathroom_burglar
+        state: '0'
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Bathroom Timer Finished! (Motion Not Detected)"
     - service: script.turn_on
       data:
         entity_id: script.bathroom_lights_off
