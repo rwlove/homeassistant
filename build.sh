@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BUILD_VER="v0.58.1"
+BUILD_VER="v0.59"
 
 echo -n "New build: ${BUILD_VER}" | tee -a build.log
 date | tee -a build.log
