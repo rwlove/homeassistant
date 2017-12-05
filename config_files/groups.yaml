@@ -297,6 +297,7 @@ bathroom:
     - group.bathroom_lights
     - sensor.bathroom_motion
     - sensor.aeotec_zw100_multisensor_bathroom_relative_humidity
+    - binary_sensor.bathroom_high_humidity
 
 kitchen:
   name: Kitchen
