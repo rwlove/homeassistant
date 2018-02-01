@@ -9,7 +9,7 @@
 #    homeassistant.components.mqtt: debug
 #    homeassistant.components.input_select: debug
 #    homeassistant.components.zwave: debug
-#    homeassistant.components.light: debug
+    homeassistant.components.light: debug
 #    homeassistant.components.http: debug
 #    homeassistant.components.websocket_api: error
 #    homeassistant.core: error
