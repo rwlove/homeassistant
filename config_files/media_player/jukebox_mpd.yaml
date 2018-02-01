@@ -1,0 +1,4 @@
+alias: jukebox
+platform: mpd
+name: jukebox_mpd
+host: !secret jukebox_ip
