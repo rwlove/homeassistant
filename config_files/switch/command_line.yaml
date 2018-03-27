@@ -1,0 +1,9 @@
+- platform: command_line
+  switches:
+    sleep:
+      command_on: >
+        /usr/bin/curl --header 'Content-Type: application/json' --data-binary '[{"jsonrpc": "2.0", "id": 0, "method": "Playlist.Clear", "params": {"playlistid": 0}},
+          {"jsonrpc":"2.0","id":0,"method":"Playlist.Add","params":{"playlistid":0,"item":{"recursive":true, "directory":"special://profile/playlists/music/sleep.xsp"}}},
+          {"jsonrpc":"2.0","id":0,"method":"Player.Open","params":{"item":{"playlistid":0,"position":0}}}]' http://righteye:8080/jsonrpc
+      command_off: >
+        /usr/bin/curl --header 'Content-Type: application/json' --data-binary '{"jsonrpc": "2.0", "method": "Player.Stop", "params": {"playerid":1}, "id": 1}' http://righteye:8080/jsonrpc

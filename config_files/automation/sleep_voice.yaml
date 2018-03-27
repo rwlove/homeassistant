@@ -1,0 +1,29 @@
+- alias: "Sleep Start"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/sleep/start
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_bedroom_voice_automation
+    state: 'on'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.scene_bedroom
+        option: 'OFF'
+    - service: switch.turn_on
+      entity_id: switch.sleep
+
+- alias: "Sleep Stop"
+  hide_entity: true
+  trigger:
+    platform: mqtt
+    topic: voice/sleep/stop
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_bedroom_voice_automation
+    state: 'on'
+  action:
+    service: switch.turn_off
+    entity_id: switch.sleep
