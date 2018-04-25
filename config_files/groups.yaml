@@ -242,6 +242,7 @@ bedroom:
     - group.bedroom_lights
     - switch.my_smart_plug_mini
     - sensor.bed_pressure
+    - switch.diffuser
 
 livingroom:
   name: Livingroom
