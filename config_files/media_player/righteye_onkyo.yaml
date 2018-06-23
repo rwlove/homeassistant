@@ -1,0 +1,3 @@
+platform: onkyo
+host: !secret onkyo_righteye_ip
+name: righteye_onkyo
