@@ -156,7 +156,6 @@ media_players:
   entities:
   - media_player.kodi_bedroom_righteye
   - media_player.kodi_livingroom_lefteye
-  - media_player.righteye_mpd
   - media_player.lefteye_mpd
   - media_player.jukebox_mpd
   - media_player.righteye_onkyo

@@ -1,4 +1,0 @@
-alias: righteye_mpd
-platform: mpd
-name: righteye_mpd
-host: !secret righteye_ip
