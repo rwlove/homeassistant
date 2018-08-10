@@ -308,6 +308,7 @@ kitchen:
   entities:
     - input_select.scene_kitchen
     - input_number.bar_brightness
+    - light.lightstrip_4
     - group.kitchen_lights
     - sensor.kitchen_motion
 
@@ -338,6 +339,7 @@ kitchen_lights:
     - light.hallway
     - light.kitchen_1
     - light.kitchen_2
+    - light.lightstrip_4
     - light.bar_light_switch_level
 
 bathroom_lights:

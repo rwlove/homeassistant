@@ -26,6 +26,10 @@
       state: on
       profile: pink
       brightness: 100
+    light.lightstrip_4:
+      state: on
+      profile: pink
+      brightness: 100
     light.hallway:
       state: on
       profile: pink
@@ -46,6 +50,10 @@
       profile: pink
       brightness: 100
     light.kitchen_2:
+      state: on
+      profile: pink
+      brightness: 100
+    light.lightstrip_4:
       state: on
       profile: pink
       brightness: 100
@@ -74,6 +82,9 @@
       state: off
       transition: 2
     light.kitchen_1:
+      state: off
+      transition: 2
+    light.lightstrip_4:
       state: off
       transition: 2
     light.kitchen_2:
@@ -114,4 +125,3 @@
       state: on
       brightness: 35
       profile: teal
-
