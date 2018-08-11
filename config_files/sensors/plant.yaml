@@ -1,0 +1,20 @@
+- platform: mqtt
+  name: my_plant_moisture
+  state_topic: "plantgw/update/myplant/"
+  value_template: '{{ value_json.moisture }}'
+- platform: mqtt
+  name: my_plant_battery
+  state_topic: "plantgw/update/myplant/"
+  value_template: '{{ value_json.battery }}'
+- platform: mqtt
+  name: my_plant_temperature
+  state_topic: "plantgw/update/myplant/"
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  name: my_plant_conductivity
+  state_topic: "plantgw/update/myplant/"
+  value_template: '{{ value_json.conductivity }}'
+- platform: mqtt
+  name: my_plant_brightness
+  state_topic: "plantgw/update/myplant/"
+  value_template: '{{ value_json.brightness }}'

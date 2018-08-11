@@ -254,6 +254,7 @@ livingroom:
     - sensor.livingroom_motion
     - sensor.aeotec_zw100_multisensor_livingroom_luminance
     - sensor.roomba_state
+    - plant.simulated_plant
 
 livingroom_sensor:
   name: Livingroom Sensor
