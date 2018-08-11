@@ -70,6 +70,9 @@
     light.kitchen_2:
       state: off
       transition: 2
+    light.lightstrip_4:
+      state: off
+      transition: 2
     light.hallway:
       state: off
       transition: 2
