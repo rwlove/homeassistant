@@ -181,3 +181,6 @@ switch.roomba_find:
 
 sensor.bed_pressure:
   friendly_name: "In Bed?"
+
+sensor.my_plant_temperature:
+  unit_of_measurement: 'Fahrenheit'
