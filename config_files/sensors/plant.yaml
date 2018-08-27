@@ -1,20 +1,40 @@
 - platform: mqtt
-  name: my_plant_moisture
-  state_topic: "plantgw/update/myplant/"
+  name: fern_moisture
+  state_topic: "plantgw/update/fern/"
   value_template: '{{ value_json.moisture }}'
 - platform: mqtt
-  name: my_plant_battery
-  state_topic: "plantgw/update/myplant/"
+  name: fern_battery
+  state_topic: "plantgw/update/fern/"
   value_template: '{{ value_json.battery }}'
 - platform: mqtt
-  name: my_plant_temperature
-  state_topic: "plantgw/update/myplant/"
+  name: fern_temperature
+  state_topic: "plantgw/update/fern/"
   value_template: '{{ value_json.temperature }}'
 - platform: mqtt
-  name: my_plant_conductivity
-  state_topic: "plantgw/update/myplant/"
+  name: fern_conductivity
+  state_topic: "plantgw/update/fern/"
   value_template: '{{ value_json.conductivity }}'
 - platform: mqtt
-  name: my_plant_brightness
-  state_topic: "plantgw/update/myplant/"
+  name: fern_brightness
+  state_topic: "plantgw/update/fern/"
+  value_template: '{{ value_json.brightness }}'
+- platform: mqtt
+  name: palm_moisture
+  state_topic: "plantgw/update/palm/"
+  value_template: '{{ value_json.moisture }}'
+- platform: mqtt
+  name: palm_battery
+  state_topic: "plantgw/update/palm/"
+  value_template: '{{ value_json.battery }}'
+- platform: mqtt
+  name: palm_temperature
+  state_topic: "plantgw/update/palm/"
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  name: palm_conductivity
+  state_topic: "plantgw/update/palm/"
+  value_template: '{{ value_json.conductivity }}'
+- platform: mqtt
+  name: palm_brightness
+  state_topic: "plantgw/update/palm/"
   value_template: '{{ value_json.brightness }}'
