@@ -41,6 +41,7 @@ frontend:
 http:
 # Uncomment this to add a password (recommended!)
   trusted_networks:
+    - 192.168.2.1
     - 127.0.0.1
     - 192.168.0.0/21
   ip_ban_enabled: false
