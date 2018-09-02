@@ -128,11 +128,11 @@ plant:
       temperature: sensor.fern_temperature
       conductivity: sensor.fern_conductivity
       brightness: sensor.fern_brightness
-    min_moisture: 20
+    min_moisture: 15
     max_moisture: 60
-    min_battery: 17
-    min_conductivity: 500
-    min_temperature: 15
+    min_battery: 15
+    min_conductivity: 350
+    min_temperature: 50
   palm:
     sensors:
       moisture: sensor.palm_moisture
@@ -140,8 +140,8 @@ plant:
       temperature: sensor.palm_temperature
       conductivity: sensor.palm_conductivity
       brightness: sensor.palm_brightness
-    min_moisture: 20
+    min_moisture: 15
     max_moisture: 60
-    min_battery: 17
-    min_conductivity: 500
-    min_temperature: 15
+    min_battery: 15
+    min_conductivity: 350
+    min_temperature: 42
