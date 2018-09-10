@@ -9,6 +9,7 @@
 - platform: mqtt
   name: fern_temperature
   state_topic: "plantgw/update/fern/"
+  unit_of_measurement: '°C'
   value_template: '{{ value_json.temperature }}'
 - platform: mqtt
   name: fern_conductivity
@@ -29,6 +30,7 @@
 - platform: mqtt
   name: palm_temperature
   state_topic: "plantgw/update/palm/"
+  unit_of_measurement: '°C'
   value_template: '{{ value_json.temperature }}'
 - platform: mqtt
   name: palm_conductivity
