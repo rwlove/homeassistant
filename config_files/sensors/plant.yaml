@@ -124,3 +124,24 @@
   name: petra_brightness
   state_topic: "plantgw/update/petra/"
   value_template: '{{ value_json.brightness }}'
+- platform: mqtt
+  name: donkey_moisture
+  state_topic: "plantgw/update/donkey/"
+  value_template: '{{ value_json.moisture }}'
+- platform: mqtt
+  name: donkey_battery
+  state_topic: "plantgw/update/donkey/"
+  value_template: '{{ value_json.battery }}'
+- platform: mqtt
+  name: donkey_temperature
+  state_topic: "plantgw/update/donkey/"
+  unit_of_measurement: '°C'
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  name: donkey_conductivity
+  state_topic: "plantgw/update/donkey/"
+  value_template: '{{ value_json.conductivity }}'
+- platform: mqtt
+  name: donkey_brightness
+  state_topic: "plantgw/update/donkey/"
+  value_template: '{{ value_json.brightness }}'

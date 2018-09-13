@@ -199,3 +199,16 @@ plant:
     min_conductivity: 350
     min_temperature: 41
     max_temperature: 89
+  donkey:
+    sensors:
+      moisture: sensor.donkey_moisture
+      battery: sensor.donkey_battery
+      temperature: sensor.donkey_temperature
+      conductivity: sensor.donkey_conductivity
+      brightness: sensor.donkey_brightness
+    min_moisture: 15
+    max_moisture: 60
+    min_battery: 15
+    min_conductivity: 350
+    min_temperature: 41
+    max_temperature: 89    

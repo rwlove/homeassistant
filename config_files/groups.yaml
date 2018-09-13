@@ -259,6 +259,7 @@ livingroom:
     - plant.pothos1
     - plant.pothos2
     - plant.petra
+    - plant.donkey
 
 livingroom_sensor:
   name: Livingroom Sensor
