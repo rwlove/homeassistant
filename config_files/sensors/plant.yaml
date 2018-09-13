@@ -40,3 +40,87 @@
   name: palm_brightness
   state_topic: "plantgw/update/palm/"
   value_template: '{{ value_json.brightness }}'
+- platform: mqtt
+  name: zz_moisture
+  state_topic: "plantgw/update/zz/"
+  value_template: '{{ value_json.moisture }}'
+- platform: mqtt
+  name: zz_battery
+  state_topic: "plantgw/update/zz/"
+  value_template: '{{ value_json.battery }}'
+- platform: mqtt
+  name: zz_temperature
+  state_topic: "plantgw/update/zz/"
+  unit_of_measurement: '°C'
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  name: zz_conductivity
+  state_topic: "plantgw/update/zz/"
+  value_template: '{{ value_json.conductivity }}'
+- platform: mqtt
+  name: zz_brightness
+  state_topic: "plantgw/update/zz/"
+  value_template: '{{ value_json.brightness }}'
+- platform: mqtt
+  name: pothos1_moisture
+  state_topic: "plantgw/update/pothos1/"
+  value_template: '{{ value_json.moisture }}'
+- platform: mqtt
+  name: pothos1_battery
+  state_topic: "plantgw/update/pothos1/"
+  value_template: '{{ value_json.battery }}'
+- platform: mqtt
+  name: pothos1_temperature
+  state_topic: "plantgw/update/pothos1/"
+  unit_of_measurement: '°C'
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  name: pothos1_conductivity
+  state_topic: "plantgw/update/pothos1/"
+  value_template: '{{ value_json.conductivity }}'
+- platform: mqtt
+  name: pothos1_brightness
+  state_topic: "plantgw/update/pothos1/"
+  value_template: '{{ value_json.brightness }}'
+- platform: mqtt
+  name: pothos2_moisture
+  state_topic: "plantgw/update/pothos2/"
+  value_template: '{{ value_json.moisture }}'
+- platform: mqtt
+  name: pothos2_battery
+  state_topic: "plantgw/update/pothos2/"
+  value_template: '{{ value_json.battery }}'
+- platform: mqtt
+  name: pothos2_temperature
+  state_topic: "plantgw/update/pothos2/"
+  unit_of_measurement: '°C'
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  name: pothos2_conductivity
+  state_topic: "plantgw/update/pothos2/"
+  value_template: '{{ value_json.conductivity }}'
+- platform: mqtt
+  name: pothos2_brightness
+  state_topic: "plantgw/update/pothos2/"
+  value_template: '{{ value_json.brightness }}'
+- platform: mqtt
+  name: petra_moisture
+  state_topic: "plantgw/update/petra/"
+  value_template: '{{ value_json.moisture }}'
+- platform: mqtt
+  name: petra_battery
+  state_topic: "plantgw/update/petra/"
+  value_template: '{{ value_json.battery }}'
+- platform: mqtt
+  name: petra_temperature
+  state_topic: "plantgw/update/petra/"
+  unit_of_measurement: '°C'
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  name: petra_conductivity
+  state_topic: "plantgw/update/petra/"
+  value_template: '{{ value_json.conductivity }}'
+- platform: mqtt
+  name: petra_brightness
+  state_topic: "plantgw/update/petra/"
+  value_template: '{{ value_json.brightness }}'

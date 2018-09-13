@@ -133,6 +133,7 @@ plant:
     min_battery: 15
     min_conductivity: 350
     min_temperature: 50
+    max_temperature: 89    
   palm:
     sensors:
       moisture: sensor.palm_moisture
@@ -144,4 +145,57 @@ plant:
     max_moisture: 60
     min_battery: 15
     min_conductivity: 350
-    min_temperature: 42
+    min_temperature: 50
+    max_temperature: 89    
+  zz:
+    sensors:
+      moisture: sensor.zz_moisture
+      battery: sensor.zz_battery
+      temperature: sensor.zz_temperature
+      conductivity: sensor.zz_conductivity
+      brightness: sensor.zz_brightness
+    min_moisture: 15
+    max_moisture: 60
+    min_battery: 15
+    min_conductivity: 350
+    min_temperature: 50
+    max_temperature: 89    
+  pothos1:
+    sensors:
+      moisture: sensor.pothos1_moisture
+      battery: sensor.pothos1_battery
+      temperature: sensor.pothos1_temperature
+      conductivity: sensor.pothos1_conductivity
+      brightness: sensor.pothos1_brightness
+    min_moisture: 15
+    max_moisture: 60
+    min_battery: 15
+    min_conductivity: 350
+    min_temperature: 50
+    max_temperature: 89    
+  pothos2:
+    sensors:
+      moisture: sensor.pothos2_moisture
+      battery: sensor.pothos2_battery
+      temperature: sensor.pothos2_temperature
+      conductivity: sensor.pothos2_conductivity
+      brightness: sensor.pothos2_brightness
+    min_moisture: 15
+    max_moisture: 60
+    min_battery: 15
+    min_conductivity: 350
+    min_temperature: 50
+    max_temperature: 89
+  petra:
+    sensors:
+      moisture: sensor.petra_moisture
+      battery: sensor.petra_battery
+      temperature: sensor.petra_temperature
+      conductivity: sensor.petra_conductivity
+      brightness: sensor.petra_brightness
+    min_moisture: 15
+    max_moisture: 60
+    min_battery: 15
+    min_conductivity: 350
+    min_temperature: 41
+    max_temperature: 89

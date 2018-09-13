@@ -255,6 +255,10 @@ livingroom:
     - sensor.roomba_state
     - plant.fern
     - plant.palm
+    - plant.zz
+    - plant.pothos1
+    - plant.pothos2
+    - plant.petra
 
 livingroom_sensor:
   name: Livingroom Sensor
