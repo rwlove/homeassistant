@@ -22,6 +22,17 @@
           On Standby
         {% endif %}
 
+    toilet_motion:
+      friendly_name: "Motion"
+      value_template: >-
+        {% if states.sensor.aeotec_zw100_multisensor_toilet_burglar.state == '8' %}
+          Detected
+        {% elif states.sensor.aeotec_zw100_multisensor_toilet_burglar.state == '3' %}
+          Tampered With
+        {% elif states.sensor.aeotec_zw100_multisensor_toilet_burglar.state == '0' %}
+          On Standby
+        {% endif %}
+
     bathroom_motion_early:
       friendly_name: "Motion"
       value_template: >-

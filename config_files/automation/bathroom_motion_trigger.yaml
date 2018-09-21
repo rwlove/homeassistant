@@ -38,6 +38,46 @@
       data:
         entity_id: script.timed_bathroom_bright
 
+- alias: "Toilet Motion On (Night)"
+#  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.aeotec_zw100_multisensor_toilet_burglar
+    to: '8'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.bathroom_light_dim
+        state: 'on'
+      - condition: state
+        entity_id: input_boolean.enable_bathroom_automation
+        state: 'on'
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.timed_bathroom_nightlight
+
+- alias: "Toilet Motion On (Day)"
+#  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.aeotec_zw100_multisensor_toilet_burglar
+    to: '8'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.bathroom_light_dim
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.enable_bathroom_automation
+        state: 'on'
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.timed_bathroom_bright
+
 - alias: "Early Bathroom Motion On"
 #  hide_entity: true
   trigger:
@@ -109,9 +149,14 @@
       - condition: state
         entity_id: input_boolean.enable_bathroom_automation
         state: 'on'
-      - condition: state
-        entity_id: sensor.aeotec_zw100_multisensor_bathroom_burglar
-        state: '8'
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: sensor.aeotec_zw100_multisensor_bathroom_burglar
+            state: '8'
+          - condition: state
+            entity_id: sensor.aeotec_zw100_multisensor_toilet_burglar
+            state: '8'
   action:
     - service: script.turn_on
       data:
@@ -140,6 +185,12 @@
       - condition: state
         entity_id: binary_sensor.bathroom_high_humidity
         state: 'off'
+      - condition: state
+        entity_id: sensor.aeotec_zw100_multisensor_toilet_burglar
+        state: '0'
+      - condition: state
+        entity_id: binary_sensor.toilet_high_humidity
+        state: 'off'
   action:
     - service: script.turn_on
       data:
@@ -162,12 +213,24 @@
       - condition: state
         entity_id: input_boolean.enable_bathroom_automation
         state: 'on'
-      - condition: state
-        entity_id: sensor.aeotec_zw100_multisensor_bathroom_burglar
-        state: '0'
-      - condition: state
-        entity_id: binary_sensor.bathroom_high_humidity
-        state: 'on'
+      - condition: or
+        conditions:
+          - condition: and
+            conditions:
+              - condition: state
+                entity_id: sensor.aeotec_zw100_multisensor_bathroom_burglar
+                state: '0'
+              - condition: state
+                entity_id: binary_sensor.bathroom_high_humidity
+                state: 'on'
+          - condition: and
+            conditions:
+              - condition: state
+                entity_id: sensor.aeotec_zw100_multisensor_toilet_burglar
+                state: '0'
+              - condition: state
+                entity_id: binary_sensor.toilet_high_humidity
+                state: 'on'
   action:
     - service: script.turn_on
       data:

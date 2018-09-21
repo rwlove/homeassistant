@@ -10,6 +10,10 @@ sensor.aeotec_zw100_multisensor_bathroom_ultraviolet:
   friendly_name: "Ultraviolet"
   icon: mdi:sunglasses
 
+sensor.aeotec_zw100_multisensor_toilet_ultraviolet:
+  friendly_name: "Ultraviolet"
+  icon: mdi:sunglasses
+
 sensor.aeotec_zw100_multisensor_bathroom_early_ultraviolet:
   friendly_name: "Ultraviolet"
   icon: mdi:sunglasses
@@ -42,6 +46,10 @@ sensor.aeotec_zw100_multisensor_bathroom_luminance:
   friendly_name: "Luminance"
   icon: mdi:weather-sunny
 
+sensor.aeotec_zw100_multisensor_toilet_luminance:
+  friendly_name: "Luminance"
+  icon: mdi:weather-sunny
+
 sensor.aeotec_zw100_multisensor_bathroom_early_luminance:
   friendly_name: "Luminance"
   icon: mdi:weather-sunny
@@ -55,7 +63,11 @@ sensor.aeotec_zw100_multisensor_livingroom_relative_humidity:
   icon: mdi:water-percent
 
 sensor.aeotec_zw100_multisensor_bathroom_relative_humidity:
-  friendly_name: "Humidity"
+  friendly_name: "Humidity (by the sink)"
+  icon: mdi:water-percent
+
+sensor.aeotec_zw100_multisensor_toilet_relative_humidity:
+  friendly_name: "Humidity (by the toilet)"
   icon: mdi:water-percent
   
 sensor.aeotec_zw100_multisensor_bathroom_early_relative_humidity:
@@ -74,6 +86,10 @@ sensor.aeotec_zw100_multisensor_bathroom_temperature:
   friendly_name: "Temperature"
   icon: mdi:thermometer
 
+sensor.aeotec_zw100_multisensor_toilet_temperature:
+  friendly_name: "Temperature"
+  icon: mdi:thermometer
+
 sensor.aeotec_zw100_multisensor_bathroom_early_temperature:
   friendly_name: "Temperature"
   icon: mdi:thermometer
@@ -87,6 +103,9 @@ sensor.livingroom_motion:
 
 sensor.bathroom_motion:
   friendly_name: "Bathroom Motion"
+
+sensor.toilet_motion:
+  friendly_name: "Toilet Motion"
 
 sensor.kitchen_motion:
   friendly_name: "Kitchen Motion"

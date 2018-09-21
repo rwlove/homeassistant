@@ -86,6 +86,7 @@ sensors:
     - group.livingroom_sensor
     - group.bathroom_sensor_early
     - group.bathroom_sensor
+    - group.toilet_sensor
 
 bathroom_scripts:
   name: Bathroom
@@ -298,6 +299,16 @@ bathroom_sensor:
     - sensor.aeotec_zw100_multisensor_bathroom_ultraviolet
     - binary_sensor.bathroom_high_humidity
 
+toilet_sensor:
+  name: Toilet Sensor
+  entities:
+    - sensor.toilet_motion
+    - sensor.aeotec_zw100_multisensor_toilet_luminance
+    - sensor.aeotec_zw100_multisensor_toilet_relative_humidity
+    - sensor.aeotec_zw100_multisensor_toilet_temperature
+    - sensor.aeotec_zw100_multisensor_toilet_ultraviolet
+    - binary_sensor.toilet_high_humidity
+
 bathroom:
   name: Bathroom
 #  view: yes
@@ -308,6 +319,8 @@ bathroom:
     - sensor.bathroom_motion
     - sensor.aeotec_zw100_multisensor_bathroom_relative_humidity
     - binary_sensor.bathroom_high_humidity
+    - sensor.aeotec_zw100_multisensor_toilet_relative_humidity
+    - binary_sensor.toilet_high_humidity
 
 kitchen:
   name: Kitchen

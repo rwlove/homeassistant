@@ -4,3 +4,10 @@
       friendly_name: "Bathroom high humidity"
       value_template: >-
         {{ (states.sensor.aeotec_zw100_multisensor_bathroom_relative_humidity.state | float - states.sensor.aeotec_zw100_multisensor_livingroom_relative_humidity.state | float) > 8 }}
+
+- platform: template
+  sensors:
+    toilet_high_humidity:
+      friendly_name: "Toilet high humidity"
+      value_template: >-
+        {{ (states.sensor.aeotec_zw100_multisensor_toilet_relative_humidity.state | float - states.sensor.aeotec_zw100_multisensor_livingroom_relative_humidity.state | float) > 8 }}
