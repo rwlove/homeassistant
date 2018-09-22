@@ -126,6 +126,9 @@ light.bar_light_switch_level:
   refresh_value: true
   delay: 2
 
+switch.fireplace_switch:
+  friendly_name: "Fireplace"
+
 binary_sensor.aeotec_zw100_multisensor_6_sensor_3_0:
   hidden: true
 

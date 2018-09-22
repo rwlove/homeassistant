@@ -253,6 +253,7 @@ livingroom:
     - group.livingroom_lights
     - sensor.livingroom_motion
     - sensor.aeotec_zw100_multisensor_livingroom_luminance
+    - switch.fireplace_switch
     - sensor.roomba_state
     - plant.fern
     - plant.palm
