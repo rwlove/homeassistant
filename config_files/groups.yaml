@@ -366,3 +366,4 @@ bathroom_lights:
   entities:
     - light.bathroom_light_switch_level
     - light.lightstrip_2
+    - light.lightstrip_5

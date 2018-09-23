@@ -108,6 +108,10 @@
       state: on
       brightness: 255
       profile: energize
+    light.lightstrip_5:
+      state: on
+      brightness: 255
+      profile: energize
 
 - name: "Bathroom Nightlight On"
   entities:
@@ -118,6 +122,10 @@
       state: on
       brightness: 35
       profile: blue
+    light.lightstrip_5:
+      state: on
+      brightness: 35
+      profile: blue      
 
 - name: "Bathroom Very Dim"
   entities:
@@ -128,3 +136,7 @@
       state: on
       brightness: 35
       profile: teal
+    light.lightstrip_5:
+      state: on
+      brightness: 35
+      profile: teal      
