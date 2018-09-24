@@ -23,6 +23,7 @@ audio_source_lefteye:
   name: "Livingroom Audio Source"
   entities:
     - switch.source_lefteye_destination_livingroom
+    - switch.source_lefteye_destination_bathroom
 #    - switch.source_lefteye_destination_bedroom
 
 audio:

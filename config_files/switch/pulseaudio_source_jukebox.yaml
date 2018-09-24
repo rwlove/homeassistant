@@ -1,0 +1,8 @@
+- platform: pulseaudio_loopback
+  source_name: 'HASS.monitor'
+  sink_name: 'alsa_output.pci-0000_00_08.0.analog-stereo'
+  host: !secret jukebox_hostname
+  name: "Source Lefteye Destination Bathroom"
+#port (Optional): The port that Pulseaudio is listening on. Defaults to 4712.
+#buffer_size (Optional): How much data to load from Pulseaudio at once. Default is 1KB.
+#tcp_timeout (Optional): How long to wait for a response from Pulseaudio before giving up. Default is 3 seconds.
