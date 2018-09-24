@@ -124,7 +124,7 @@
       profile: blue
     light.lightstrip_5:
       state: on
-      brightness: 35
+      brightness: 135
       profile: blue      
 
 - name: "Bathroom Very Dim"
