@@ -45,6 +45,7 @@ docker run \
        -h homeassistant \
        -v ${PWD}/logs/home-assistant.log:/config/home-assistant.log \
        -v ${PWD}/logs/OZW_Log.txt:/config/OZW_Log.txt \
+       -v ${PWD}/persistent:/config/.storage \
        -v /etc/localtime:/etc/localtime:ro \
        -v ${ZWAVE_DEV}:/dev/ttyACM0 \
        services/homeassistant:v${HASS_VERSION} ${CMD}
