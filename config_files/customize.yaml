@@ -201,7 +201,10 @@ switch.roomba_dock:
 switch.roomba_find:
   friendly_name: "Find"
 
-sensor.bed_pressure:
+sensor.bed_pressure_left:
+  friendly_name: "In Bed?"
+
+sensor.bed_pressure_right:
   friendly_name: "In Bed?"
 
 sensor.my_plant_temperature:

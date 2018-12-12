@@ -35,4 +35,5 @@ include:
     - group.kitchen_lights
     - sensor.bathroom_motion
     - group.bathroom_lights
-    - sensor.bed_pressure
+    - sensor.bed_pressure_left
+    - sensor.bed_pressure_right

@@ -243,7 +243,8 @@ bedroom:
     - input_number.bedroom_brightness
     - group.bedroom_lights
     - switch.my_smart_plug_mini
-    - sensor.bed_pressure
+    - sensor.bed_pressure_left
+    - sensor.bed_pressure_right
     - switch.diffuser
 
 livingroom:

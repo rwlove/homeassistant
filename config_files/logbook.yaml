@@ -23,4 +23,5 @@ include:
     - group.livingroom_lights
     - group.kitchen_lights
     - group.bathroom_lights
-    - sensor.bed_pressure
+    - sensor.bed_pressure_left
+    - sensor.bed_pressure_right

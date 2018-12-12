@@ -1,7 +1,7 @@
 - alias: "Getting Out Of Bed"
   trigger:
     platform: state
-    entity_id: binary_sensor.bed_pressure_sensor_sensor
+    entity_id: binary_sensor.bed_pressure_left_sensor
     to: 'on'
   action:
     - service: script.turn_on
@@ -19,7 +19,7 @@
 - alias: "Getting Into Bed"
   trigger:
     platform: state
-    entity_id: binary_sensor.bed_pressure_sensor_sensor
+    entity_id: binary_sensor.bed_pressure_left_sensor
     to: 'off'
   action:
     - service: script.turn_on
