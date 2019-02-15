@@ -1,4 +1,0 @@
-alias: lefteye_mpd
-platform: mpd
-name: lefteye_mpd
-host: !secret lefteye_ip

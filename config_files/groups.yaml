@@ -9,29 +9,6 @@ default_view:
     - group.locations
 #    - configurator.philips_hue
 
-#audio_source_righteye:
-#  view: no
-#  control: hidden
-#  name: "Bedroom Audio Source"
-#  entities:
-#    - switch.source_righteye_destination_bedroom
-#    - switch.source_righteye_destination_livingroom
-
-audio_source_lefteye:
-  view: no
-  control: hidden  
-  name: "Livingroom Audio Source"
-  entities:
-    - switch.source_lefteye_destination_livingroom
-    - switch.source_lefteye_destination_bathroom
-#    - switch.source_lefteye_destination_bedroom
-
-audio:
-  view: yes
-  entities:
-    - group.audio_source_lefteye
-#    - group.audio_source_righteye
-
 wakeup_time:
   name: Wakeup Time
   view: no
@@ -158,7 +135,6 @@ media_players:
   entities:
   - media_player.kodi_bedroom_righteye
   - media_player.kodi_livingroom_lefteye
-  - media_player.lefteye_mpd
   - media_player.jukebox_mpd
   - media_player.righteye_onkyo
   - media_player.lefteye_onkyo
