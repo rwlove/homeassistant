@@ -352,6 +352,7 @@ livingroom_lights:
   entities:
     - light.lamp
     - light.lightstrip_1
+    - light.lightstrip_6
     - switch.track_lighting_switch_switch
 
 kitchen_lights:

@@ -15,6 +15,10 @@
       state: on
       profile: pink
       brightness: 100
+    light.lightstrip_6:
+      state: on
+      profile: pink
+      brightness: 30
 
 - name: "Kitchen Nightlight On"
   entities:
@@ -42,6 +46,10 @@
       profile: pink
       brightness: 30
     light.lightstrip_1:
+      state: on
+      profile: pink
+      brightness: 150
+    light.lightstrip_6:
       state: on
       profile: pink
       brightness: 150
