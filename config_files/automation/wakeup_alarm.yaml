@@ -1,6 +1,7 @@
 - alias: 'WakeUp Light Bedroom'
+  initial_state: 'true'
   trigger:
-    - platform: time
+    - platform: time_pattern
       minutes: '/1'
       seconds: 0
   condition:
@@ -27,6 +28,7 @@
     service: script.wakeup_bedroom
 
 - alias: Sleep Routine
+  initial_state: 'true'
   trigger:
     platform: state
     entity_id: input_boolean.sleep
@@ -52,6 +54,7 @@
         option: 'OFF'
 
 - alias: Cancel Sleep Routine
+  initial_state: 'true'
   trigger:
     platform: state
     entity_id: input_boolean.sleep

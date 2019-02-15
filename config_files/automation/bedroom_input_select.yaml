@@ -1,4 +1,5 @@
 - alias: Bedroom Lights - Input Select Chagne Color
+  initial_state: 'true'
   trigger:
     - platform: state
       entity_id: input_select.scene_bedroom
@@ -38,6 +39,7 @@
         profile: "{{ states.input_select.scene_bedroom.state | lower }}"
 
 - alias: Bedroom Lights - Input Select Chagne Scene
+  initial_state: 'true'
   trigger:
     - platform: state
       entity_id: input_select.scene_bedroom
@@ -77,6 +79,7 @@
         profile: "{{ states.input_select.scene_bedroom.state | lower }}"
 
 - alias: Bedroom Lights - Input Select Turn Off
+  initial_state: 'true'
   trigger:
     - platform: state
       entity_id: input_select.scene_bedroom

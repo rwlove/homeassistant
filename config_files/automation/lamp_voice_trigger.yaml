@@ -1,4 +1,5 @@
 - alias: "Lamp Voice Change On"
+  initial_state: 'true'
   hide_entity: true
   trigger:
     platform: mqtt
@@ -8,6 +9,7 @@
     entity_id: light.lamp
 
 - alias: "Lamp Voice Change Off"
+  initial_state: 'true'
   hide_entity: true
   trigger:
     platform: mqtt
@@ -17,6 +19,7 @@
     entity_id: light.lamp
 
 - alias: "Lamp Voice Change Color"
+  initial_state: 'true'
   hide_entity: true
   trigger:
     - platform: mqtt

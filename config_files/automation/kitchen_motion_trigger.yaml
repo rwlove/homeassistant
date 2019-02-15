@@ -1,4 +1,5 @@
 - alias: "Kitchen Motion Detection On"
+  initial_state: 'true'
   trigger:
     platform: state
     entity_id: sensor.aeotec_zw100_multisensor_kitchen_burglar
@@ -20,6 +21,7 @@
       entity_id: timer.kitchen_timer
 
 - alias: "Kitchen Timer Finished (Motion Detected)"
+  initial_state: 'true'
   trigger:
     platform: event
     event_type: timer.finished
@@ -46,6 +48,7 @@
 
 # bug: what about if the burglar sensor is tampered with?
 - alias: "Kitchen Timer Finished (Motion Not Detected)"
+  initial_state: 'true'
   trigger:
     platform: event
     event_type: timer.finished

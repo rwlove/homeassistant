@@ -1,4 +1,5 @@
 - alias: "Track Voice Change On"
+  initial_state: 'true'
   hide_entity: true
   trigger:
     platform: mqtt
@@ -8,6 +9,7 @@
     entity_id: switch.track_lighting_switch_switch
 
 - alias: "Track Voice Change Off"
+  initial_state: 'true'
   hide_entity: true
   trigger:
     platform: mqtt

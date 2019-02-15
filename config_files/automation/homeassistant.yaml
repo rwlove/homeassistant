@@ -1,4 +1,5 @@
 - alias: "Homeassistant Startup - Dim On"
+  initial_state: 'true'
   hide_entity: true
   trigger:
     platform: homeassistant
@@ -13,6 +14,7 @@
         entity_id: input_boolean.bathroom_light_dim
 
 - alias: "Homeassistant Startup - Dim On"
+  initial_state: 'true'
   hide_entity: true
   trigger:
     platform: homeassistant
