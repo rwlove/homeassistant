@@ -3,7 +3,7 @@ timed_nightlight_with_kitchen:
   sequence:
     - service: scene.turn_on
       data:
-        entity_id: scene.livingroom__kitchen_nightlight_on
+        entity_id: scene.livingroom_kitchen_nightlight_on
     - service: timer.start
       data:
         entity_id: timer.kitchen_timer
