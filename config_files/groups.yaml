@@ -221,7 +221,7 @@ bedroom:
     - switch.my_smart_plug_mini
     - sensor.bed_pressure_left
     - sensor.bed_pressure_right
-    - switch.diffuser
+    - switch.sonoff_100044903f
 
 livingroom:
   name: Livingroom

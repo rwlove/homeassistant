@@ -67,6 +67,13 @@ nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_secret
 
+sonoff:
+  username: !secret sonoff_username
+  password: !secret sonoff_password
+  scan_interval: 60
+  grace_period: 600
+  api_region: 'us'
+
 climate:
   platform: nest
 
@@ -211,4 +218,4 @@ plant:
     min_battery: 15
     min_conductivity: 350
     min_temperature: 41
-    max_temperature: 89    
+    max_temperature: 89
