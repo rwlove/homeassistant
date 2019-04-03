@@ -1,4 +1,3 @@
-alias: righteye_kodi
 platform: kodi
 host: !secret righteye_hostname
 port: 8080
