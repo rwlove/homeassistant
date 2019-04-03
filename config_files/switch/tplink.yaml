@@ -1,2 +1,4 @@
 - platform: tplink
-  host: !secret tplink_ip
+  discovery: false
+  switch:
+    - host: !secret tplink_ip
