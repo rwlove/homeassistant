@@ -76,6 +76,8 @@ bathroom_scripts:
     - script.timed_bathroom_nightlight
     - script.timed_bathroom_bright
     - timer.bathroom_timer
+    - timer.bathroom_diffuser_timer
+
 
 livingroom_scripts:
   name: Livingroom
@@ -295,6 +297,7 @@ bathroom:
     - input_select.scene_bathroom
     - input_number.bathroom_brightness
     - group.bathroom_lights
+    - switch.sonoff_10006b80c3
     - sensor.bathroom_motion
     - sensor.aeotec_zw100_multisensor_bathroom_relative_humidity
     - binary_sensor.bathroom_high_humidity

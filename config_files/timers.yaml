@@ -9,3 +9,6 @@ bathroom_timer:
 
 bathroom_early_timer:
   duration: '00:02:00'
+
+bathroom_diffuser_timer:
+  duration: '00:00:02'
