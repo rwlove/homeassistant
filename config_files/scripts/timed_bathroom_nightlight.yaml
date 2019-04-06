@@ -81,3 +81,33 @@ timed_bathroom_early:
     - service: timer.start
       data:
         entity_id: timer.bathroom_early_timer
+
+timed_bathroom_diffuser_on:
+  alias: "Bathroom Diffuser On"
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Bathroom Diffuser On!"
+    - service: switch.turn_on
+      data:
+        entity_id: switch.sonoff_10006b80c3
+    - service: timer.start
+      data:
+        entity_id: timer.bathroom_diffuser_timer
+
+timed_bathroom_diffuser_off:
+  alias: "Bathroom Diffuser Off"
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Bathroom Diffuser Off!"
+    - service: switch.turn_off
+      data:
+        entity_id: switch.sonoff_10006b80c3
+    - service: timer.cancel
+      data:
+        entity_id: timer.bathroom_diffuser_timer

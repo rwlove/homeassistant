@@ -76,8 +76,9 @@ bathroom_scripts:
     - script.timed_bathroom_nightlight
     - script.timed_bathroom_bright
     - timer.bathroom_timer
+    - script.timed_bathroom_diffuser_on
+    - script.timed_bathroom_diffuser_off
     - timer.bathroom_diffuser_timer
-
 
 livingroom_scripts:
   name: Livingroom
