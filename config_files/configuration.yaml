@@ -121,6 +121,11 @@ dyson:
 graphite:
   host: !secret graphite_ip
 
+tplink:
+  discovery: false
+  switch:
+    - host: !secret tplink_ip
+
 plant:
   fern:
     sensors:
