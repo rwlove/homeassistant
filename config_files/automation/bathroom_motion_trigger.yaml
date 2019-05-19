@@ -1,4 +1,5 @@
 - alias: "Toilet Motion Off and Diffuser On"
+  initial_state: 'true'
   trigger:
     platform: state
     entity_id: sensor.aeotec_zw100_multisensor_toilet_burglar
@@ -13,6 +14,7 @@
         entity_id: script.timed_bathroom_diffuser_on
 
 - alias: "Timer Finished and Diffuser Off"
+  initial_state: 'true'
   trigger:
     platform: event
     event_type: timer.finished
