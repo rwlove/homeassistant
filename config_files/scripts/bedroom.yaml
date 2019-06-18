@@ -21,3 +21,33 @@ bedroom_lights_off:
   - service: light.turn_off
     data:
       entity_id: group.bedroom_lights
+
+bedroom_diffuser_on:
+  alias: "Bedroom Diffuser On"
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Bedroom Diffuser On!"
+    - service: switch.turn_on
+      data:
+        entity_id: switch.sonoff_100044903f
+    - service: timer.start
+      data:
+        entity_id: timer.bedroom_diffuser_timer
+
+bedroom_diffuser_off:
+  alias: "Bedroom Diffuser Off"
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Bedroom Diffuser Off!"
+    - service: switch.turn_off
+      data:
+        entity_id: switch.sonoff_100044903f
+    - service: timer.cancel
+      data:
+        entity_id: timer.bedroom_diffuser_timer

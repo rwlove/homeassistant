@@ -1,0 +1,31 @@
+- alias: "Bedroom Diffuser for 10 minutes"
+  trigger:
+    - platform: time
+      at: '20:00:00'
+    - platform: time
+      at: '20:30:00'
+    - platform: time
+      at: '21:00:00'
+    - platform: time
+      at: '21:30:00'
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.bedroom_diffuser_on
+
+- alias: "Bedroom Diffuser Timer Finished"
+  initial_state: 'true'
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.bedroom_diffuser_timer
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.notify_kodi_frontends
+        variables:
+          message: "Bedroom Diffuser Timer Finished!"
+    - service: script.turn_on
+      data:
+        entity_id: script.bedroom_diffuser_off
