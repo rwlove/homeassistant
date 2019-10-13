@@ -1,4 +1,4 @@
-FROM homeassistant/home-assistant:0.99.2
+FROM homeassistant/home-assistant:0.100.1
 
 #####
 # Set Environment Variables.
@@ -11,13 +11,11 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install Software.
 #################################
 
-RUN apt-get -y update && \
-apt-get -y dist-upgrade && \
-apt-get -y install apt-utils \
-libudev-dev \
-inetutils-ping \
-iproute2 && \
-dpkg --configure -a
+RUN apk update
+RUN apk add \
+eudev-dev \
+iputils \
+iproute2
 
 
 #####
@@ -43,14 +41,6 @@ RUN ln -s /config/zwcfg.xsd /usr/src/app/build/python-openzwave/openzwave/config
 EXPOSE 8123
 CMD ["/hass_entrypoint.sh"]
 
-
-#####
-# Clean up.
-#################################
-
-RUN apt-get -y clean && \
-rm -rf /var/lib/apt/lists/* && \
-rm -rf /tmp/*
 
 RUN mkdir -p /var/lib/mpd/playlists
 
