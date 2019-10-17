@@ -202,10 +202,10 @@ switch.roomba_find:
   friendly_name: "Find"
 
 sensor.bed_pressure_left:
-  friendly_name: "In Bed?"
+  friendly_name: "In Bed (Left)?"
 
 sensor.bed_pressure_right:
-  friendly_name: "In Bed?"
+  friendly_name: "In Bed (Right)?"
 
 sensor.my_plant_temperature:
   unit_of_measurement: 'Fahrenheit'
