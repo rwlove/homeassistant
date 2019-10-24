@@ -325,6 +325,8 @@ locations:
 
 bedroom_lights:
   name: "Bedroom Lights"
+  view: no
+  control: hidden
   entities:
     - light.left_back
     - light.right_back
@@ -334,6 +336,8 @@ bedroom_lights:
 
 livingroom_lights:
   name: "Livingroom Lights"
+  view: no
+  control: hidden
   entities:
     - light.lamp
     - light.lightstrip_1
@@ -342,6 +346,8 @@ livingroom_lights:
 
 kitchen_lights:
   name: "Kitchen Lights"
+  view: no
+  control: hidden
   entities:
     - light.hallway
     - light.kitchen_1
@@ -351,6 +357,8 @@ kitchen_lights:
 
 bathroom_lights:
   name: "Bathroom Lights"
+  view: no
+  control: hidden
   entities:
     - light.bathroom_light_switch_level
     - light.lightstrip_2
