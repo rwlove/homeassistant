@@ -5,6 +5,14 @@
 echo -n "New build: v${HASS_VERSION}" | tee -a build.log
 date | tee -a build.log
 
+pushd config_files/custom_components/
+
+git_url=`git config --get remote.origin.url`
+
+echo -n "Pull ${git_url}"
+git pull
+popd
+
 ./helper_scripts/create_config_tarball.sh | tee -a build.log
 
 docker build $* -t services/homeassistant:v${HASS_VERSION} . 2>&1 | tee -a build.log
