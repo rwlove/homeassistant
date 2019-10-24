@@ -178,6 +178,18 @@ dyson:
   - sensor.purifier_cool_tower_humidity
   - sensor.purifier_cool_tower_filter_life
 
+plants:
+  name: Plants
+  view: yes
+  entities:
+  - plant.fern
+  - plant.palm
+  - plant.zz
+  - plant.pothos1
+  - plant.pothos2
+  - plant.petra
+  - plant.donkey
+
 battery:
   name: Battery
   view: yes
@@ -236,13 +248,6 @@ livingroom:
     - sensor.aeotec_zw100_multisensor_livingroom_luminance
     - switch.fireplace_switch
     - sensor.roomba_state
-    - plant.fern
-    - plant.palm
-    - plant.zz
-    - plant.pothos1
-    - plant.pothos2
-    - plant.petra
-    - plant.donkey
 
 livingroom_sensor:
   name: Livingroom Sensor
