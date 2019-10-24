@@ -209,3 +209,9 @@ sensor.bed_pressure_right:
 
 sensor.my_plant_temperature:
   unit_of_measurement: 'Fahrenheit'
+
+device_tracker.galaxy_s10_thesteamedcrab_com:
+  friendly_name: Rob
+
+device_tracker.renee_android_thesteamedcrab_com:
+  friendly_name: Renee
