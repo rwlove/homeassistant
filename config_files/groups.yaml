@@ -321,7 +321,8 @@ kitchen:
 locations:
   name: Locations
   entities:
-    - device_tracker.galaxythesteamedcrabcom
+    - device_tracker.galaxy_s10_thesteamedcrab_com
+    - device_tracker.renee-android_thesteamedcrab_com
 
 bedroom_lights:
   name: "Bedroom Lights"
