@@ -6,7 +6,6 @@ default_view:
     - group.livingroom
     - group.kitchen
     - group.bathroom
-    - group.locations
 #    - configurator.philips_hue
 
 wakeup_time:
@@ -317,12 +316,6 @@ kitchen:
     - input_number.bar_brightness
     - group.kitchen_lights
     - sensor.kitchen_motion
-
-locations:
-  name: Locations
-  entities:
-    - device_tracker.galaxy_s10_thesteamedcrab_com
-    - device_tracker.renee_android_thesteamedcrab_com
 
 bedroom_lights:
   name: "Bedroom Lights"
