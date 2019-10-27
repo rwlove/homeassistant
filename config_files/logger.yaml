@@ -1,7 +1,7 @@
   default: warning
   logs:
 #    homeassistant.components.history: debug
-#    homeassistant.platform.thinkingcleaner: debug
+    homeassistant.platform.thinkingcleaner: debug
 #    homeassistant.components.switch: debug
 #    homeassistant.components.sensor: info
     homeassistant.components.automation: debug
