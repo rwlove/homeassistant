@@ -1,0 +1,21 @@
+- alias: "Rob Home Roomba Go Home"
+  initial_state: 'true'
+  trigger:
+    platform: zone
+    zone: zone.home
+    entity_id: device_tracker.galaxy_s10_thesteamedcrab_com
+    event: enter
+  action:
+    service: switch.turn_on
+    entity_id: switch.roomba_dock
+
+- alias: "Renee Home Roomba Go Home"
+  initial_state: 'true'
+  trigger:
+    platform: zone
+    zone: zone.home
+    entity_id: device_tracker.renee_android_thesteamedcrab_com
+    event: enter
+  action:
+    service: switch.turn_on
+    entity_id: switch.roomba_dock    
