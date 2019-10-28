@@ -1,6 +1,7 @@
 title: Tanner Place
 views:
-  - badges: []
+  - title: Home
+    badges: []
     cards:
       - entities:
           - input_select.scene_bedroom
@@ -46,9 +47,8 @@ views:
         title: Bathroom
         type: entities
     path: default_view
-    title: Home
-  - badges: []
-    title: "Location"
+  - title: Location
+    badges: []
     show_header_toggle: false
     cards:
       - entities:
@@ -56,15 +56,15 @@ views:
 	- device_tracker.renee_android_thesteamedcrab_com
 	- device_tracker.d4_53_83_94_4a_f2
 	- device_tracker.14_56_8e_44_09_86
-      type: entities
-  - badges: []
+      type: glance
+  - title: Wakeup Time
+    badges: []
     cards:
       - entities:
           - sensor.wakeup_alarm_time
           - sensor.wakeup_start_time_lights
           - sensor.wakeup_fadein_duration
         show_header_toggle: false
-        title: Wakeup Time
         type: entities
       - entities:
           - input_number.wakeup_hour
@@ -81,15 +81,17 @@ views:
         type: entities
     path: wakeuplight
     title: Wakeup Light
-  - badges: []
+  - title: Sleep
+    badges: []
     cards:
       - entities:
           - input_boolean.sleep
         type: entities
     path: sleepsettings
     show_header_toggle: false
-    title: Sleep
-  - badges: []
+  - title: Climate
+    path: climate
+    badges: []
     cards:
       - entities:
           - sensor.aeotec_zw100_multisensor_livingroom_temperature
@@ -111,9 +113,9 @@ views:
         show_header_toggle: true
         title: Weather Outside
         type: entities
-    path: climate
-    title: climate
-  - badges: []
+  - title: sensors
+    path: sensors  
+    badges: []
     cards:
       - entities:
           - sensor.kitchen_motion
@@ -162,9 +164,9 @@ views:
         show_header_toggle: false
         title: Toilet Sensor
         type: entities
-    path: sensors
-    title: sensors
-  - badges: []
+  - title: scripts
+    path: scripts
+    badges: []
     cards:
       - entities:
           - script.timed_nightlight_with_kitchen
@@ -191,9 +193,9 @@ views:
         show_header_toggle: false
         title: Bathroom
         type: entities
-    path: scripts
-    title: scripts
-  - badges: []
+  - title: Lights
+    path: lights_display    
+    badges: []
     cards:
       - entities:
           - light.hallway
@@ -228,9 +230,9 @@ views:
         show_header_toggle: false
         title: Bathroom Lights
         type: entities
-    path: lights_display
-    title: Lights
-  - badges: []
+  - title: Media Players
+    path: media_players  
+    badges: []
     cards:
       - entity: media_player.kodi_bedroom_righteye
         type: media-control
@@ -242,9 +244,9 @@ views:
         type: media-control
       - entity: media_player.lefteye_onkyo
         type: media-control
-    path: media_players
-    title: Media Players
-  - badges:
+  - title: Nest
+    path: nest
+    badges:
       - binary_sensor.entryway_thermostat_nest_fan
       - binary_sensor.entryway_thermostat_nest_has_leaf
       - binary_sensor.entryway_thermostat_nest_is_locked
@@ -257,17 +259,17 @@ views:
     cards:
       - entity: climate.entryway_nest
         type: thermostat
-    path: nest
-    title: Nest
-  - badges: []
-    cards: []
+  - title: Roomba
     path: roomba
-    title: Roomba
-  - badges: []
+    badges: []
     cards: []
+  - title: Dyson
     path: dyson
-    title: Dyson
-  - badges: []
+    badges: []
+    cards: []
+  - title: Plants
+    path: plants
+    badges: []
     cards:
       - entity: plant.fern
         type: plant-status
@@ -283,13 +285,13 @@ views:
         type: plant-status
       - entity: plant.donkey
         type: plant-status
-    path: plants
-    title: Plants
-  - badges: []
-    cards: []
+  - title: Battery
     path: battery
-    title: Battery
-  - badges:
+    badges: []
+    cards: []
+  - title: Settings
+    path: settings
+    badges:
       - sensor.uptime
     cards:
       - entities:
@@ -308,5 +310,3 @@ views:
         show_header_toggle: false
         title: Bathroom Bright/Dim Times
         type: entities
-    path: settings
-    title: Settings
