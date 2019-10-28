@@ -85,9 +85,9 @@ views:
     cards:
       - entities:
           - input_boolean.sleep
-        title: Input boolean
         type: entities
     path: sleepsettings
+    show_header_toggle: false
     title: Sleep
   - badges: []
     cards:
