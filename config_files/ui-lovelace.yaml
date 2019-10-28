@@ -6,7 +6,7 @@ views:
     cards:
       - title: Bedroom
         type: entities
-	show_header_toggle: false
+        show_header_toggle: false
         entities:
           - input_select.scene_bedroom
           - input_number.bedroom_brightness
@@ -17,7 +17,7 @@ views:
           - switch.sonoff_100044903f
       - title: Livingroom
         type: entities
-	show_header_toggle: false
+        show_header_toggle: false
         entities:
           - input_select.scene_livingroom
           - input_number.livingroom_brightness
@@ -28,7 +28,7 @@ views:
           - sensor.roomba_state
       - title: Kitchen
         type: entities
-	show_header_toggle: false
+        show_header_toggle: false
         entities:
           - input_select.scene_kitchen
           - input_number.bar_brightness
@@ -36,7 +36,7 @@ views:
           - sensor.kitchen_motion
       - title: Bathroom
         type: entities
-	show_header_toggle: false
+        show_header_toggle: false
         entities:
           - input_select.scene_bathroom
           - input_number.bathroom_brightness
@@ -95,7 +95,7 @@ views:
     cards:
       - title: Weather Inside
         type: entities
-	show_header_toggle: false
+        show_header_toggle: false
         entities:
           - sensor.aeotec_zw100_multisensor_livingroom_temperature
           - sensor.aeotec_zw100_multisensor_livingroom_relative_humidity
@@ -104,7 +104,7 @@ views:
         entity: climate.entrywaynest        
       - title: Weather Outside
         type: entities
-	show_header_toggle: false
+        show_header_toggle: false
         entities:
           - sensor.portland_current
           - sensor.portland_humidity
