@@ -2,8 +2,12 @@ title: Tanner Place
 views:
   - title: Home
     badges: []
+    path: default_view
     cards:
-      - entities:
+      - title: Bedroom
+        type: entities
+	show_header_toggle: false
+        entities:
           - input_select.scene_bedroom
           - input_number.bedroom_brightness
           - group.bedroom_lights
@@ -11,10 +15,10 @@ views:
           - sensor.bed_pressure_left
           - sensor.bed_pressure_right
           - switch.sonoff_100044903f
-        show_header_toggle: false
-        title: Bedroom
+      - title: Livingroom
         type: entities
-      - entities:
+	show_header_toggle: false
+        entities:
           - input_select.scene_livingroom
           - input_number.livingroom_brightness
           - group.livingroom_lights
@@ -22,18 +26,18 @@ views:
           - sensor.aeotec_zw100_multisensor_livingroom_luminance
           - switch.fireplace_switch
           - sensor.roomba_state
-        show_header_toggle: true
-        title: Livingroom
+      - title: Kitchen
         type: entities
-      - entities:
+	show_header_toggle: false
+        entities:
           - input_select.scene_kitchen
           - input_number.bar_brightness
           - group.kitchen_lights
           - sensor.kitchen_motion
-        show_header_toggle: true
-        title: Kitchen
+      - title: Bathroom
         type: entities
-      - entities:
+	show_header_toggle: false
+        entities:
           - input_select.scene_bathroom
           - input_number.bathroom_brightness
           - group.bathroom_lights
@@ -43,20 +47,16 @@ views:
           - binary_sensor.bathroom_high_humidity
           - sensor.aeotec_zw100_multisensor_toilet_relative_humidity
           - binary_sensor.toilet_high_humidity
-        show_header_toggle: true
-        title: Bathroom
-        type: entities
-    path: default_view
   - title: Location
     badges: []
     show_header_toggle: false
     cards:
       - entities:
         - device_tracker.galaxy_s10_thesteamedcrab_com
-	- device_tracker.renee_android_thesteamedcrab_com
-	- device_tracker.d4_53_83_94_4a_f2
-	- device_tracker.14_56_8e_44_09_86
-      type: glance
+        - device_tracker.renee_android_thesteamedcrab_com
+        - device_tracker.d4_53_83_94_4a_f2
+        - device_tracker.14_56_8e_44_09_86
+    type: glance
   - title: Wakeup Time
     badges: []
     cards:
@@ -73,11 +73,11 @@ views:
         show_header_toggle: false
         title: Wakeup Time Settings
         type: entities
-      - entities:
+      - title: Wakeup Light Settings
+        entities:
           - input_boolean.wakeup
           - input_boolean.wakeup_weekends
         show_header_toggle: false
-        title: Wakeup Light Settings
         type: entities
     path: wakeuplight
     title: Wakeup Light
@@ -93,15 +93,19 @@ views:
     path: climate
     badges: []
     cards:
-      - entities:
+      - title: Weather Inside
+        type: entities
+	show_header_toggle: false
+        entities:
           - sensor.aeotec_zw100_multisensor_livingroom_temperature
           - sensor.aeotec_zw100_multisensor_livingroom_relative_humidity
-        show_header_toggle: true
-        title: Weather Inside
-        type: entities
-      - entity: climate.entrywaynest
+      - title: Nest
         type: thermostat
-      - entities:
+        entity: climate.entrywaynest        
+      - title: Weather Outside
+        type: entities
+	show_header_toggle: false
+        entities:
           - sensor.portland_current
           - sensor.portland_humidity
           - sensor.portland_pressure
@@ -110,11 +114,8 @@ views:
           - sensor.portland_temperature_min
           - sensor.portland_visibility
           - sensor.portland_wind_speed
-        show_header_toggle: true
-        title: Weather Outside
-        type: entities
-  - title: sensors
-    path: sensors  
+  - title: Sensors
+    path: sensors
     badges: []
     cards:
       - entities:
