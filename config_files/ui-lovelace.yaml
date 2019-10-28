@@ -121,7 +121,7 @@ views:
           - sensor.aeotec_zw100_multisensor_kitchen_relative_humidity
           - sensor.aeotec_zw100_multisensor_kitchen_temperature
           - sensor.aeotec_zw100_multisensor_kitchen_ultraviolet
-        show_header_toggle: true
+        show_header_toggle: false
         title: Kitchen Sensor
         type: entities
       - entities:
@@ -130,7 +130,7 @@ views:
           - sensor.aeotec_zw100_multisensor_livingroom_relative_humidity
           - sensor.aeotec_zw100_multisensor_livingroom_temperature
           - sensor.aeotec_zw100_multisensor_livingroom_ultraviolet
-        show_header_toggle: true
+        show_header_toggle: false
         title: Livingroom Sensor
         type: entities
       - entities:
@@ -139,7 +139,7 @@ views:
           - sensor.aeotec_zw100_multisensor_bathroom_early_relative_humidity
           - sensor.aeotec_zw100_multisensor_bathroom_early_temperature
           - sensor.aeotec_zw100_multisensor_bathroom_early_ultraviolet
-        show_header_toggle: true
+        show_header_toggle: false
         title: Bathroom Sensor (Early)
         type: entities
       - entities:
@@ -149,7 +149,7 @@ views:
           - sensor.aeotec_zw100_multisensor_bathroom_temperature
           - sensor.aeotec_zw100_multisensor_bathroom_ultraviolet
           - binary_sensor.bathroom_high_humidity
-        show_header_toggle: true
+        show_header_toggle: false
         title: Bathroom Sensor (Primary)
         type: entities
       - entities:
@@ -159,7 +159,7 @@ views:
           - sensor.aeotec_zw100_multisensor_toilet_temperature
           - sensor.aeotec_zw100_multisensor_toilet_ultraviolet
           - binary_sensor.toilet_high_humidity
-        show_header_toggle: true
+        show_header_toggle: false
         title: Toilet Sensor
         type: entities
     path: sensors
