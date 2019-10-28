@@ -45,14 +45,11 @@ views:
         show_header_toggle: true
         title: Bathroom
         type: entities
-      - entities:
-          - device_tracker.galaxythesteamedcrabcom
-        show_header_toggle: true
-        title: Locations
-        type: entities
     path: default_view
     title: Home
   - badges: []
+    title: "Location"
+    show_header_toggle: false
     cards:
       - entities:
         - device_tracker.galaxy_s10_thesteamedcrab_com
