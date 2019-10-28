@@ -246,16 +246,6 @@ views:
         type: media-control
   - title: Nest
     path: nest
-    badges:
-      - binary_sensor.entryway_thermostat_nest_fan
-      - binary_sensor.entryway_thermostat_nest_has_leaf
-      - binary_sensor.entryway_thermostat_nest_is_locked
-      - binary_sensor.entryway_thermostat_nest_is_using_emergency_heat
-      - binary_sensor.entryway_thermostat_nest_online
-      - sensor.entryway_thermostat_nest_humidity
-      - sensor.entryway_thermostat_nest_operation_mode
-      - sensor.entryway_thermostat_nest_target
-      - sensor.entryway_thermostat_nest_temperature
     cards:
       - entity: climate.entryway_nest
         type: thermostat
