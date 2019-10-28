@@ -4,7 +4,7 @@
     homeassistant.platform.thinkingcleaner: debug
 #    homeassistant.components.switch: debug
 #    homeassistant.components.sensor: info
-    homeassistant.components.automation: debug
+#    homeassistant.components.automation: debug
 #    homeassistant.components.scripts: info
 #    homeassistant.components.mqtt: debug
 #    homeassistant.components.input_select: debug
