@@ -55,6 +55,14 @@ views:
   - badges: []
     cards:
       - entities:
+        - device_tracker.galaxy_s10_thesteamedcrab_com
+	- device_tracker.renee_android_thesteamedcrab_com
+	- device_tracker.d4_53_83_94_4a_f2
+	- device_tracker.14_56_8e_44_09_86
+      type: entities
+  - badges: []
+    cards:
+      - entities:
           - sensor.wakeup_alarm_time
           - sensor.wakeup_start_time_lights
           - sensor.wakeup_fadein_duration
