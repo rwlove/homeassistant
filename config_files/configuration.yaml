@@ -218,3 +218,6 @@ plant:
     min_conductivity: 350
     min_temperature: 41
     max_temperature: 89
+
+lovelace:
+  mode: yaml
