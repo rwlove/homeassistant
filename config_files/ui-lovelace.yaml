@@ -49,6 +49,7 @@ views:
           - binary_sensor.toilet_high_humidity
   - title: Location
     type: entities
+    path: location
     badges: []
     show_header_toggle: false
     cards:
@@ -57,6 +58,7 @@ views:
         - device_tracker.renee_android_thesteamedcrab_com
         - device_tracker.d4_53_83_94_4a_f2
         - device_tracker.14_56_8e_44_09_86
+        type: entities
   - title: Wakeup Time
     path: wakeuplight
     badges: []
