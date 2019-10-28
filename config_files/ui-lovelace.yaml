@@ -58,6 +58,7 @@ views:
         - device_tracker.d4_53_83_94_4a_f2
         - device_tracker.14_56_8e_44_09_86
   - title: Wakeup Time
+    path: wakeuplight
     badges: []
     cards:
       - entities:
@@ -79,8 +80,6 @@ views:
           - input_boolean.wakeup_weekends
         show_header_toggle: false
         type: entities
-    path: wakeuplight
-    title: Wakeup Light
   - title: Sleep
     badges: []
     cards:
