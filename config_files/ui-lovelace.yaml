@@ -253,21 +253,32 @@ views:
         type: thermostat
   - title: Roomba
     path: roomba
-    show_header_toggle: false
     badges: []
-    cards: []
+    type: entities
+    cards:
+      - title: Roomba
+        type: entities
+        show_header_toggle: false
+        entities:
+          - sensor.roomba_state
+          - sensor.roomba_capacity
+          - sensor.roomba_battery
+          - switch.roomba_clean
+          - switch.roomba_dock
+          - switch.roomba_find
   - title: Dyson
     type: entities
     path: dyson
     cards:
       - title: Dyson (Bedroom)
         show_header_toggle: false
+        type: entities
         entities:
-	  - sensor.purifier_cool_tower_aqi
-	  - sensor.purifier_cool_tower_dust
-	  - sensor.purifier_cool_tower_filter_life
-	  - sensor.purifier_cool_tower_humidity
-	  - sensor.purifier_cool_tower_temperature
+          - sensor.purifier_cool_tower_aqi
+          - sensor.purifier_cool_tower_dust
+          - sensor.purifier_cool_tower_filter_life
+          - sensor.purifier_cool_tower_humidity
+          - sensor.purifier_cool_tower_temperature
     badges: []
   - title: Plants
     path: plants
