@@ -1,63 +1,307 @@
-title: Lovenet
-# Include external resources
-resources:
-  - url: /local/my-custom-card.js
-    type: js
-  - url: /local/my-webfont.css
-    type: css
-
-# Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
-background: center / cover no-repeat url("/background.png") fixed
-# Exclude entities from "Unused entities" view
-excluded_entities:
-  - weblink.router
+title: Tanner Place
 views:
-    # View tab title.
-  - title: Example
-    # Optional unique id for direct access /lovelace/${id}
-    id: example
-    # Optional background (overwrites the global background).
-    background: radial-gradient(crimson, skyblue)
-    # Each view can have a different theme applied. Theme should be defined in the frontend.
-    theme: dark-mode
-    # The cards to show on this view.
+  - badges: []
     cards:
-        # The filter card will filter entities for their state
-      - type: entity-filter
-        entities:
-          - device_tracker.paulus
-          - device_tracker.anne_there
-        state_filter:
-          - 'home'
-        card:
-          type: glance
-          title: People that are home
-
-        # The picture entity card will represent an entity with a picture
-      - type: picture-entity
-        image: https://www.home-assistant.io/images/default-social.png
-        entity: light.bed_light
-
-    # Specify a tab icon if you want the view tab to be an icon.
-  - icon: mdi:home-assistant
-    # Title of the view. Will be used as the tooltip for tab icon
-    title: Second view
+      - entities:
+          - input_select.scene_bedroom
+          - input_number.bedroom_brightness
+          - group.bedroom_lights
+          - switch.my_smart_plug_mini
+          - sensor.bed_pressure_left
+          - sensor.bed_pressure_right
+          - switch.sonoff_100044903f
+        show_header_toggle: false
+        title: Bedroom
+        type: entities
+      - entities:
+          - input_select.scene_livingroom
+          - input_number.livingroom_brightness
+          - group.livingroom_lights
+          - sensor.livingroom_motion
+          - sensor.aeotec_zw100_multisensor_livingroom_luminance
+          - switch.fireplace_switch
+          - sensor.roomba_state
+        show_header_toggle: true
+        title: Livingroom
+        type: entities
+      - entities:
+          - input_select.scene_kitchen
+          - input_number.bar_brightness
+          - group.kitchen_lights
+          - sensor.kitchen_motion
+        show_header_toggle: true
+        title: Kitchen
+        type: entities
+      - entities:
+          - input_select.scene_bathroom
+          - input_number.bathroom_brightness
+          - group.bathroom_lights
+          - switch.sonoff_10006b80c3
+          - sensor.bathroom_motion
+          - sensor.aeotec_zw100_multisensor_bathroom_relative_humidity
+          - binary_sensor.bathroom_high_humidity
+          - sensor.aeotec_zw100_multisensor_toilet_relative_humidity
+          - binary_sensor.toilet_high_humidity
+        show_header_toggle: true
+        title: Bathroom
+        type: entities
+      - entities:
+          - device_tracker.galaxythesteamedcrabcom
+        show_header_toggle: true
+        title: Locations
+        type: entities
+    path: default_view
+    title: Home
+  - badges: []
     cards:
-        # Entities card will take a list of entities and show their state.
-      - type: entities
-        # Title of the entities card
-        title: Example
-        # The entities here will be shown in the same order as specified.
-        # Each entry is an entity ID or a map with extra options.
-        entities:
-          - light.kitchen
-          - switch.ac
-          - entity: light.living_room
-            # Override the name to use
-            name: LR Lights
-
-        # The markdown card will render markdown text.
-      - type: markdown
-        title: Lovelace
-        content: >
-          Welcome to your **Lovelace UI**.
+      - entities:
+          - sensor.wakeup_alarm_time
+          - sensor.wakeup_start_time_lights
+          - sensor.wakeup_fadein_duration
+        show_header_toggle: false
+        title: Wakeup Time
+        type: entities
+      - entities:
+          - input_number.wakeup_hour
+          - input_number.wakeup_minutes
+          - input_number.wakeup_duration
+        show_header_toggle: false
+        title: Wakeup Time Settings
+        type: entities
+      - entities:
+          - input_boolean.wakeup
+          - input_boolean.wakeup_weekends
+        show_header_toggle: false
+        title: Wakeup Light Settings
+        type: entities
+    path: wakeuplight
+    title: Wakeup Light
+  - badges: []
+    cards:
+      - entities:
+          - input_boolean.sleep
+        title: Input boolean
+        type: entities
+    path: sleepsettings
+    title: Sleep
+  - badges: []
+    cards:
+      - entities:
+          - sensor.aeotec_zw100_multisensor_livingroom_temperature
+          - sensor.aeotec_zw100_multisensor_livingroom_relative_humidity
+        show_header_toggle: true
+        title: Weather Inside
+        type: entities
+      - entity: climate.entrywaynest
+        type: thermostat
+      - entities:
+          - sensor.portland_current
+          - sensor.portland_humidity
+          - sensor.portland_pressure
+          - sensor.portland_temperature
+          - sensor.portland_temperature_max
+          - sensor.portland_temperature_min
+          - sensor.portland_visibility
+          - sensor.portland_wind_speed
+        show_header_toggle: true
+        title: Weather Outside
+        type: entities
+    path: climate
+    title: climate
+  - badges: []
+    cards:
+      - entities:
+          - sensor.kitchen_motion
+          - sensor.aeotec_zw100_multisensor_kitchen_luminance
+          - sensor.aeotec_zw100_multisensor_kitchen_relative_humidity
+          - sensor.aeotec_zw100_multisensor_kitchen_temperature
+          - sensor.aeotec_zw100_multisensor_kitchen_ultraviolet
+        show_header_toggle: true
+        title: Kitchen Sensor
+        type: entities
+      - entities:
+          - sensor.livingroom_motion
+          - sensor.aeotec_zw100_multisensor_livingroom_luminance
+          - sensor.aeotec_zw100_multisensor_livingroom_relative_humidity
+          - sensor.aeotec_zw100_multisensor_livingroom_temperature
+          - sensor.aeotec_zw100_multisensor_livingroom_ultraviolet
+        show_header_toggle: true
+        title: Livingroom Sensor
+        type: entities
+      - entities:
+          - sensor.bathroom_motion_early
+          - sensor.aeotec_zw100_multisensor_bathroom_early_luminance
+          - sensor.aeotec_zw100_multisensor_bathroom_early_relative_humidity
+          - sensor.aeotec_zw100_multisensor_bathroom_early_temperature
+          - sensor.aeotec_zw100_multisensor_bathroom_early_ultraviolet
+        show_header_toggle: true
+        title: Bathroom Sensor (Early)
+        type: entities
+      - entities:
+          - sensor.bathroom_motion
+          - sensor.aeotec_zw100_multisensor_bathroom_luminance
+          - sensor.aeotec_zw100_multisensor_bathroom_relative_humidity
+          - sensor.aeotec_zw100_multisensor_bathroom_temperature
+          - sensor.aeotec_zw100_multisensor_bathroom_ultraviolet
+          - binary_sensor.bathroom_high_humidity
+        show_header_toggle: true
+        title: Bathroom Sensor (Primary)
+        type: entities
+      - entities:
+          - sensor.toilet_motion
+          - sensor.aeotec_zw100_multisensor_toilet_luminance
+          - sensor.aeotec_zw100_multisensor_toilet_relative_humidity
+          - sensor.aeotec_zw100_multisensor_toilet_temperature
+          - sensor.aeotec_zw100_multisensor_toilet_ultraviolet
+          - binary_sensor.toilet_high_humidity
+        show_header_toggle: true
+        title: Toilet Sensor
+        type: entities
+    path: sensors
+    title: sensors
+  - badges: []
+    cards:
+      - entities:
+          - script.timed_nightlight_with_kitchen
+          - script.timed_nightlight_without_kitchen
+          - timer.livingroom_timer
+        show_header_toggle: false
+        title: Livingroom
+        type: entities
+      - entities:
+          - script.timed_nightlight_only_kitchen
+          - timer.kitchen_timer
+        show_header_toggle: false
+        title: Kitchen
+        type: entities
+      - entities:
+          - script.timed_bathroom_early
+          - timer.bathroom_early_timer
+          - script.timed_bathroom_nightlight
+          - script.timed_bathroom_bright
+          - timer.bathroom_timer
+          - script.timed_bathroom_diffuser_on
+          - script.timed_bathroom_diffuser_off
+          - timer.bathroom_diffuser_timer
+        show_header_toggle: false
+        title: Bathroom
+        type: entities
+    path: scripts
+    title: scripts
+  - badges: []
+    cards:
+      - entities:
+          - light.hallway
+          - light.kitchen_1
+          - light.kitchen_2
+          - light.lightstrip_4
+          - light.bar_light_switch_level
+        show_header_toggle: false
+        title: Kitchen Lights
+        type: entities
+      - entities:
+          - light.left_back
+          - light.right_back
+          - light.left_front
+          - light.right_front
+          - light.lightstrip_3
+        show_header_toggle: false
+        title: Bedroom Lights
+        type: entities
+      - entities:
+          - light.lamp
+          - light.lightstrip_1
+          - light.lightstrip_6
+          - switch.track_lighting_switch_switch
+        show_header_toggle: false
+        title: Livingroom Lights
+        type: entities
+      - entities:
+          - light.bathroom_light_switch_level
+          - light.lightstrip_2
+          - light.lightstrip_5
+        show_header_toggle: false
+        title: Bathroom Lights
+        type: entities
+    path: lights_display
+    title: Lights
+  - badges: []
+    cards:
+      - entity: media_player.kodi_bedroom_righteye
+        type: media-control
+      - entity: media_player.kodi_livingroom_lefteye
+        type: media-control
+      - entity: media_player.jukebox_mpd
+        type: media-control
+      - entity: media_player.righteye_onkyo
+        type: media-control
+      - entity: media_player.lefteye_onkyo
+        type: media-control
+    path: media_players
+    title: Media Players
+  - badges:
+      - binary_sensor.entryway_thermostat_nest_fan
+      - binary_sensor.entryway_thermostat_nest_has_leaf
+      - binary_sensor.entryway_thermostat_nest_is_locked
+      - binary_sensor.entryway_thermostat_nest_is_using_emergency_heat
+      - binary_sensor.entryway_thermostat_nest_online
+      - sensor.entryway_thermostat_nest_humidity
+      - sensor.entryway_thermostat_nest_operation_mode
+      - sensor.entryway_thermostat_nest_target
+      - sensor.entryway_thermostat_nest_temperature
+    cards:
+      - entity: climate.entryway_nest
+        type: thermostat
+    path: nest
+    title: Nest
+  - badges: []
+    cards: []
+    path: roomba
+    title: Roomba
+  - badges: []
+    cards: []
+    path: dyson
+    title: Dyson
+  - badges: []
+    cards:
+      - entity: plant.fern
+        type: plant-status
+      - entity: plant.palm
+        type: plant-status
+      - entity: plant.zz
+        type: plant-status
+      - entity: plant.pothos1
+        type: plant-status
+      - entity: plant.pothos2
+        type: plant-status
+      - entity: plant.petra
+        type: plant-status
+      - entity: plant.donkey
+        type: plant-status
+    path: plants
+    title: Plants
+  - badges: []
+    cards: []
+    path: battery
+    title: Battery
+  - badges:
+      - sensor.uptime
+    cards:
+      - entities:
+          - input_boolean.notifications_on
+          - input_boolean.enable_bedroom_voice_automation
+          - input_boolean.enable_bathroom_automation
+          - input_boolean.enable_livingroom_automation
+          - input_boolean.enable_kitchen_automation
+          - input_boolean.bathroom_light_dim
+        show_header_toggle: false
+        title: Advanced Settings
+        type: entities
+      - entities:
+          - input_datetime.dim_time_on
+          - input_datetime.bright_time_on
+        show_header_toggle: true
+        title: Bathroom Bright/Dim Times
+        type: entities
+    path: settings
+    title: Settings
