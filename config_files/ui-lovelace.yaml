@@ -107,14 +107,9 @@ views:
         type: entities
         show_header_toggle: false
         entities:
-          - sensor.portland_current
-          - sensor.portland_humidity
-          - sensor.portland_pressure
-          - sensor.portland_temperature
-          - sensor.portland_temperature_max
-          - sensor.portland_temperature_min
-          - sensor.portland_visibility
-          - sensor.portland_wind_speed
+          - sensor.dark_sky_summary
+          - sensor.dark_sky_icon
+          - sensor.dark_sky_temperature 
   - title: Sensors
     path: sensors
     badges: []
