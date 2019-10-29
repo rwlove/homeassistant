@@ -86,6 +86,8 @@ device_tracker:
     - 192.168.2.14
     scan_options: "--privileged -sn -dns-servers 192.168.1.1 --host-timeout 5s"
 
+person: !include persons.yaml
+
 zone:
   name: Home
   latitude: 45.528472

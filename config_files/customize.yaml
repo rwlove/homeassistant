@@ -221,3 +221,9 @@ device_tracker.renee_android_thesteamedcrab_com:
 
 device_tracker.14_56_8e_44_09_86:
   friendly_name: "Renee (MAC: ec:0e:c4:4e:7f:bf)"
+
+person.rob:
+  entity_picture: "/pictures/Rob.jpg"
+
+person.renee:
+  entity_picture: "/pictures/Renee.jpg"

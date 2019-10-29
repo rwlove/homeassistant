@@ -1,0 +1,10 @@
+- name: Rob
+  id: 0
+  user_id: 9cea6b8fb05f48ae9e110fbd53a14566
+  device_trackers:
+    - device_tracker.galaxy_s10_thesteamedcrab_com
+- name: Renee
+  id: 1
+  user_id: ba08852ea7404a59b63c9514556c0b58
+  device_trackers:
+    - device_tracker.renee_android_thesteamedcrab_com

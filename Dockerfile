@@ -35,6 +35,11 @@ RUN ln -s /config/zwcfg.xsd /usr/src/app/build/python-openzwave/openzwave/config
 
 
 #####
+# Copy pictures into image
+#################################
+COPY pictures /pictures
+
+#####
 # Open Port and Set the entrypoint.
 #################################
 
