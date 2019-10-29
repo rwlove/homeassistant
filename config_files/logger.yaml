@@ -4,7 +4,7 @@
     homeassistant.platform.thinkingcleaner: info
 #    homeassistant.components.switch: debug
 #    homeassistant.components.sensor: info
-    homeassistant.components.automation: info
+#    homeassistant.components.automation: info
 #    homeassistant.components.scripts: info
 #    homeassistant.components.mqtt: debug
 #    homeassistant.components.input_select: debug
@@ -15,5 +15,6 @@
 #    homeassistant.core: error
 #    homeassistant.components.media_player: debug
 #    homeassistant.components.mpd.media_player: debug
-    homeassistant.components.dyson: info
+#    homeassistant.components.dyson: info
 #    homeassistant.components.hue: debug
+    homeassistant.components.nmap_tracker: debug
