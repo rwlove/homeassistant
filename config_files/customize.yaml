@@ -223,7 +223,7 @@ device_tracker.14_56_8e_44_09_86:
   friendly_name: "Renee (MAC: ec:0e:c4:4e:7f:bf)"
 
 person.rob:
-  entity_picture: "/local/Rob.jpg"
+  entity_picture: "/local/Rob.png"
 
 person.renee:
-  entity_picture: "/local/Renee.jpg"
+  entity_picture: "/local/Renee.png"
