@@ -225,6 +225,11 @@ views:
           - light.bathroom_light_switch_level
           - light.lightstrip_2
           - light.lightstrip_5
+      - title: All Lights
+        show_header_toggle: false
+        type: entities
+        entities:
+          - group.all_lights
   - title: Media Players
     path: media_players  
     badges: []
