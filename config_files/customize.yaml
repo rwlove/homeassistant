@@ -217,7 +217,7 @@ device_tracker.renee_android_thesteamedcrab_com:
   friendly_name: "Renee"
 
 person.rob:
-  entity_picture: "/local/Rob.png"
+  entity_picture: /local/Rob.png
 
 person.renee:
-  entity_picture: "/local/Renee.png"
+  entity_picture: /local/Renee.png
