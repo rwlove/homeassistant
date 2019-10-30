@@ -211,16 +211,10 @@ sensor.my_plant_temperature:
   unit_of_measurement: 'Fahrenheit'
 
 device_tracker.galaxy_s10_thesteamedcrab_com:
-  friendly_name: "Rob (HOSTNAME: galaxy-s10)"
-
-device_tracker.d4_53_83_94_4a_f2:
-  friendly_name: "Rob (MAC: d4:53:83:94:4a:f2)"
+  friendly_name: "Rob"
 
 device_tracker.renee_android_thesteamedcrab_com:
-  friendly_name: "Renee (HOSTNAME: renee-android)"
-
-device_tracker.14_56_8e_44_09_86:
-  friendly_name: "Renee (MAC: ec:0e:c4:4e:7f:bf)"
+  friendly_name: "Renee"
 
 person.rob:
   entity_picture: "/local/Rob.png"
