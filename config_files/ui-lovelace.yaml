@@ -192,39 +192,39 @@ views:
     path: lights_display    
     badges: []
     cards:
-      - entities:
+      - title: Kitchen Lights
+        show_header_toggle: true
+        type: entities
+        entities:
           - light.hallway
           - light.kitchen_1
           - light.kitchen_2
           - light.lightstrip_4
           - light.bar_light_switch_level
-        show_header_toggle: false
-        title: Kitchen Lights
+      - title: Bedroom Lights
+        show_header_toggle: true        
         type: entities
-      - entities:
+        entities:
           - light.left_back
           - light.right_back
           - light.left_front
           - light.right_front
           - light.lightstrip_3
-        show_header_toggle: false
-        title: Bedroom Lights
+      - title: Livingroom Lights
+        show_header_toggle: true
         type: entities
-      - entities:
+        entities:
           - light.lamp
           - light.lightstrip_1
           - light.lightstrip_6
           - switch.track_lighting_switch_switch
-        show_header_toggle: false
-        title: Livingroom Lights
+      - title: Bathroom Lights
+        show_header_toggle: true
         type: entities
-      - entities:
+        entities:
           - light.bathroom_light_switch_level
           - light.lightstrip_2
           - light.lightstrip_5
-        show_header_toggle: false
-        title: Bathroom Lights
-        type: entities
   - title: Media Players
     path: media_players  
     badges: []
