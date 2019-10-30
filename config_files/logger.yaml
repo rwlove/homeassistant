@@ -17,4 +17,4 @@
 #    homeassistant.components.mpd.media_player: debug
 #    homeassistant.components.dyson: info
 #    homeassistant.components.hue: debug
-    homeassistant.components.nmap_tracker: debug
+#    homeassistant.components.nmap_tracker: debug
