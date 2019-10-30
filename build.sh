@@ -17,6 +17,6 @@ popd
 
 docker build $* -t services/homeassistant:v${HASS_VERSION} . 2>&1 | tee -a build.log
 
-rm config_files.tar.gz
+#rm config_files.tar.gz
 
 docker run --rm services/homeassistant:v${HASS_VERSION} python -m homeassistant --script check_config --config /config 2>&1 | tee -a build.log
