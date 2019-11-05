@@ -1,4 +1,7 @@
 title: Tanner Place
+resources:
+  - url: https://cdn.jsdelivr.net/gh/bramkragten/weather-card/dist/weather-card.min.js
+    type: module
 views:
   - title: Home
     badges: []
@@ -98,16 +101,10 @@ views:
         entities:
           - sensor.aeotec_zw100_multisensor_livingroom_temperature
           - sensor.aeotec_zw100_multisensor_livingroom_relative_humidity
-      - title: Nest
-        type: thermostat
-        entity: climate.entrywaynest        
       - title: Weather Outside
-        type: entities
+        type: custom:weather-card
         show_header_toggle: false
-        entities:
-          - sensor.dark_sky_summary
-          - sensor.dark_sky_icon
-          - sensor.dark_sky_temperature 
+        entity: weather.dark_sky
   - title: Sensors
     path: sensors
     badges: []

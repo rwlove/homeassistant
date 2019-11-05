@@ -214,3 +214,8 @@ plant:
 
 lovelace:
   mode: yaml
+
+weather:
+  - platform: darksky
+    api_key: ce505685c28d5d17e1ceca1ad91b64e4
+    mode: daily
