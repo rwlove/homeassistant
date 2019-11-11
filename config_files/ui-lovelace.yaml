@@ -15,9 +15,9 @@ views:
         color: auto
         tap_action:
           action: call-service
-          service: light.turn_off
+          service: script.turn_on
           service_data:
-            entity_id: group.all_lights
+            entity_id: script.all_lights_off
   - title: Rooms
     badges: []
     path: rooms
