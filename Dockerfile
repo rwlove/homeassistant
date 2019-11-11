@@ -50,3 +50,10 @@ RUN mkdir -p /var/lib/mpd/playlists
 #################################
 
 ADD config_files.tar.gz /config
+
+
+#####
+# Include custom cards
+#################################
+
+RUN git clone https://github.com/custom-cards/button-card /config/www/button-card

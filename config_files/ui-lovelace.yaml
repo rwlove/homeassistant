@@ -8,15 +8,14 @@ views:
     badges: []
     cards:
       - title: Turn Off All Lights
-        name: Turn Off Lights
-        type: entity-button
-	icon: mdi:lightbulb
+        type: "custom:button-card"
+        icon: mdi:lightbulb
+        color: auto
         tap_action:
           action: call-service
           service: light.turn_off
           service_data:
             entity_id: group.all_lights
-        entity: group.all_lights
   - title: Rooms
     badges: []
     path: rooms
