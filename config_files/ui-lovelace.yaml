@@ -12,6 +12,7 @@ views:
       - title: Turn Off All Lights
         type: "custom:button-card"
         icon: mdi:lightbulb
+        aspect_ratio: 2/1
         color: auto
         tap_action:
           action: call-service
@@ -21,6 +22,7 @@ views:
       - title: Fireplace
         type: "custom:button-card"
         icon: mdi:fireplace
+        aspect_ratio: 2/1
         color: auto
         action: toggle
         entity: switch.fireplace_switch
