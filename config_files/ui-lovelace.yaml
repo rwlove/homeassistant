@@ -18,6 +18,12 @@ views:
           service: script.turn_on
           service_data:
             entity_id: script.all_lights_off
+      - title: Fireplace
+        type: "custom:button-card"
+        icon: mdi:fireplace
+        color: auto
+        action: toggle
+        entity: switch.fireplace_switch
   - title: Rooms
     badges: []
     path: rooms
