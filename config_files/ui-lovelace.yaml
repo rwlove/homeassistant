@@ -2,6 +2,8 @@ title: Tanner Place
 resources:
   - url: https://cdn.jsdelivr.net/gh/bramkragten/weather-card/dist/weather-card.min.js
     type: module
+  - url: https://github.com/custom-cards/button-card/releases/download/3.0.0/button-card.js
+    type: js
 views:
   - title: Home
     path: default_view
