@@ -4,8 +4,22 @@ resources:
     type: module
 views:
   - title: Home
-    badges: []
     path: default_view
+    badges: []
+    cards:
+      - title: Turn Off All Lights
+        name: Turn Off Lights
+        type: entity-button
+	icon: mdi:lightbulb
+        tap_action:
+          action: call-service
+          service: light.turn_off
+          service_data:
+            entity_id: group.all_lights
+        entity: group.all_lights
+  - title: Rooms
+    badges: []
+    path: rooms
     cards:
       - title: Bedroom
         type: entities
