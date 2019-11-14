@@ -5,7 +5,7 @@ resources:
   - url: https://github.com/custom-cards/button-card/releases/download/3.0.0/button-card.js
     type: js
 views:
-  - title: Home
+  - title: Shortcuts
     path: default_view
     badges: []
     cards:
@@ -83,10 +83,9 @@ views:
         - device_tracker.galaxy_s10_thesteamedcrab_com
         - device_tracker.renee_android_thesteamedcrab_com
         type: entities
-  - title: Lovenet Services
+  - title: Services
     type: entities
     path: services
-    icon: mdi:web
     badges: []
     show_header_toggle: false
     cards:
