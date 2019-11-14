@@ -97,7 +97,7 @@ views:
           icon: mdi:dns
         - type: weblink
           name: Subsonic
-          url: https://subsonic.thesteamedcrab.com/subsonic
+          url: https://subsonic.thesteamedcrab.com:4040/subsonic
           icon: mdi:music
         - type: weblink
           name: BiglyBt
