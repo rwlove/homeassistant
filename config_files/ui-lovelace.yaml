@@ -73,6 +73,15 @@ views:
           - binary_sensor.bathroom_high_humidity
           - sensor.aeotec_zw100_multisensor_toilet_relative_humidity
           - binary_sensor.toilet_high_humidity
+  - title: Weight
+    type: entities
+    path: weight
+    badges: []
+    show_header_toggle: false
+    cards:
+        - entities:
+          - sensor.weight
+          type: entities
   - title: Location
     type: entities
     path: location

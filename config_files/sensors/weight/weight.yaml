@@ -1,0 +1,5 @@
+- platform: mqtt
+  name: weight
+  state_topic: "weight_monitor/WeightChannelA"
+  unit_of_measurement: kg
+  icon: mdi:scale
