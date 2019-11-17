@@ -1,5 +1,15 @@
 - platform: mqtt
-  name: weight
+  name: weight_kg
   state_topic: "weight_monitor/WeightChannelA"
-  unit_of_measurement: kg
   icon: mdi:scale
+  value_template: "{{ (value | float /1000) | round(0) }}"
+  qos: 0
+  unit_of_measurement: "kg"
+
+- platform: mqtt
+  name: weight_lbs
+  state_topic: "weight_monitor/WeightChannelA"
+  icon: mdi:scale
+  value_template: "{{ ((value | float /1000) * 2.2462) | round(0) }}"
+  qos: 0
+  unit_of_measurement: "lbs"
