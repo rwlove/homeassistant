@@ -8,6 +8,7 @@ bedroom_lights:
     - light.left_front
     - light.right_front
     - light.lightstrip_3
+    - switch.my_smart_plug_mini
 
 livingroom_lights:
   name: "Livingroom Lights"
