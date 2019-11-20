@@ -80,10 +80,14 @@ views:
     show_header_toggle: false
     cards:
         - entities:
-          - name: "Weight (kg)"
-            entity: sensor.weight_kg
-          - name: "Weight (lbs)"
-            entity: sensor.weight_lbs
+          - name: "Weight Short (kg)"
+            entity: sensor.weight_short_kg
+          - name: "Weight Short (lbs)"
+            entity: sensor.weight_short_lbs
+          - name: "Weight Long (kg)"
+            entity: sensor.weight_long_kg
+          - name: "Weight Long (lbs)"
+            entity: sensor.weight_long_lbs            
           type: entities
   - title: Location
     type: entities
