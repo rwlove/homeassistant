@@ -29,3 +29,20 @@
   value_template: "{{ ((value | float /1000) * 2.2462) | round(0) }}"
   qos: 0
   unit_of_measurement: "lbs"
+
+- platform: template
+  sensors:
+    in_bed:
+      friendly_name: "In Bed"
+      value_template: >-
+        {% set weight = states('sensor.weight_long_kg') | float %}
+
+        {% if 3250 < weight < 4500 %}
+          Renee
+        {% elif weight > 7000 and weight < 8250 %}
+          Rob
+        {% elif weight > 10250 and weight < 12750 %}
+          Both
+        {% else %}
+          Nobody
+        {% endif %}
