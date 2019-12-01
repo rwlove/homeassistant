@@ -109,6 +109,10 @@ views:
     cards:
       - entities:
         - type: weblink
+          name: Mythtv
+          url: http://thecore.thesteamedcrab.com/mythweb/
+          icon: mdi:television-classic
+        - type: weblink
           name: Pi-Hole
           url: http://pihole.thesteamedcrab.com/admin/index.php
           icon: mdi:dns
