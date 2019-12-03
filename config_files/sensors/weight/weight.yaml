@@ -2,7 +2,7 @@
   name: weight_short_kg
   state_topic: "weight-short/WeightChannelA"
   icon: mdi:scale
-  value_template: "{{ (value | float /1000) | round(0) }}"
+  value_template: "{{ (value | float) | round(0) }}"
   qos: 0
   unit_of_measurement: "kg"
 
@@ -10,7 +10,7 @@
   name: weight_short_lbs
   state_topic: "weight-short/WeightChannelA"
   icon: mdi:scale
-  value_template: "{{ ((value | float /1000) * 2.2462) | round(0) }}"
+  value_template: "{{ ((value | float) * 2.2462) | round(0) }}"
   qos: 0
   unit_of_measurement: "lbs"
 
@@ -18,7 +18,7 @@
   name: weight_long_kg
   state_topic: "weight-long/WeightChannelA"
   icon: mdi:scale
-  value_template: "{{ (value | float /1000) | round(0) }}"
+  value_template: "{{ (value | float) | round(0) }}"
   qos: 0
   unit_of_measurement: "kg"
 
@@ -26,7 +26,7 @@
   name: weight_long_lbs
   state_topic: "weight-long/WeightChannelA"
   icon: mdi:scale
-  value_template: "{{ ((value | float /1000) * 2.2462) | round(0) }}"
+  value_template: "{{ ((value | float) * 2.2462) | round(0) }}"
   qos: 0
   unit_of_measurement: "lbs"
 
