@@ -134,7 +134,7 @@ views:
           icon: mdi:chart-line
         - type: weblink
           name: Portainer
-          url: http://thesteamedcrab.com:9000
+          url: http://portainer:9000
           icon: mdi:alpha-c-box-outline
         type: entities      
   - title: Wakeup Time
