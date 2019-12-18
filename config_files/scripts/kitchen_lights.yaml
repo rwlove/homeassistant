@@ -18,6 +18,13 @@ kitchen_lights_off:
       entity_id: script.notify_kodi_frontends
       variables:
         message: "Turning off Kitchen Lights!"
-  - service: scene.turn_on
+  - service: light.turn_off
     data:
-      entity_id: scene.kitchen_lights_off
+      entity_id:
+        - light.kitchen_1
+        - light.kitchen_2
+        - light.lightstrip_4
+        - light.hallway
+        - light.bar_light_switch_level
+      transition: 2
+      
