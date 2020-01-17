@@ -39,3 +39,14 @@ bathroom_lights:
     - light.bathroom_light_switch_level
     - light.lightstrip_2
     - light.lightstrip_5
+
+all_lights:
+  name: "All Lights"
+  view: no
+  control: hidden
+  entities:
+    - group.bedroom_lights
+    - group.livingroom_lights
+    - group.kitchen_lights
+    - group.bathroom_lights
+
