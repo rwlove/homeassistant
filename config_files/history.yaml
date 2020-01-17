@@ -13,7 +13,6 @@ exclude:
     - group.kitchen
     - group.bathroom
     - group.all_lights
-    - group.all_switches
     - group.bedroom_scripts
     - group.kitchen_scripts
     - group.livingroom_scripts
