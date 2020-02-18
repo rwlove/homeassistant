@@ -1,6 +1,5 @@
 - alias: "All Lights - Voice Change On"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/all/lights_on
@@ -15,7 +14,6 @@
 
 - alias: "All Lights - Voice Change Off"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/all/lights_off
@@ -48,7 +46,6 @@
 
 - alias: "All Lights - Voice Change Color"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     - platform: mqtt
       topic: voice/all/lights_color

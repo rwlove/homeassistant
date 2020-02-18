@@ -1,4 +1,4 @@
-- alias: 'WakeUp Light Bedroom'
+- alias: 'WakeUp Lit Bedroom'
   initial_state: 'true'
   trigger:
     - platform: time_pattern

@@ -1,6 +1,5 @@
 - alias: "Sleep Start"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/sleep/start
@@ -18,7 +17,6 @@
 
 - alias: "Sleep Stop"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/sleep/stop

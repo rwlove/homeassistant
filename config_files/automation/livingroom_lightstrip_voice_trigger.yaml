@@ -1,6 +1,5 @@
 - alias: "Strip Voice Change On"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/strip/lights_on
@@ -10,7 +9,6 @@
 
 - alias: "Strip Voice Change Off"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/strip/lights_off
@@ -20,7 +18,6 @@
 
 - alias: "Strip Voice Change Color"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     - platform: mqtt
       topic: voice/strip/lights_color

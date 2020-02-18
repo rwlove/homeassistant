@@ -1,6 +1,5 @@
 - alias: "Homeassistant Startup - Dim On"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: homeassistant
     event: start
@@ -15,7 +14,6 @@
 
 - alias: "Homeassistant Startup - Dim On"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: homeassistant
     event: start

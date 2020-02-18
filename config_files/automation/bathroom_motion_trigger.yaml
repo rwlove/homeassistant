@@ -27,7 +27,6 @@
 
 - alias: "Bathroom Motion On (Night)"
   initial_state: 'true'
-#  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.aeotec_zw100_multisensor_bathroom_burglar
@@ -48,7 +47,6 @@
 
 - alias: "Bathroom Motion On (Day)"
   initial_state: 'true'
-#  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.aeotec_zw100_multisensor_bathroom_burglar
@@ -69,7 +67,6 @@
 
 - alias: "Toilet Motion On (Night)"
   initial_state: 'true'
-#  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.aeotec_zw100_multisensor_toilet_burglar
@@ -90,7 +87,6 @@
 
 - alias: "Toilet Motion On (Day)"
   initial_state: 'true'
-#  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.aeotec_zw100_multisensor_toilet_burglar
@@ -111,7 +107,6 @@
 
 - alias: "Early Bathroom Motion On"
   initial_state: 'true'
-#  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.aeotec_zw100_multisensor_bathroom_early_burglar

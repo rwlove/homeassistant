@@ -1,6 +1,5 @@
 - alias: "Bathroom Lights - Voice Change On"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/bathroom/lights_on
@@ -12,7 +11,6 @@
 
 - alias: "Bathroom Lights - Voice Change Off"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/bathroom/lights_off
@@ -24,7 +22,6 @@
 
 - alias: "Bathroom Lights - Voice Change Color/Scene"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     - platform: mqtt
       topic: voice/bathroom/lights_color
@@ -41,7 +38,6 @@
 
 - alias: "Bathroom Lights - Voice Change Dim"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/bathroom/lights_adjust
@@ -59,7 +55,6 @@
 
 - alias: "Bathroom Lights - Voice Change Bright"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/bathroom/lights_adjust

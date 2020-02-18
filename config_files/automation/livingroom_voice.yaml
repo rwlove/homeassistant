@@ -1,6 +1,5 @@
 - alias: "Livingroom Lights - Voice Change On"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/livingroom/lights_on
@@ -12,7 +11,6 @@
 
 - alias: "Livingroom Lights - Voice Change Off"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/livingroom/lights_off
@@ -24,7 +22,6 @@
 
 - alias: "Livingroom Lights - Voice Change Color/Scene"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     - platform: mqtt
       topic: voice/livingroom/lights_color
@@ -41,7 +38,6 @@
 
 - alias: "Livingroom Lights - Voice Change Dim"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/livingroom/lights_adjust
@@ -62,7 +58,6 @@
 
 - alias: "Livingroom Lights - Voice Change Bright"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/livingroom/lights_adjust

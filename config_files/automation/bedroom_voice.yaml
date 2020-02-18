@@ -1,6 +1,5 @@
 - alias: "Bedroom Lights - Voice Change On"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/bedroom/lights_on
@@ -16,7 +15,6 @@
 
 - alias: "Bedroom Lights - Voice Change Off"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/bedroom/lights_off
@@ -32,7 +30,6 @@
 
 - alias: "Bedroom Lights - Voice Change Color/Scene"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     - platform: mqtt
       topic: voice/bedroom/lights_color
@@ -53,7 +50,6 @@
 
 - alias: "Bedroom Lights - Voice Change Dim"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/bedroom/lights_adjust
@@ -70,7 +66,6 @@
 
 - alias: "Bedroom Lights - Voice Change Bright"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/bedroom/lights_adjust

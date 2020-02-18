@@ -1,6 +1,5 @@
 - alias: "Livingroom Kodi Play 000sexysongs"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: kodi/lefteye/sexy

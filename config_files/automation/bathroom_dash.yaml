@@ -1,6 +1,5 @@
 - alias: "Bathroom Lights - Dash Change On"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: dash2

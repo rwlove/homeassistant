@@ -1,6 +1,5 @@
 - alias: "Kitchen Lights - Voice Change On"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/kitchen/lights_on
@@ -12,7 +11,6 @@
 
 - alias: "Kitchen Lights - Voice Change Off"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/kitchen/lights_off
@@ -24,7 +22,6 @@
 
 - alias: "Kitchen Lights Voice - Change Color/Scene"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     - platform: mqtt
       topic: voice/kitchen/lights_color
@@ -41,7 +38,6 @@
 
 - alias: "Kitchen Lights - Voice Change Dim"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/kitchen/lights_adjust
@@ -54,7 +50,6 @@
 
 - alias: "Kitchen Lights - Voice Change Bright"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: voice/kitchen/lights_adjust

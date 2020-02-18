@@ -1,6 +1,5 @@
 bedroom_lights:
   name: "Bedroom Lights"
-  control: hidden
   entities:
     - light.left_back
     - light.right_back
@@ -11,7 +10,6 @@ bedroom_lights:
 
 livingroom_lights:
   name: "Livingroom Lights"
-  control: hidden
   entities:
     - light.lamp
     - light.lightstrip_1
@@ -20,7 +18,6 @@ livingroom_lights:
 
 kitchen_lights:
   name: "Kitchen Lights"
-  control: hidden
   entities:
     - light.hallway
     - light.kitchen_1
@@ -30,7 +27,6 @@ kitchen_lights:
 
 bathroom_lights:
   name: "Bathroom Lights"
-  control: hidden
   entities:
     - light.bathroom_light_switch_level
     - light.lightstrip_2
@@ -38,7 +34,6 @@ bathroom_lights:
 
 all_lights:
   name: "All Lights"
-  control: hidden
   entities:
     - group.bedroom_lights
     - group.livingroom_lights

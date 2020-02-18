@@ -1,6 +1,5 @@
 - alias: "Bedroom Lights - Dash Change On"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: dash1
@@ -26,7 +25,6 @@
 
 - alias: "Bedroom Lights - Dash Change Off"
   initial_state: 'true'
-  hide_entity: true
   trigger:
     platform: mqtt
     topic: dash1

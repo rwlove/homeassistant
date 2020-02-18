@@ -1,6 +1,5 @@
 - alias: "Motion Detection Nightlight (Kitchen Light Off)"
   initial_state: 'true'
-#  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.aeotec_zw100_multisensor_livingroom_burglar
@@ -23,7 +22,6 @@
 
 - alias: "Motion Detection Nightlight (Kitchen Light On)"
   initial_state: 'true'
-#  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.aeotec_zw100_multisensor_livingroom_burglar
@@ -46,7 +44,6 @@
 
 - alias: "Motion Detection Nightlight (Kitchen Light Only)"
   initial_state: 'true'
-#  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.aeotec_zw100_multisensor_livingroom_burglar

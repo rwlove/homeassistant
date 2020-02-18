@@ -16,7 +16,6 @@
         brightness: 255
         color_name: purple
 
-#  hide_entity: true
 - alias: "Getting Into Bed"
   initial_state: 'true'
   trigger:
