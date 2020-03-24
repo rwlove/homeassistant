@@ -41,6 +41,7 @@ views:
           - sensor.bed_pressure_left
           - sensor.bed_pressure_right
           - switch.sonoff_100044903f
+          - light.elgato_key_light
       - title: Livingroom
         type: entities
         show_header_toggle: false
