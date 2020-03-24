@@ -23,26 +23,9 @@
         entity_id: script.notify_kodi_frontends
         variables:
           message: "Turning Off All Lights!"
-    - service: light.turn_off
-      entity_id: group.all_lights
-    - service: switch.turn_off
-      entity_id: switch.track_lighting_switch_switch
-    - service: input_select.select_option
+    - service: script.turn_on
       data:
-        entity_id: input_select.scene_bedroom
-        option: 'OFF'
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.scene_livingroom
-        option: 'OFF'
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.scene_kitchen
-        option: 'OFF'
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.scene_bathroom
-        option: 'OFF'
+        entity_id: script.all_lights_off
 
 - alias: "All Lights - Voice Change Color"
   initial_state: 'true'
