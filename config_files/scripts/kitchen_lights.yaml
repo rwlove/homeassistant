@@ -1,11 +1,6 @@
 kitchen_lights_on:
   alias: "Turn On Kitchen Lights"
   sequence:
-  - service: script.turn_on
-    data:
-      entity_id: script.notify_kodi_frontends
-      variables:
-        message: "Turning On Kitchen Lights!"
   - service: scene.turn_on
     data:
       entity_id: scene.kitchen_bright_on
@@ -13,11 +8,6 @@ kitchen_lights_on:
 kitchen_lights_off:
   alias: "Turn Off Kitchen Lights"
   sequence:
-  - service: script.turn_on
-    data:
-      entity_id: script.notify_kodi_frontends
-      variables:
-        message: "Turning off Kitchen Lights!"
   - service: light.turn_off
     data:
       entity_id:

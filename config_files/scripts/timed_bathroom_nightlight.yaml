@@ -1,11 +1,6 @@
 bathroom_bright_on:
   alias: "Turn On Bathroom Lights"
   sequence:
-  - service: script.turn_on
-    data:
-      entity_id: script.notify_kodi_frontends
-      variables:
-        message: "Turning On Bathroom Lights Bright!"
   - service: scene.turn_on
     data:
       entity_id: scene.bathroom_bright_on
@@ -13,11 +8,6 @@ bathroom_bright_on:
 bathroom_early_on:
   alias: "Turn On Early Bathroom Lights"
   sequence:
-  - service: script.turn_on
-    data:
-      entity_id: script.notify_kodi_frontends
-      variables:
-        message: "Turning On Bathroom Lights (Early)!"
   - service: scene.turn_on
     data:
       entity_id: scene.bathroom_very_dim
@@ -25,11 +15,6 @@ bathroom_early_on:
 bathroom_nightlight_on:
   alias: "Turn On Bathroom Nightlight"
   sequence:
-  - service: script.turn_on
-    data:
-      entity_id: script.notify_kodi_frontends
-      variables:
-        message: "Turning On Bathroom Nightlight!"
   - service: scene.turn_on
     data:
       entity_id: scene.bathroom_nightlight_on
@@ -37,11 +22,6 @@ bathroom_nightlight_on:
 bathroom_lights_off:
   alias: "Turn Off Bathroom Lights"
   sequence:
-  - service: script.turn_on
-    data:
-      entity_id: script.notify_kodi_frontends
-      variables:
-        message: "Turning Off Bathroom Lights!"
   - service: light.turn_off
     data:
       entity_id: group.bathroom_lights
@@ -85,11 +65,6 @@ timed_bathroom_early:
 timed_bathroom_diffuser_on:
   alias: "Bathroom Diffuser On"
   sequence:
-    - service: script.turn_on
-      data:
-        entity_id: script.notify_kodi_frontends
-        variables:
-          message: "Bathroom Diffuser On!"
     - service: switch.turn_on
       data:
         entity_id: switch.sonoff_10006b80c3
@@ -100,11 +75,6 @@ timed_bathroom_diffuser_on:
 timed_bathroom_diffuser_off:
   alias: "Bathroom Diffuser Off"
   sequence:
-    - service: script.turn_on
-      data:
-        entity_id: script.notify_kodi_frontends
-        variables:
-          message: "Bathroom Diffuser Off!"
     - service: switch.turn_off
       data:
         entity_id: switch.sonoff_10006b80c3

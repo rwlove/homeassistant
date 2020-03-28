@@ -1,10 +1,5 @@
 bedroom_lights_on:
   sequence:
-  - service: script.turn_on
-    data:
-      entity_id: script.notify_kodi_frontends
-      variables:
-        message: "Turning On Bedroom Lights!"
   - service: light.turn_on
     data:
       color_name: white
@@ -13,11 +8,6 @@ bedroom_lights_on:
 
 bedroom_lights_off:
   sequence:
-  - service: script.turn_on
-    data:
-      entity_id: script.notify_kodi_frontends
-      variables:
-        message: "Turning Off Bedroom Lights!"
   - service: light.turn_off
     data:
       entity_id: group.bedroom_lights
@@ -25,11 +15,6 @@ bedroom_lights_off:
 bedroom_diffuser_on:
   alias: "Bedroom Diffuser On"
   sequence:
-    - service: script.turn_on
-      data:
-        entity_id: script.notify_kodi_frontends
-        variables:
-          message: "Bedroom Diffuser On!"
     - service: switch.turn_on
       data:
         entity_id: switch.sonoff_100044903f
@@ -40,11 +25,6 @@ bedroom_diffuser_on:
 bedroom_diffuser_off:
   alias: "Bedroom Diffuser Off"
   sequence:
-    - service: script.turn_on
-      data:
-        entity_id: script.notify_kodi_frontends
-        variables:
-          message: "Bedroom Diffuser Off!"
     - service: switch.turn_off
       data:
         entity_id: switch.sonoff_100044903f

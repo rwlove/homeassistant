@@ -4,11 +4,6 @@
     platform: mqtt
     topic: voice/all/lights_on
   action:
-    - service: script.turn_on
-      data:
-        entity_id: script.notify_kodi_frontends
-        variables:
-          message: "Turning On All Lights!"
     - service: light.turn_on
       entity_id: group.all_lights
 
@@ -18,11 +13,6 @@
     platform: mqtt
     topic: voice/all/lights_off
   action:
-    - service: script.turn_on
-      data:
-        entity_id: script.notify_kodi_frontends
-        variables:
-          message: "Turning Off All Lights!"
     - service: script.turn_on
       data:
         entity_id: script.all_lights_off
@@ -35,11 +25,6 @@
     - platform: mqtt
       topic: voice/all/lights_scene
   action:
-    - service: script.turn_on
-      data:
-        entity_id: script.notify_kodi_frontends
-        variables:
-          message: "Changing Color of All Lights!"
     - service: light.turn_on
       data_template:
         profile: "{{ trigger.payload }}"

@@ -23,9 +23,4 @@
   action:
     - service: script.turn_on
       data:
-        entity_id: script.notify_kodi_frontends
-        variables:
-          message: "Bedroom Diffuser Timer Finished!"
-    - service: script.turn_on
-      data:
         entity_id: script.bedroom_diffuser_off

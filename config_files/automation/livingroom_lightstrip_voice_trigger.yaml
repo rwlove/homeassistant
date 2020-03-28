@@ -24,11 +24,6 @@
     - platform: mqtt
       topic: voice/strip/lights_scene
   action:
-    - service: script.turn_on
-      data:
-        entity_id: script.notify_kodi_frontends
-        variables:
-          message: "Changing Color of Strip"
     - service: light.turn_on
       data_template:
         profile: "{{ trigger.payload }}"

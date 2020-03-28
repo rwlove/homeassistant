@@ -11,11 +11,6 @@
   action:
     - service: script.turn_on
       data:
-        entity_id: script.notify_kodi_frontends
-        variables:
-          message: "Shower Running!"
-    - service: script.turn_on
-      data:
         entity_id: script.timed_bathroom_bright
 
 - alias: "Shower Running (Toilet Sensor)"
@@ -29,11 +24,6 @@
     entity_id: input_boolean.enable_bathroom_automation
     state: 'on'
   action:
-    - service: script.turn_on
-      data:
-        entity_id: script.notify_kodi_frontends
-        variables:
-          message: "Shower Running!"
     - service: script.turn_on
       data:
         entity_id: script.timed_bathroom_bright

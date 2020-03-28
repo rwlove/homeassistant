@@ -28,9 +28,6 @@
     - platform: mqtt
       topic: voice/kitchen/lights_scene
   action:
-    - service: script.notify_kodi_frontends
-      data:
-        message: "Changing Color of Kitchen Lights to {{ trigger.payload }}"
     - service: input_select.select_option
       data_template:
         entity_id: input_select.scene_kitchen

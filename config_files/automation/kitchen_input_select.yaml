@@ -29,9 +29,6 @@
       entity_id: input_select.scene_kitchen
       to: 'Aqua'
   action:
-    - service: script.notify_kodi_frontends
-      data_template:
-        message: 'Changing Kitchen Lights to Scene: {{ states.input_select.scene_kitchen.state }} and Brightness: {{ states.input_number.kitchen_brightness.state }}'
     - service: light.turn_on
       data_template:
         entity_id: group.kitchen_lights
@@ -69,9 +66,6 @@
       entity_id: input_select.scene_kitchen
       to: 'Stretch'
   action:
-    - service: script.notify_kodi_frontends
-      data_template:
-        message: 'Changing Kitchen Lights to Scene: {{ states.input_select.scene_kitchen.state }} and Brightness: {{ states.input_number.kitchen_brightness.state }}'
     - service: light.turn_on
       data_template:
         entity_id: group.kitchen_lights

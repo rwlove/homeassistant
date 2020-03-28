@@ -1,10 +1,5 @@
 livingroom_lights_on:
   sequence:
-  - service: script.turn_on
-    data:
-      entity_id: script.notify_kodi_frontends
-      variables:
-        message: "Turning On Livingroom Lights!"
   - service: light.turn_on
     data:
       color_name: white
@@ -16,11 +11,6 @@ livingroom_lights_on:
 
 livingroom_lights_off:
   sequence:
-  - service: script.turn_on
-    data:
-      entity_id: script.notify_kodi_frontends
-      variables:
-        message: "Turning Off Livingroom Lights!"
   - service: light.turn_off
     data:
       entity_id: group.livingroom_lights

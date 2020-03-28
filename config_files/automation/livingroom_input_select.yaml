@@ -29,9 +29,6 @@
       entity_id: input_select.scene_livingroom
       to: 'Aqua'
   action:
-    - service: script.notify_kodi_frontends
-      data_template:
-        message: 'Changing Livingroom Lights to Scene: {{ states.input_select.scene_livingroom.state }} and Brightness: {{ states.input_number.livingroom_brightness.state }}'
     - service: light.turn_on
       data_template:
         entity_id: group.livingroom_lights
@@ -69,9 +66,6 @@
       entity_id: input_select.scene_livingroom
       to: 'Stretch'
   action:
-    - service: script.notify_kodi_frontends
-      data_template:
-        message: 'Changing Livingroom Lights to Scene: {{ states.input_select.scene_livingroom.state }} and Brightness: {{ states.input_number.livingroom_brightness.state }}'
     - service: light.turn_on
       data_template:
         entity_id: group.livingroom_lights
