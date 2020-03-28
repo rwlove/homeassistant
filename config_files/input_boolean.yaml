@@ -27,7 +27,7 @@ enable_bathroom_automation:
 
 enable_livingroom_automation:
   name: "Livingroom Automation"
-  initial: on
+  initial: off
 
 enable_kitchen_automation:
   name: "Kitchen Automation"
