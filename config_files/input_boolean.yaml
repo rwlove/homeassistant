@@ -15,7 +15,7 @@ wakeup:
 wakeup_weekends:
   name: 'Wakeup weekends'
   icon: mdi:power
-  initial: on
+  initial: off
 
 enable_bedroom_voice_automation:
   name: "Bedroom Voice Automation"
