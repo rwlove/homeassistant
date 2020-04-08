@@ -1,2 +1,1 @@
-- alias: roomba
-  platform: thinkingcleaner
+- platform: thinkingcleaner
