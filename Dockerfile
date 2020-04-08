@@ -39,7 +39,7 @@ RUN ln -s /config/zwcfg.xsd /usr/src/app/build/python-openzwave/openzwave/config
 #################################
 
 EXPOSE 8123
-CMD ["/hass_entrypoint.sh"]
+ENTRYPOINT ["/hass_entrypoint.sh"]
 
 
 RUN mkdir -p /var/lib/mpd/playlists
