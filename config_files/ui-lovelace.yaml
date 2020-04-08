@@ -37,11 +37,15 @@ views:
           - input_select.scene_bedroom
           - input_number.bedroom_brightness
           - group.bedroom_lights
-          - switch.my_smart_plug_mini
           - sensor.bed_pressure_left
           - sensor.bed_pressure_right
           - switch.sonoff_100044903f
+      - title: Office
+        type: entities
+        show_header_toggle: false
+        entities:
           - light.elgato_key_light
+          - switch.my_smart_plug_mini
       - title: Livingroom
         type: entities
         show_header_toggle: false

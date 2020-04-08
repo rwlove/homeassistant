@@ -20,6 +20,7 @@ include:
     - sensor.aeotec_zw100_multisensor_bathroom_humidity
     - sensor.portland_current
     - group.bedroom_lights
+    - group.office_lights
     - group.livingroom_lights
     - group.kitchen_lights
     - group.bathroom_lights

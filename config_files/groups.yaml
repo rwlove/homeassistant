@@ -6,9 +6,12 @@ bedroom_lights:
     - light.left_front
     - light.right_front
     - light.lightstrip_3
+
+office_lights:
+  name: "Office Lights"
+  entities:
     - light.elgato_key_light
     - switch.my_smart_plug_mini
-    
 
 livingroom_lights:
   name: "Livingroom Lights"
@@ -38,6 +41,7 @@ all_lights:
   name: "All Lights"
   entities:
     - group.bedroom_lights
+    - group.office_lights
     - group.livingroom_lights
     - group.kitchen_lights
     - group.bathroom_lights

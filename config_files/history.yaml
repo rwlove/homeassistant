@@ -28,6 +28,7 @@ include:
     - sensor.aeotec_zw100_multisensor_livingroom_temperature
     - sensor.portland_current
     - group.bedroom_lights
+    - group.office_lights
     - sensor.livingroom_motion
     - group.livingroom_lights
     - sensor.kitchen_motion
