@@ -30,22 +30,6 @@ views:
     badges: []
     path: rooms
     cards:
-      - title: Bedroom
-        type: entities
-        show_header_toggle: false
-        entities:
-          - input_select.scene_bedroom
-          - input_number.bedroom_brightness
-          - group.bedroom_lights
-          - sensor.bed_pressure_left
-          - sensor.bed_pressure_right
-          - switch.sonoff_100044903f
-      - title: Office
-        type: entities
-        show_header_toggle: false
-        entities:
-          - light.elgato_key_light
-          - switch.my_smart_plug_mini
       - title: Livingroom
         type: entities
         show_header_toggle: false
@@ -57,6 +41,22 @@ views:
           - sensor.aeotec_zw100_multisensor_livingroom_luminance
           - switch.fireplace_switch
           - sensor.roomba_state
+      - title: Office
+        type: entities
+        show_header_toggle: false
+        entities:
+          - light.elgato_key_light
+          - switch.my_smart_plug_mini
+      - title: Bedroom
+        type: entities
+        show_header_toggle: false
+        entities:
+          - input_select.scene_bedroom
+          - input_number.bedroom_brightness
+          - group.bedroom_lights
+          - sensor.bed_pressure_left
+          - sensor.bed_pressure_right
+          - switch.sonoff_100044903f
       - title: Kitchen
         type: entities
         show_header_toggle: false
