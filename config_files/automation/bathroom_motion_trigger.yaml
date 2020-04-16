@@ -29,8 +29,8 @@
   initial_state: 'true'
   trigger:
     platform: state
-    entity_id: sensor.aeotec_zw100_multisensor_bathroom_burglar
-    to: '8'
+    entity_id: binary_sensor.wyzesense_779b0549
+    to: 'on'
   condition:
     condition: and
     conditions:
@@ -49,8 +49,8 @@
   initial_state: 'true'
   trigger:
     platform: state
-    entity_id: sensor.aeotec_zw100_multisensor_bathroom_burglar
-    to: '8'
+    entity_id: binary_sensor.wyzesense_779b0549
+    to: 'on'
   condition:
     condition: and
     conditions:
@@ -173,8 +173,8 @@
       - condition: or
         conditions:
           - condition: state
-            entity_id: sensor.aeotec_zw100_multisensor_bathroom_burglar
-            state: '8'
+            entity_id: binary_sensor.wyzesense_779b0549
+            state: 'on'
           - condition: state
             entity_id: sensor.aeotec_zw100_multisensor_toilet_burglar
             state: '8'
@@ -197,8 +197,8 @@
         entity_id: input_boolean.enable_bathroom_automation
         state: 'on'
       - condition: state
-        entity_id: sensor.aeotec_zw100_multisensor_bathroom_burglar
-        state: '0'
+        entity_id: binary_sensor.wyzesense_779b0549
+        state: 'off'
       - condition: state
         entity_id: binary_sensor.bathroom_high_humidity
         state: 'off'
@@ -231,8 +231,8 @@
           - condition: and
             conditions:
               - condition: state
-                entity_id: sensor.aeotec_zw100_multisensor_bathroom_burglar
-                state: '0'
+                entity_id: binary_sensor.wyzesense_779b0549
+                state: 'off'
               - condition: state
                 entity_id: binary_sensor.bathroom_high_humidity
                 state: 'on'

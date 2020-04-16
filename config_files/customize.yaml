@@ -101,7 +101,7 @@ sensor.aeotec_zw100_multisensor_kitchen_temperature:
 sensor.livingroom_motion:
   friendly_name: "Livingroom Motion"
 
-sensor.bathroom_motion:
+binary_sensor.wyzesense_779b0549:
   friendly_name: "Bathroom Motion"
 
 sensor.toilet_motion:

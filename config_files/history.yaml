@@ -33,7 +33,7 @@ include:
     - group.livingroom_lights
     - sensor.kitchen_motion
     - group.kitchen_lights
-    - sensor.bathroom_motion
+    - binary_sensor.wyzesense_779b0549
     - group.bathroom_lights
     - sensor.bed_pressure_left
     - sensor.bed_pressure_right

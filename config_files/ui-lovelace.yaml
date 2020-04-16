@@ -73,7 +73,7 @@ views:
           - input_number.bathroom_brightness
           - group.bathroom_lights
           - switch.sonoff_10006b80c3
-          - sensor.bathroom_motion
+          - binary_sensor.wyzesense_779b0549
           - sensor.aeotec_zw100_multisensor_bathroom_relative_humidity
           - binary_sensor.bathroom_high_humidity
           - sensor.aeotec_zw100_multisensor_toilet_relative_humidity
@@ -219,7 +219,7 @@ views:
         title: Bathroom Sensor (Early)
         type: entities
       - entities:
-          - sensor.bathroom_motion
+          - binary_sensor.wyzesense_779b0549
           - sensor.aeotec_zw100_multisensor_bathroom_luminance
           - sensor.aeotec_zw100_multisensor_bathroom_relative_humidity
           - sensor.aeotec_zw100_multisensor_bathroom_temperature
