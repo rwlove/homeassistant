@@ -14,6 +14,12 @@ git clone https://github.com/peterbuga/HASS-sonoff-ewelink
 mv HASS-sonoff-ewelink/sonoff ${CURR_DIR}/
 popd && rm -rf /tmp/ewelink
 
+rm -rf wyzesense
+mkdir /tmp/wyzesense && pushd /tmp/wyzesense
+git clone https://github.com/kevinvincent/ha-wyzesense
+mv ha-wyzesense/custom_components/wyzesense ${CURR_DIR}/
+popd && rm -rf /tmp/wyzesense
+
 popd
 
 ./helper_scripts/create_config_tarball.sh | tee -a build.log

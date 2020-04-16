@@ -48,6 +48,7 @@ docker run \
        -v ${PWD}/persistent:/config/.storage \
        -v /etc/localtime:/etc/localtime:ro \
        -v ${ZWAVE_DEV}:/dev/ttyACM0 \
+       -v /dev/wyzesense \
        services/homeassistant:v${HASS_VERSION} ${CMD}
 
 add_contianer_to_network.sh -n homeassistant -b br0 -m ${MAC_ADDRESS} -v "hass"
