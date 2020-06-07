@@ -3,7 +3,8 @@
 . settings.conf
 
 MODE=d #default is daemon
-ZWAVE_DEV=""
+ZWAVE_DEV="/dev/zwave"
+WYZE_DEV="/dev/wyzesense"
 
 while getopts ":i" opt; do
     case $opt in
@@ -17,22 +18,18 @@ while getopts ":i" opt; do
     esac
 done
 
-for f in $( ls /dev/ttyAC* ) ; do
-    echo "Testing file: $f"
-    if [ -c "${f}" ] ; then
-	ZWAVE_DEV="${f}"
-	echo "  - VALID Z-Wave Device"
-    else
-	echo "  - invalid Z-Wave Device"
-    fi
-done
-
 [ ! -d logs ] && mkdir logs/
 [ ! -f logs/home-assistant.log ] && touch logs/home-assistant.log
 
 if [ "" == "${ZWAVE_DEV}" ] ; then
     echo "Exiting, no Z-Wave device found"
     echo "Exiting, no Z-Wave device found" >> ${PWD}/logs/home-assistant.log
+    exit -1
+fi
+
+if [ "" == "${WYZE_DEV}" ] ; then
+    echo "Exiting, no Wyze Bridge (${WYZE_DEV}) found"
+    echo "Exiting, no Wize Bridge (${WYZE_DEV}) found" >> ${PWD}/logs/home-assistant.log
     exit -1
 fi  
 
@@ -47,7 +44,8 @@ docker run \
        -v ${PWD}/logs/OZW_Log.txt:/config/OZW_Log.txt \
        -v ${PWD}/persistent:/config/.storage \
        -v /etc/localtime:/etc/localtime:ro \
-       -v ${ZWAVE_DEV}:/dev/ttyACM0 \
+       -v ${ZWAVE_DEV}:/dev/zwave \
+       -v ${WYZE_DEV}:/dev/wyze \
        -v /dev/wyzesense:/dev/wyzesense: \
        services/homeassistant:v${HASS_VERSION} ${CMD}
 

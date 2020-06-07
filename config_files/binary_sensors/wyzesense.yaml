@@ -1,2 +1,2 @@
 - platform: wyzesense
-  device: /dev/wyzesense
+  device: /dev/wyze
