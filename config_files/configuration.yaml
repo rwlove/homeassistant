@@ -100,7 +100,7 @@ zone:
   icon: mdi:account-multiple
 
 mqtt:
-  broker: mosca
+  broker: rabbitmq.thesteamedcrab.com
   port: 1883
   client_id: home-assistant-1
   keepalive: 60
